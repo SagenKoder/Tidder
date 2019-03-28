@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="tidder-eureka:war">
+    <output-path>$PROJECT_DIR$/tidder-eureka/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>tidder-eureka</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="tidder-eureka-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="tidder-eureka:war exploded" />
+    </root>
+  </artifact>
+</component>
