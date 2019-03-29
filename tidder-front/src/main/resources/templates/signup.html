@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="fragments/layout::head">
+    <title id="pageTitle">Sagen.App - Sign up</title>
+</head>
+
+<body id="page-top">
+
+<!-- Navigation -->
+<div th:replace="fragments/layout::sagenapp_header(${currentUser}, false)"></div>
+
+<div class="container">
+    <div class="col-sm-6 my-3">
+        <h4 class="text-primary">Create a new accuont</h4>
+        <b th:if="${createAdmin}"><i>Note: No other users exists! This user will be giver administrator privileges automatically!</i></b>
+        <form th:action="@{/signup}" th:modelAttribute="user" method="post">
+            <div class="form-group">
+                <input type="text"   name="firstName" class="form-control" placeholder="First Name">
+            </div>
+            <div class="form-group">
+                <input type="text" name="lastName" class="form-control" placeholder="Last Name">
+            </div>
+
+            <div class="form-group">
+                <input type="email"  name="email" class="form-control" placeholder="Email">
+            </div>
+
+            <div class="form-group">
+                <input type="password"  name="password" class="form-control" placeholder="Password">
+            </div>
+
+            <button class="btn btn-success">Create account</button>
+        </form>
+    </div>
+</div>
+
+<!-- footer -->
+<div th:replace="fragments/layout::sagenapp_footer"></div>
+
+</body>
+</html>

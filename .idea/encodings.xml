@@ -2,6 +2,7 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/tidder-eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tidder-front" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tidder-oauth" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tidder-test1" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tidder-test2" charset="UTF-8" />
