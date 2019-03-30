@@ -1,0 +1,26 @@
+version: '3'
+services:
+  tidder-front:
+    build: ./tidder-front/
+    ports:
+      - "9090:9090"
+  tidder-eureka:
+    build: ./tidder-eureka/
+    ports:
+      - "8761:8761"
+  tidder-zuul:
+    build: ./tidder-zuul/
+    ports:
+      - "8762:8762"
+  tidder-oauth:
+    build: ./tidder-oauth/
+    ports:
+      - "9099:9099"
+  tidder-test1:
+    build: ./tidder-test1/
+    posts:
+      - "9092:9092"
+  tidder-test2:
+    build: ./tidder-test2/
+    posts:
+      - "9092:9091"
