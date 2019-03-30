@@ -4,5 +4,5 @@ WORKDIR /app
 EXPOSE 9090
 ARG JAR_FILE=tidder-test2-0.0.1-SNAPSHOT.jar
 ADD ./target/$JAR_FILE /app
-RUN "#!/bin/bash\n java -jar ${JAR_FILE}" > ./entrypoint.sh
+RUN "echo #!/bin/bash\n java -jar ${JAR_FILE}" > ./entrypoint.sh
 ENTRYPOINT [".entrypoint.sh"]
