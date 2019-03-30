@@ -7,14 +7,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="tidder-eureka" />
-        <module name="tidder-test2" />
-        <module name="tidder-test1" />
-        <module name="tidder-zuul" />
-        <module name="tidder-oauth" />
         <module name="tidder-front" />
+        <module name="tidder-oauth" />
+        <module name="tidder-test1" />
+        <module name="tidder-test2" />
+        <module name="tidder-zuul" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Tidder" target="1.5" />
       <module name="tidder-eureka" target="1.8" />
       <module name="tidder-front" target="1.8" />
       <module name="tidder-oauth" target="1.8" />

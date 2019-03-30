@@ -1,6 +1,8 @@
-FROM maven:3.3-jdk-8
+FROM openjdk:8-jdk-alpine
 VOLUME /app
-RUN mvnw clean package
-COPY ./target/tidder-eureka-0.0.1-SNAPSHOT.jar /app
-RUN rm -rf ./target/
-ENTRYPOINT ["java", "-jar", "tidder-eureka-0.0.1-SNAPSHOT.jar"]
+WORKDIR /app
+EXPOSE 9090
+ARG JAR_FILE=tidder-eureka-0.0.1-SNAPSHOT.jar
+ADD ./target/$JAR_FILE /app
+RUN "#!/bin/bash\n java -jar ${JAR_FILE}" > ./entrypoint.sh
+ENTRYPOINT [".entrypoint.sh"]
