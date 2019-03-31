@@ -1,0 +1,41 @@
+version: '3'
+services:
+  tidder-front:
+    build: ./tidder-front/
+    ports:
+      - "9090"
+    deploy:
+      mode: replicated
+      replicas: 6
+  tidder-eureka:
+    container_name: tidder-eureka
+    build: ./tidder-eureka/
+    ports:
+      - "8761:8761"
+  tidder-zuul:
+    container_name: tidder-zuul
+    build: ./tidder-zuul/
+    ports:
+      - "8080:8080"
+  tidder-oauth:
+    build: ./tidder-oauth/
+    ports:
+      - "9099"
+    deploy:
+      mode: replicated
+      replicas: 6
+  tidder-test1:
+    build: ./tidder-test1/
+    ports:
+      - "9092" 
+    deploy:
+      mode: replicated 
+      replicas: 6
+  tidder-test2:
+    build: ./tidder-test2/
+    ports:
+      - "9091" 
+    deploy:
+      mode: replicated
+      replicas: 6
+
