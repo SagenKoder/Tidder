@@ -1,0 +1,36 @@
+server:
+  port: 8761
+spring:
+  application:
+    name: zuul-server
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://tidder-eureka:8761/eureka/
+zuul:
+  add-host-header: true
+  add-proxy-headers: true
+  routes:
+    sensitiveHeaders: Cookie,Set-Cookie
+    eureka:
+      path: /eureka/**
+      serviceId: eureka-server
+    test:
+      path: /test/**
+      serviceId: test
+    oauth:
+      path: /oauth/**
+      serviceId: oauth
+      stripPrefix: false
+    home:
+      path: /**
+      serviceId: front
+security:
+  oauth2:
+    resource:
+      jwt:
+        key-value: myPassword123
