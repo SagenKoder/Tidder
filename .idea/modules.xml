@@ -6,7 +6,6 @@
       <module fileurl="file://$PROJECT_DIR$/tidder-eureka/tidder-eureka.iml" filepath="$PROJECT_DIR$/tidder-eureka/tidder-eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/tidder-front/tidder-front.iml" filepath="$PROJECT_DIR$/tidder-front/tidder-front.iml" />
       <module fileurl="file://$PROJECT_DIR$/tidder-oauth/tidder-oauth.iml" filepath="$PROJECT_DIR$/tidder-oauth/tidder-oauth.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tidder-oauth/tidder-oauth.iml" filepath="$PROJECT_DIR$/tidder-oauth/tidder-oauth.iml" />
       <module fileurl="file://$PROJECT_DIR$/tidder-test1/tidder-test1.iml" filepath="$PROJECT_DIR$/tidder-test1/tidder-test1.iml" />
       <module fileurl="file://$PROJECT_DIR$/tidder-test2/tidder-test2.iml" filepath="$PROJECT_DIR$/tidder-test2/tidder-test2.iml" />
       <module fileurl="file://$PROJECT_DIR$/tidder-zuul/tidder-zuul.iml" filepath="$PROJECT_DIR$/tidder-zuul/tidder-zuul.iml" />

@@ -1,12 +1,5 @@
 version: '3'
 services:
-  tidder-front:
-    build: ./tidder-front/
-    ports:
-      - "9090"
-    deploy:
-      mode: replicated
-      replicas: 6
   tidder-eureka:
     container_name: tidder-eureka
     build: ./tidder-eureka/
@@ -17,6 +10,13 @@ services:
     build: ./tidder-zuul/
     ports:
       - "8080:8080"
+  tidder-front:
+    build: ./tidder-front/
+    ports:
+      - "9090"
+    deploy:
+      mode: replicated
+      replicas: 6
   tidder-oauth:
     build: ./tidder-oauth/
     ports:
@@ -38,4 +38,3 @@ services:
     deploy:
       mode: replicated
       replicas: 6
-
