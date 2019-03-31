@@ -29,8 +29,8 @@ zuul:
     home:
       path: /**
       serviceId: front
-security:
-  oauth2:
-    resource:
-      jwt:
-        key-value: myPassword123
+#security:
+#  oauth2:
+#    resource:
+#      jwt:
+#        key-value: myPassword123
