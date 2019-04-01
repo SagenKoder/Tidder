@@ -14,10 +14,14 @@ eureka:
 zuul:
   add-host-header: true
   add-proxy-headers: true
+  sensitiveHeaders: Cookie,Set-Cookie
   routes:
-    sensitiveHeaders: Cookie,Set-Cookie
     eureka-front:
       path: /eureka*
+      serviceId: eureka-server
+      stripPrefix: true
+    eureka-feont-slash:
+      path: /eureka/*
       serviceId: eureka-server
       stripPrefix: true
     eureka-front-res:
