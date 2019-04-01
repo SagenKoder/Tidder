@@ -15,9 +15,13 @@ zuul:
   add-host-header: true
   add-proxy-headers: true
   routes:
-#    sensitiveHeaders: Cookie,Set-Cookie
-    eureka:
-      path: /eureka/
+    sensitiveHeaders: Cookie,Set-Cookie
+    eureka-front:
+      path: /eureka*
+      serviceId: eureka-server
+      stripPrefix: true
+    eureka-front-res:
+      path: /eureka/**
       serviceId: eureka-server
       stripPrefix: false
     test:
