@@ -1,5 +1,5 @@
 server:
-  port: 8761
+  port: 8080
 spring:
   application:
     name: zuul-server
@@ -15,10 +15,11 @@ zuul:
   add-host-header: true
   add-proxy-headers: true
   routes:
-    sensitiveHeaders: Cookie,Set-Cookie
+#    sensitiveHeaders: Cookie,Set-Cookie
     eureka:
-      path: /eureka/**
+      path: /eureka/
       serviceId: eureka-server
+      stripPrefix: false
     test:
       path: /test/**
       serviceId: test

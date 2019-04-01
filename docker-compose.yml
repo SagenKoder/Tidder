@@ -17,7 +17,7 @@ services:
     build: ./tidder-eureka/
     restart: always
     ports:
-      - "8761:8761"
+    - "8761:8761"
   tidder-zuul:
     container_name: tidder-zuul
     build: ./tidder-zuul/
@@ -25,17 +25,16 @@ services:
     depends_on:
       - tidder-eureka
       - tidder-front
-      - db
     ports:
-      - "8080:8080"
+    - "8080:8080"
   tidder-front:
     build: ./tidder-front/
     restart: always
     depends_on:
-      - tidder-eureka
-      - db
+    - tidder-eureka
+    - db
     ports:
-      - "9090"
+    - "9090"
     deploy:
       mode: replicated
       replicas: 1
@@ -43,10 +42,10 @@ services:
     build: ./tidder-oauth/
     restart: always
     depends_on:
-      - tidder-eureka
-      - db
+    - tidder-eureka
+    - db
     ports:
-      - "9099"
+    - "9099"
     deploy:
       mode: replicated
       replicas: 1
@@ -54,9 +53,9 @@ services:
     build: ./tidder-test1/
     restart: always
     depends_on:
-      - tidder-eureka
+    - tidder-eureka
     ports:
-      - "9092" 
+    - "9092"
     deploy:
       mode: replicated 
       replicas: 1
@@ -64,9 +63,9 @@ services:
     build: ./tidder-test2/
     restart: always
     depends_on:
-      - tidder-eureka
+    - tidder-eureka
     ports:
-      - "9091" 
+    - "9091"
     deploy:
       mode: replicated
       replicas: 1
