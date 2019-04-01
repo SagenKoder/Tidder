@@ -38,6 +38,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/eureka}">Eureka Dashboard</a>
+                </li>
                 <li th:if="${currentUser==null}" class="nav-item">
                     <a class="nav-link" th:href="@{/login}">Log in</a>
                 </li>
