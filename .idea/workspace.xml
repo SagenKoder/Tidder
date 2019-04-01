@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c11b0fa-9b05-4d38-8a87-03744b940b4a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_15.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_h2database_h2_1_4_197.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tidder-zuul/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tidder-zuul/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tidder-zuul/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tidder-zuul/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tidder-front/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tidder-front/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tidder-front/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/tidder-front/src/main/resources/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/tidder-eureka/target/" />
@@ -26,11 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="391">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
@@ -39,25 +42,16 @@
         <entry file="file://$PROJECT_DIR$/tidder-eureka/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tidder-zuul/src/main/java/app/sagen/tidderzuul/TidderZuulApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tidder-zuul/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="527">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
             </state>
           </provider>
         </entry>
@@ -65,17 +59,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docker-compose.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+            <state relative-caret-position="187">
+              <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tidder-test1/src/main/resources/application.properties">
+        <entry file="file://$PROJECT_DIR$/tidder-front/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="70" selection-start-line="2" selection-start-column="70" selection-end-line="2" selection-end-column="70" />
+            <state relative-caret-position="119">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tidder-eureka/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -90,10 +93,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tidder-oauth/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tidder-zuul/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="626">
-              <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+              <caret line="72" selection-start-line="72" selection-end-line="72" />
             </state>
           </provider>
         </entry>
@@ -102,7 +114,7 @@
         <entry file="file://$PROJECT_DIR$/tidder-zuul/src/main/java/app/sagen/tidderzuul/GatewayConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
@@ -145,18 +157,18 @@
         <option value="$PROJECT_DIR$/tidder-test2/pom.xml" />
         <option value="$PROJECT_DIR$/tidder-test1/pom.xml" />
         <option value="$PROJECT_DIR$/tidder-oauth/pom.xml" />
-        <option value="$PROJECT_DIR$/tidder-front/pom.xml" />
         <option value="$PROJECT_DIR$/tidder-test2/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/tidder-test1/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/tidder-oauth/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/tidder-front/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/tidder-zuul/src/main/java/app/sagen/tidderzuul/HostHeaderFilter.java" />
         <option value="$PROJECT_DIR$/tidder-zuul/src/main/java/app/sagen/tidderzuul/ZuulHostFilter.java" />
         <option value="$PROJECT_DIR$/tidder-zuul/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/docker-compose.yml" />
         <option value="$PROJECT_DIR$/tidder-zuul/src/main/java/app/sagen/tidderzuul/GatewayConfiguration.java" />
         <option value="$PROJECT_DIR$/tidder-zuul/pom.xml" />
         <option value="$PROJECT_DIR$/tidder-zuul/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/tidder-front/pom.xml" />
+        <option value="$PROJECT_DIR$/docker-compose.yml" />
+        <option value="$PROJECT_DIR$/tidder-front/src/main/resources/application.properties" />
       </list>
     </option>
   </component>
@@ -183,9 +195,8 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="666" />
-    <option name="y" value="-16" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -403,7 +414,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554067818614" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554116049268" />
     <property name="last_opened_file_path" value="$USER_HOME$/OneDrive - OsloMet/Sagen/Utvikling/java/Idea Projects" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -500,7 +511,7 @@
       <option name="presentableId" value="Default" />
       <updated>1553784422532</updated>
       <workItem from="1553784427328" duration="12819000" />
-      <workItem from="1554039673881" duration="8658000" />
+      <workItem from="1554039673881" duration="10883000" />
     </task>
     <task id="LOCAL-00001" summary="Added Dockerfiles">
       <created>1553962153278</created>
@@ -558,17 +569,24 @@
       <option name="project" value="LOCAL" />
       <updated>1554066624596</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Removed security">
+      <created>1554067836885</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1554067836885</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27804000" />
+    <option name="totallyTimeSpent" value="30029000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23134328" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.35448578" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" />
@@ -591,13 +609,13 @@
       <window_info anchor="bottom" id="Statistic" order="11" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" visible="true" weight="0.15926327" />
+      <window_info anchor="bottom" id="Version Control" order="14" visible="true" weight="0.16083151" />
       <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="16" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.07782516" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.15973742" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Key Promoter X" order="6" />
@@ -619,7 +637,8 @@
     <MESSAGE value="Zuul forward Host headers" />
     <MESSAGE value="Added oauth to zuul" />
     <MESSAGE value="Temp disabled security" />
-    <option name="LAST_COMMIT_MESSAGE" value="Temp disabled security" />
+    <MESSAGE value="Removed security" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed security" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/tidder-eureka/src/main/java/app/sagen/tidder/tiddereureka/ServletInitializer.java" />
@@ -782,27 +801,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-oauth/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="66" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-front/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="66" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-eureka/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="42" lean-forward="true" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tidder-test2/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -817,31 +815,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-oauth/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="29" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-eureka/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tidder-zuul/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -859,13 +836,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tidder-zuul/src/main/java/app/sagen/tidderzuul/TidderZuulApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -876,21 +846,70 @@
     <entry file="file://$PROJECT_DIR$/tidder-zuul/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="626">
-          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tidder-zuul/src/main/java/app/sagen/tidderzuul/GatewayConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-oauth/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="29" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-oauth/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tidder-zuul/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-eureka/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-front/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-eureka/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
