@@ -6,7 +6,7 @@ services:
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
-      MYSQL_RANDOM_ROOT_PASSWORD: true
+      MYSQL_RANDOM_ROOT_PASSWORD: yes
       MYSQL_DATABASE: tidder
       MYSQL_USER: tidderadmin
       MYSQL_PASSWORD: nimdareddit
