@@ -40,7 +40,7 @@ public class UserController {
         response += "Listening to port: " + serverPort + "\n";
         response += "Server time: " + new Date().toString() + "\n";
 
-        return response;
+        return response.replace("\n", "<br/>\n");
     }
 
 }
