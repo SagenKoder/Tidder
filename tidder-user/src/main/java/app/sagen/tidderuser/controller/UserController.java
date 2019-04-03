@@ -23,13 +23,13 @@ public class UserController {
             Enumeration<NetworkInterface> networkInterfaces = NetworkInterface.getNetworkInterfaces();
             while(networkInterfaces.hasMoreElements()) {
                 NetworkInterface networkInterface = networkInterfaces.nextElement();
-                String inetData = "  - " + networkInterface.getDisplayName() + "\n";
+                String inetData = "<a>  - " + networkInterface.getDisplayName() + "\n";
                 Enumeration<InetAddress> inetAddresses = networkInterface.getInetAddresses();
                 int num = 0;
                 while(inetAddresses.hasMoreElements()) {
                     num++;
                     InetAddress inetAddress = inetAddresses.nextElement();
-                    inetData += "    - " + inetAddress.getHostAddress() + "</a>\n";
+                    inetData += "<a>    - " + inetAddress.getHostAddress() + "</a>\n";
                 }
                 if(num > 0) response += inetData;
             }
