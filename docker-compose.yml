@@ -69,3 +69,9 @@ services:
     deploy:
       mode: replicated
       replicas: 1
+networks:
+  tidder_default:
+    ipam:
+      driver: default
+      config:
+      - subnet: 46.4.245.160/28
