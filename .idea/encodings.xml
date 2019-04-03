@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
     <file url="file://$PROJECT_DIR$/tidder-eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tidder-front" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tidder-oauth" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tidder-test1" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tidder-test2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tidder-user" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tidder-zuul" charset="UTF-8" />
   </component>
 </project>

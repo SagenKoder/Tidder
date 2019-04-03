@@ -47,7 +47,7 @@
                 <li th:if="${currentUser==null}" class="nav-item">
                     <a class="nav-link" th:href="@{/signup}">Sign up</a>
                 </li>
-                <li th:if="${currentUser!=null && currentUser.getRoles().contains(T(app.sagen.tidderfront.Role).ROLE_ADMIN)}" class="nav-item dropdown">
+                <li th:if="${currentUser!=null && currentUser.getRoles().contains(T(app.sagen.tidderuser.Role).ROLE_ADMIN)}" class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-admin" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fa fa-user"></i><span th:text="${' Admin'}"></span>
                     </a>

@@ -16,6 +16,7 @@
         <module>tidder-test1</module>
         <module>tidder-test2</module>
         <module>tidder-zuul</module>
+        <module>tidder-user</module>
     </modules>
     
 </project>

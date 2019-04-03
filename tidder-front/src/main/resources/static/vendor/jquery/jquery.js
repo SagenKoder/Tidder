@@ -5049,7 +5049,7 @@ jQuery.event = {
 				}
 			}
 
-			// Add to the element's handler list, delegates in tidderfront
+			// Add to the element's handler list, delegates in tidderuser
 			if ( selector ) {
 				handlers.splice( handlers.delegateCount++, 0, handleObj );
 			} else {
