@@ -1,6 +1,9 @@
 package app.sagen.tidderuser.controller;
 
+import app.sagen.tidderuser.service.EmailService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,6 +14,9 @@ import java.util.Enumeration;
 
 @RestController
 public class UserController {
+
+    @Autowired
+    EmailService emailService;
 
     @Value("${server.port}")
     private String serverPort;
@@ -41,6 +47,12 @@ public class UserController {
         response += "<a>Server time: " + new Date().toString() + "</a>\n";
 
         return response.replace("\n", "<br/>\n");
+    }
+
+    @RequestMapping("/sendMail/{to}")
+    public String sendMail(@PathVariable("to") String to) {
+        emailService.sendSimpleMessage(to, "Test email from Tidder", "This is a test email from tidder!\nIf you received this, you are cool AF <3");
+        return "Sent email to " + to;
     }
 
 }
