@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.util.Date;
@@ -36,18 +37,27 @@ public class UserController {
         return userService.findAll();
     }
 
-    @GetMapping("/email/{email}")
-    public List<User> getByEmail(@PathVariable String email) {
-        return userService.findAllByEmail(email);
+    @PostMapping("/")
+    public User saveUser(HttpServletResponse response, @RequestBody User user) {
+        return userService.save(user);
     }
 
-    @GetMapping("/username/{username}")
+    @GetMapping("/u/{username}")
     public User getByUsername(@PathVariable String username) {
         Optional<User> optUser = userService.findByUsername(username);
         return optUser.orElseGet(() -> {throw new ResourceNotFoundException("Could not find a user with the username: " + username);});
     }
 
-    @PostMapping("/username/{username}/sendEmail")
+    @PostMapping("/u/{username}")
+    public User updateUser(@PathVariable String username, @RequestBody User user) {
+        Optional<User> optUser = userService.update(user, username);
+        if(!optUser.isPresent()) {
+            throw new ResourceNotFoundException("Could not find a user with the username: " + username);
+        }
+        return optUser.get();
+    }
+
+    @PostMapping("/u/{username}/sendEmail")
     public ResponseSendtEmail sendMailUser(@PathVariable String username, @RequestBody RequestEmail requestEmail) {
         Optional<User> optUser = userService.findByUsername(username);
         if(!optUser.isPresent()) {
@@ -57,11 +67,21 @@ public class UserController {
         return new ResponseSendtEmail(optUser.get().getEmail(), requestEmail.getHeader(), requestEmail.getBody(), "OK", "Email successfully sent!");
     }
 
-    @PostMapping("/sendMail/{email}")
-    public ResponseSendtEmail sendMailEmail(@PathVariable() String email, @RequestBody RequestEmail requestEmail) {
-        emailService.sendSimpleEmail(email, requestEmail.getHeader(), requestEmail.getBody());
-        return new ResponseSendtEmail(email, requestEmail.getHeader(), requestEmail.getBody(), "OK", "Email successfully sent!");
+    @DeleteMapping("/u/{username}")
+    public void deleteUser(@PathVariable String username) {
+        userService.delete(username);
     }
+
+    @GetMapping("/email/{email}")
+    public List<User> getByEmail(@PathVariable String email) {
+        return userService.findAllByEmail(email);
+    }
+
+//    @PostMapping("/sendEmail/{email}")
+//    public ResponseSendtEmail sendMailEmail(@PathVariable() String email, @RequestBody RequestEmail requestEmail) {
+//        emailService.sendSimpleEmail(email, requestEmail.getHeader(), requestEmail.getBody());
+//        return new ResponseSendtEmail(email, requestEmail.getHeader(), requestEmail.getBody(), "OK", "Email successfully sent!");
+//    }
 
     @RequestMapping("/meta")
     public String home() {

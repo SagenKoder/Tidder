@@ -2,8 +2,9 @@ package app.sagen.tidderfront.service;
 
 import app.sagen.tidderfront.Role;
 import app.sagen.tidderfront.model.User;
-import app.sagen.tidderfront.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -12,48 +13,90 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
+import java.net.URI;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Service
 public class UserService implements UserDetailsService {
 
-    private UserRepository userRepository;
+    private RestTemplate restTemplate = new RestTemplate();
+    private LoadBalancerClient loadBalancer;
+
+    private URI getUserService() {
+        ServiceInstance instance = loadBalancer.choose("stores");
+        return URI.create(String.format("http://%s:%s", instance.getHost(), instance.getPort()));
+    }
 
     @Autowired
-    private UserService(UserRepository userRepository) {
-        this.userRepository = userRepository;
+    private UserService(LoadBalancerClient loadBalancer) {
+        this.loadBalancer = loadBalancer;
     }
 
-    @Override
-    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        Optional<User> user = userRepository.findUserByEmail(email);
-        if(!user.isPresent()) throw new UsernameNotFoundException("Not found user with email: " + email);
-        return user.get();
+    public List<User> findAll() {
+        return Arrays.stream(Objects.requireNonNull(restTemplate.getForObject(getUserService(), User[].class)))
+                .collect(Collectors.toList());
     }
 
-    public Optional<User> loadUserById(long id) {
-        return userRepository.findById(id);
+    public long count() {
+        return findAll().size();
+    }
+
+    public List<User> findAllByEmail(String email) {
+        URI uri = getUserService().resolve("/email/" + email);
+        return Arrays.stream(Objects.requireNonNull(restTemplate.getForObject(uri, User[].class)))
+                .collect(Collectors.toList());
+    }
+
+    public Optional<User> findByUsername(String username) {
+        URI uri = getUserService().resolve("/u/" + username);
+        try {
+            return Optional.ofNullable(restTemplate.getForObject(uri, User.class));
+        } catch (Exception e){
+            e.printStackTrace();
+            return Optional.empty();
+        }
+    }
+
+    public Optional<User> save(User user) {
+        try {
+            return Optional.ofNullable(restTemplate.postForObject(getUserService(), user, User.class));
+        } catch (Exception e) {
+            e.printStackTrace();
+            return Optional.empty();
+        }
+    }
+
+    public Optional<User> update(User user, String username) {
+        try {
+            return Optional.ofNullable(restTemplate.postForObject(getUserService().resolve("/u/" + username), user, User.class));
+        } catch (Exception e) {
+            e.printStackTrace();
+            return Optional.empty();
+        }
+    }
+
+    public void delete(User user) {
+        try {
+            restTemplate.delete(getUserService().resolve("/u/" + user.getUsername()));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void delete(String username) {
+        try {
+            restTemplate.delete(getUserService().resolve("/u/" + username));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public Optional<User> getAuthenticatedUser() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        return userRepository.findUserByEmail(auth.getName());
-    }
-
-    public List<User> getAll() {
-        return userRepository.findAll();
-    }
-
-    public long count() {
-        return userRepository.count();
-    }
-
-    public void save(User user) {
-        userRepository.save(user);
+        return findByUsername(auth.getName());
     }
 
     public void registerNewUser(User user) {
@@ -66,12 +109,11 @@ public class UserService implements UserDetailsService {
         save(user);
     }
 
-    public void delete(User user) {
-        userRepository.delete(user);
-    }
-
-    public void deleteById(long id) {
-        userRepository.deleteById(id);
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        Optional<User> user = findByUsername(username);
+        if(!user.isPresent()) throw new UsernameNotFoundException("Not found user with email: " + username);
+        return user.get();
     }
 
 }

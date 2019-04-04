@@ -17,7 +17,7 @@ public class UserService {
     private UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
         if(count() == 0) {
-            userRepository.save(new User("sagen", "Alexander Meisdalen", "Sagen", "alexmsagen@gmail.com", "SomeRandomPasswordHash"));
+            userRepository.save(new User("sagen", "Alexander Meisdalen", "Sagen", "alexmsagen@gmail.com", "{noop}alex123"));
         }
     }
 
@@ -37,17 +37,12 @@ public class UserService {
         return userRepository.findUserByUsername(username);
     }
 
-    public void save(User user) {
+    public User save(User user) {
         Optional<User> oldUserOpt = userRepository.findUserByUsername(user.getUsername());
-        if(oldUserOpt.isPresent()) {
-            update(oldUserOpt.get(), oldUserOpt.get().getUsername());
-        }
-        else {
-            userRepository.save(user);
-        }
+        return oldUserOpt.map(user1 -> update(user1, user1.getUsername()).get()).orElseGet(() -> userRepository.save(user));
     }
 
-    public void update(User user, String username) {
+    public Optional<User> update(User user, String username) {
         Optional<User> oldUserOpt = userRepository.findUserByUsername(username);
         if(oldUserOpt.isPresent()) {
             User oldUser = oldUserOpt.get();
@@ -62,7 +57,9 @@ public class UserService {
             if(user.getRoles() != null && !user.getRoles().isEmpty())
                 oldUser.setRoles(user.getRoles());
             save(oldUser);
+            return Optional.of(oldUser);
         }
+        return Optional.empty();
     }
 
     public void delete(User user) {
