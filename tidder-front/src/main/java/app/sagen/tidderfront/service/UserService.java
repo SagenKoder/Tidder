@@ -26,7 +26,7 @@ public class UserService implements UserDetailsService {
     private LoadBalancerClient loadBalancer;
 
     private URI getUserService() {
-        ServiceInstance instance = loadBalancer.choose("stores");
+        ServiceInstance instance = loadBalancer.choose("user");
         return URI.create(String.format("http://%s:%s", instance.getHost(), instance.getPort()));
     }
 
