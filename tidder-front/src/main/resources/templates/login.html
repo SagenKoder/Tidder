@@ -14,7 +14,7 @@
     <div class="col-sm-6 my-3 ">
         <h4 class="text-primary">Log in</h4>
         <i style="color:red" th:if="${error}">Wrong username or password!</i>
-        <form th:action="@{/login}"  method="POST">
+        <form th:action="@{/processLogin}"  method="POST">
 
             <div class="form-group">
                 <input type="text"  name="username" class="form-control" placeholder="username">
