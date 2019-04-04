@@ -52,6 +52,7 @@ public class UserService implements UserDetailsService {
 
     public Optional<User> findByUsername(String username) {
         URI uri = getUserService().resolve("/u/" + username);
+        System.out.println("FIND BY USERNAME URI: " + uri.toString());
         try {
             return Optional.ofNullable(restTemplate.getForObject(uri, User.class));
         } catch (Exception e){
