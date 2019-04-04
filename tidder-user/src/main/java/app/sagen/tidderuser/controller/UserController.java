@@ -1,6 +1,7 @@
 package app.sagen.tidderuser.controller;
 
 import app.sagen.tidderuser.exceptions.ResourceNotFoundException;
+import app.sagen.tidderuser.model.RequestEmail;
 import app.sagen.tidderuser.model.ResponseSendtEmail;
 import app.sagen.tidderuser.model.User;
 import app.sagen.tidderuser.service.EmailService;
@@ -74,14 +75,20 @@ public class UserController {
         return response.toString().replace("\n", "<br/>\n");
     }
 
-    @PostMapping("/sendMail/{username}")
-    public ResponseSendtEmail sendMail(@PathVariable() String username, @RequestParam String header, @RequestParam String body) {
+    @PostMapping("/username/{username}/sendEmail")
+    public ResponseSendtEmail sendMailUser(@PathVariable String username, @RequestBody RequestEmail requestEmail) {
         Optional<User> optUser = userService.findByUsername(username);
         if(!optUser.isPresent()) {
-            new ResponseSendtEmail(username, header, body, "ERROR", "Could not find the requested user!");
+            new ResponseSendtEmail(username, requestEmail.getHeader(), requestEmail.getBody(), "ERROR", "Could not find the requested user!");
         }
-        emailService.sendSimpleEmail(optUser.get().getEmail(), "Test email from Tidder", "This is a test email from tidder!\nIf you received this, you are cool AF <3");
-        return new ResponseSendtEmail(username, header, body, "OK", "Email successfully sent!");
+        emailService.sendSimpleEmail(username, requestEmail.getHeader(), requestEmail.getBody());
+        return new ResponseSendtEmail(username, requestEmail.getHeader(), requestEmail.getBody(), "OK", "Email successfully sent!");
+    }
+
+    @PostMapping("/sendMail/{email}")
+    public ResponseSendtEmail sendMailEmail(@PathVariable() String email, @RequestBody RequestEmail requestEmail) {
+        emailService.sendSimpleEmail(email, requestEmail.getHeader(), requestEmail.getBody());
+        return new ResponseSendtEmail(email, requestEmail.getHeader(), requestEmail.getBody(), "OK", "Email successfully sent!");
     }
 
 }
