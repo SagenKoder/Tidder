@@ -47,7 +47,23 @@ public class UserController {
         return optUser.orElseGet(() -> {throw new ResourceNotFoundException("Could not find a user with the username: " + username);});
     }
 
-    @RequestMapping("/")
+    @PostMapping("/username/{username}/sendEmail")
+    public ResponseSendtEmail sendMailUser(@PathVariable String username, @RequestBody RequestEmail requestEmail) {
+        Optional<User> optUser = userService.findByUsername(username);
+        if(!optUser.isPresent()) {
+            new ResponseSendtEmail(username, requestEmail.getHeader(), requestEmail.getBody(), "ERROR", "Could not find the requested user!");
+        }
+        emailService.sendSimpleEmail(username, requestEmail.getHeader(), requestEmail.getBody());
+        return new ResponseSendtEmail(username, requestEmail.getHeader(), requestEmail.getBody(), "OK", "Email successfully sent!");
+    }
+
+    @PostMapping("/sendMail/{email}")
+    public ResponseSendtEmail sendMailEmail(@PathVariable() String email, @RequestBody RequestEmail requestEmail) {
+        emailService.sendSimpleEmail(email, requestEmail.getHeader(), requestEmail.getBody());
+        return new ResponseSendtEmail(email, requestEmail.getHeader(), requestEmail.getBody(), "OK", "Email successfully sent!");
+    }
+
+    @RequestMapping("/meta")
     public String home() {
         StringBuilder response = new StringBuilder("<a>Welcome to the User Service!</a>\n");
         response.append("<a>I am assigned the following network interfaces:</a>\n");
@@ -74,21 +90,4 @@ public class UserController {
 
         return response.toString().replace("\n", "<br/>\n");
     }
-
-    @PostMapping("/username/{username}/sendEmail")
-    public ResponseSendtEmail sendMailUser(@PathVariable String username, @RequestBody RequestEmail requestEmail) {
-        Optional<User> optUser = userService.findByUsername(username);
-        if(!optUser.isPresent()) {
-            new ResponseSendtEmail(username, requestEmail.getHeader(), requestEmail.getBody(), "ERROR", "Could not find the requested user!");
-        }
-        emailService.sendSimpleEmail(username, requestEmail.getHeader(), requestEmail.getBody());
-        return new ResponseSendtEmail(username, requestEmail.getHeader(), requestEmail.getBody(), "OK", "Email successfully sent!");
-    }
-
-    @PostMapping("/sendMail/{email}")
-    public ResponseSendtEmail sendMailEmail(@PathVariable() String email, @RequestBody RequestEmail requestEmail) {
-        emailService.sendSimpleEmail(email, requestEmail.getHeader(), requestEmail.getBody());
-        return new ResponseSendtEmail(email, requestEmail.getHeader(), requestEmail.getBody(), "OK", "Email successfully sent!");
-    }
-
 }
