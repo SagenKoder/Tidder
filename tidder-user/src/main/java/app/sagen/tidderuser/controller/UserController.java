@@ -51,10 +51,10 @@ public class UserController {
     public ResponseSendtEmail sendMailUser(@PathVariable String username, @RequestBody RequestEmail requestEmail) {
         Optional<User> optUser = userService.findByUsername(username);
         if(!optUser.isPresent()) {
-            new ResponseSendtEmail(username, requestEmail.getHeader(), requestEmail.getBody(), "ERROR", "Could not find the requested user!");
+            return new ResponseSendtEmail(username, requestEmail.getHeader(), requestEmail.getBody(), "ERROR", "Could not find the requested user!");
         }
-        emailService.sendSimpleEmail(username, requestEmail.getHeader(), requestEmail.getBody());
-        return new ResponseSendtEmail(username, requestEmail.getHeader(), requestEmail.getBody(), "OK", "Email successfully sent!");
+        emailService.sendSimpleEmail(optUser.get().getEmail(), requestEmail.getHeader(), requestEmail.getBody());
+        return new ResponseSendtEmail(optUser.get().getEmail(), requestEmail.getHeader(), requestEmail.getBody(), "OK", "Email successfully sent!");
     }
 
     @PostMapping("/sendMail/{email}")
