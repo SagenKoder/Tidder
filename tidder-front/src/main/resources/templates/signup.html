@@ -16,6 +16,9 @@
         <b th:if="${createAdmin}"><i>Note: No other users exists! This user will be giver administrator privileges automatically!</i></b>
         <form th:action="@{/signup}" th:modelAttribute="user" method="post">
             <div class="form-group">
+                <input type="text"   name="username" class="form-control" placeholder="Username">
+            </div>
+            <div class="form-group">
                 <input type="text"   name="firstName" class="form-control" placeholder="First Name">
             </div>
             <div class="form-group">
