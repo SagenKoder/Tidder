@@ -1,58 +1,87 @@
 package app.sagen.tidderuser.controller;
 
+import app.sagen.tidderuser.exceptions.ResourceNotFoundException;
+import app.sagen.tidderuser.model.ResponseSendtEmail;
+import app.sagen.tidderuser.model.User;
 import app.sagen.tidderuser.service.EmailService;
+import app.sagen.tidderuser.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.util.Date;
 import java.util.Enumeration;
+import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class UserController {
 
-    @Autowired
-    EmailService emailService;
-
     @Value("${server.port}")
     private String serverPort;
+    private EmailService emailService;
+    private UserService userService;
+
+    @Autowired
+    public UserController(EmailService emailService, UserService userService) {
+        this.emailService = emailService;
+        this.userService = userService;
+    }
+
+    @GetMapping("/")
+    public List<User> getAll() {
+        return userService.findAll();
+    }
+
+    @GetMapping("/email/{email}")
+    public List<User> getByEmail(@PathVariable String email) {
+        return userService.findAllByEmail(email);
+    }
+
+    @GetMapping("/username/{username}")
+    public User getByUsername(@PathVariable String username) {
+        Optional<User> optUser = userService.findByUsername(username);
+        return optUser.orElseGet(() -> {throw new ResourceNotFoundException("Could not find a user with the username: " + username);});
+    }
 
     @RequestMapping("/")
     public String home() {
-        String response = "<a>Welcome to the User Service!</a>\n";
-        response += "<a>I am assigned the following network interfaces:</a>\n";
+        StringBuilder response = new StringBuilder("<a>Welcome to the User Service!</a>\n");
+        response.append("<a>I am assigned the following network interfaces:</a>\n");
         try {
             Enumeration<NetworkInterface> networkInterfaces = NetworkInterface.getNetworkInterfaces();
             while(networkInterfaces.hasMoreElements()) {
                 NetworkInterface networkInterface = networkInterfaces.nextElement();
-                String inetData = "<a>&nbsp&nbsp- " + networkInterface.getDisplayName() + "\n";
+                StringBuilder inetData = new StringBuilder("<a>&nbsp&nbsp- " + networkInterface.getDisplayName() + "\n");
                 Enumeration<InetAddress> inetAddresses = networkInterface.getInetAddresses();
                 int num = 0;
                 while(inetAddresses.hasMoreElements()) {
                     num++;
                     InetAddress inetAddress = inetAddresses.nextElement();
-                    inetData += "<a>&nbsp&nbsp&nbsp&nbsp- " + inetAddress.getHostAddress() + "</a>\n";
+                    inetData.append("<a>&nbsp&nbsp&nbsp&nbsp- ").append(inetAddress.getHostAddress()).append("</a>\n");
                 }
-                if(num > 0) response += inetData;
+                if(num > 0) response.append(inetData);
             }
         } catch (Exception e) {
-            response += "<a>Exception while getting interface information! Error: " + e.getMessage();
+            response.append("<a>Exception while getting interface information! Error: ").append(e.getMessage());
             e.printStackTrace();
         }
-        response += "<a>Listening to port: " + serverPort + "</a>\n";
-        response += "<a>Server time: " + new Date().toString() + "</a>\n";
+        response.append("<a>Listening to port: ").append(serverPort).append("</a>\n");
+        response.append("<a>Server time: ").append(new Date().toString()).append("</a>\n");
 
-        return response.replace("\n", "<br/>\n");
+        return response.toString().replace("\n", "<br/>\n");
     }
 
-    @RequestMapping("/sendMail/{to}")
-    public String sendMail(@PathVariable("to") String to) {
-        emailService.sendSimpleMessage(to, "Test email from Tidder", "This is a test email from tidder!\nIf you received this, you are cool AF <3");
-        return "Sent email to " + to;
+    @PostMapping("/sendMail/{username}")
+    public ResponseSendtEmail sendMail(@PathVariable() String username, @RequestParam String header, @RequestParam String body) {
+        Optional<User> optUser = userService.findByUsername(username);
+        if(!optUser.isPresent()) {
+            new ResponseSendtEmail(username, header, body, "ERROR", "Could not find the requested user!");
+        }
+        emailService.sendSimpleEmail(optUser.get().getEmail(), "Test email from Tidder", "This is a test email from tidder!\nIf you received this, you are cool AF <3");
+        return new ResponseSendtEmail(username, header, body, "OK", "Email successfully sent!");
     }
 
 }

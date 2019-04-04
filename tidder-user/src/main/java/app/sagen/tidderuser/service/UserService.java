@@ -18,11 +18,7 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public Optional<User> loadUserById(long id) {
-        return userRepository.findById(id);
-    }
-
-    public List<User> getAll() {
+    public List<User> findAll() {
         return userRepository.findAll();
     }
 
@@ -30,16 +26,48 @@ public class UserService {
         return userRepository.count();
     }
 
+    public List<User> findAllByEmail(String email) {
+        return userRepository.findAllByEmail(email);
+    }
+
+    public Optional<User> findByUsername(String username) {
+        return userRepository.findUserByUsername(username);
+    }
+
     public void save(User user) {
-        userRepository.save(user);
+        Optional<User> oldUserOpt = userRepository.findUserByUsername(user.getUsername());
+        if(oldUserOpt.isPresent()) {
+            update(oldUserOpt.get(), oldUserOpt.get().getUsername());
+        }
+        else {
+            userRepository.save(user);
+        }
+    }
+
+    public void update(User user, String username) {
+        Optional<User> oldUserOpt = userRepository.findUserByUsername(username);
+        if(oldUserOpt.isPresent()) {
+            User oldUser = oldUserOpt.get();
+            if(user.getEmail() != null)
+                oldUser.setEmail(user.getEmail());
+            if(user.getFirstName() != null)
+                oldUser.setFirstName(user.getFirstName());
+            if(user.getLastName() != null)
+                oldUser.setLastName(user.getLastName());
+            if(user.getPassword() != null)
+                oldUser.setPassword(user.getPassword());
+            if(user.getRoles() != null && !user.getRoles().isEmpty())
+                oldUser.setRoles(user.getRoles());
+            save(oldUser);
+        }
     }
 
     public void delete(User user) {
         userRepository.delete(user);
     }
 
-    public void deleteById(long id) {
-        userRepository.deleteById(id);
+    public void delete(String username) {
+        userRepository.delete(new User(username));
     }
 
 }

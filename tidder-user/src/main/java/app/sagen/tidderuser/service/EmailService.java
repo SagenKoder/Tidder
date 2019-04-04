@@ -17,7 +17,7 @@ public class EmailService {
     }
 
     @Async
-    public void sendSimpleMessage(String to, String subject, String text) {
+    public void sendSimpleEmail(String to, String subject, String text) {
         SimpleMailMessage message = new SimpleMailMessage();
         message.setTo(to);
         message.setSubject(subject);
