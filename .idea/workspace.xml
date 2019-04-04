@@ -78,8 +78,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/config/SecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+            <state relative-caret-position="393">
+              <caret line="33" column="69" selection-start-line="33" selection-start-column="69" selection-end-line="33" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -213,11 +213,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
     <option name="width" value="974" />
-    <option name="height" value="564" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -379,7 +378,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554417778363" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554418283832" />
     <property name="last_opened_file_path" value="$USER_HOME$/OneDrive - OsloMet/Sagen/Utvikling/java/Idea Projects" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -492,7 +491,7 @@
       <workItem from="1553784427328" duration="12819000" />
       <workItem from="1554039673881" duration="14990000" />
       <workItem from="1554150910669" duration="5986000" />
-      <workItem from="1554388417217" duration="20340000" />
+      <workItem from="1554388417217" duration="20823000" />
     </task>
     <task id="LOCAL-00001" summary="Added Dockerfiles">
       <created>1553962153278</created>
@@ -753,17 +752,24 @@
       <option name="project" value="LOCAL" />
       <updated>1554417101826</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Use default login page">
+      <created>1554417790448</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1554417790448</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60462000" />
+    <option name="totallyTimeSpent" value="60945000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13965885" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2866521" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" />
@@ -793,7 +799,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.07782516" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.15973742" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Key Promoter X" order="6" />
@@ -807,7 +813,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added eureka to navbar" />
     <MESSAGE value="Added tidder-user" />
     <MESSAGE value="Added &lt;br&gt; to user /" />
     <MESSAGE value="Added &lt;a&gt;" />
@@ -832,7 +837,8 @@
     <MESSAGE value="Added debug" />
     <MESSAGE value="Defined username and password" />
     <MESSAGE value="Changed url for login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed url for login" />
+    <MESSAGE value="Use default login page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Use default login page" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/tidder-zuul/src/main/resources/application.properties" />
@@ -1314,8 +1320,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/config/SecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+        <state relative-caret-position="393">
+          <caret line="33" column="69" selection-start-line="33" selection-start-column="69" selection-end-line="33" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
