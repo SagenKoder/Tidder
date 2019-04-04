@@ -19,6 +19,7 @@ import java.util.Set;
 public class User{
 
     @Id
+    @Column(name="username")
     private String username;
     private String firstName;
     private String lastName;
