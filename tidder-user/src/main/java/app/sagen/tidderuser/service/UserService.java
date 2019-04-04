@@ -5,6 +5,7 @@ import app.sagen.tidderuser.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -19,6 +20,10 @@ public class UserService {
     }
 
     public List<User> findAll() {
+        List<User> allUsers = userRepository.findAll();
+        if(allUsers.isEmpty()) {
+            allUsers.add(new User("sagen", "Alexander Meisdalen", "Sagen", "alexmsagen@gmail.com", "SomeRandomPasswordHash"));
+        }
         return userRepository.findAll();
     }
 
@@ -27,10 +32,16 @@ public class UserService {
     }
 
     public List<User> findAllByEmail(String email) {
+        if(email.equals("alexmsagen@gmail.com")) {
+            return Collections.singletonList(new User("sagen", "Alexander Meisdalen", "Sagen", "alexmsagen@gmail.com", "SomeRandomPasswordHash"));
+        }
         return userRepository.findAllByEmail(email);
     }
 
     public Optional<User> findByUsername(String username) {
+        if(username.equals("sagen")) {
+            return Optional.of(new User("sagen", "Alexander Meisdalen", "Sagen", "alexmsagen@gmail.com", "SomeRandomPasswordHash"));
+        }
         return userRepository.findUserByUsername(username);
     }
 
