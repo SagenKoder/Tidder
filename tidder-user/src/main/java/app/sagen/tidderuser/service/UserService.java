@@ -1,5 +1,6 @@
 package app.sagen.tidderuser.service;
 
+import app.sagen.tidderuser.Role;
 import app.sagen.tidderuser.model.User;
 import app.sagen.tidderuser.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +8,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @Service
 public class UserService {
@@ -17,7 +20,9 @@ public class UserService {
     private UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
         if(count() == 0) {
-            userRepository.save(new User("sagen", "Alexander Meisdalen", "Sagen", "alexmsagen@gmail.com", "{noop}alex123"));
+            User user = new User("sagen", "Alexander Meisdalen", "Sagen", "alexmsagen@gmail.com", "{noop}alex123");
+            user.setRoles(Stream.of(Role.ROLE_USER, Role.ROLE_ADMIN).collect(Collectors.toSet()));
+            userRepository.save(user);
         }
     }
 
