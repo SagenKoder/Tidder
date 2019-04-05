@@ -45,6 +45,7 @@ public class UserController {
     @GetMapping("/u/{username}")
     public User getByUsername(@PathVariable String username) {
         Optional<User> optUser = userService.findByUsername(username);
+        System.out.println("USER SERVICE :::::: GETTING USER " + username + " :::::: RETURNING " + optUser);
         return optUser.orElseGet(() -> {throw new ResourceNotFoundException("Could not find a user with the username: " + username);});
     }
 

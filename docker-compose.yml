@@ -78,7 +78,7 @@ services:
       - "9090"
     deploy:
       mode: replicated
-      replicas: 5
+      replicas: 1
 networks:
   tidder_default:
     ipam:

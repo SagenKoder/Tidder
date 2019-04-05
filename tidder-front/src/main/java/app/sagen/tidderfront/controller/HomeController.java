@@ -23,6 +23,7 @@ public class HomeController {
 
     @GetMapping()
     public String homePage(Model model){
+        System.out.println("FRONT :::::: HomeController :::::: GET homepage");
         Optional<User> user = userService.getAuthenticatedUser();
         model.addAttribute("currentUser", user.orElseGet(null));
         return "home";

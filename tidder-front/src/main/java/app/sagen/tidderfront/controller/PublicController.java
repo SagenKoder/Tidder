@@ -24,6 +24,7 @@ public class PublicController {
 
     @GetMapping("/login")
     public String login(Model model, @RequestParam(value = "error", required = false) String err){
+        System.out.println("FRONT :::::: PublicController :::::: GET login");
         Optional<User> user = userService.getAuthenticatedUser();
         user.ifPresent(user1 -> model.addAttribute("currentUser", user1));
         model.addAttribute("error", err != null);
@@ -32,6 +33,7 @@ public class PublicController {
 
     @GetMapping("/signup")
     public String signup(Model model){
+        System.out.println("FRONT :::::: PublicController :::::: GET signup");
         Optional<User> user = userService.getAuthenticatedUser();
         user.ifPresent(user1 -> model.addAttribute("currentUser", user1));
         model.addAttribute("createAdmin", userService.count() == 0);
@@ -40,12 +42,14 @@ public class PublicController {
 
     @PostMapping("/signup")
     public String register(@ModelAttribute("user") User user){
+        System.out.println("FRONT :::::: PublicController :::::: POST signup");
         userService.registerNewUser(user);
         return "redirect:/login";
     }
 
     @GetMapping("/")
     public String homePage(Model model ){
+        System.out.println("FRONT :::::: PublicController :::::: GET homepage");
         Optional<User> user = userService.getAuthenticatedUser();
         user.ifPresent(user1 -> model.addAttribute("currentUser", user1));
         return "index";
