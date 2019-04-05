@@ -12,10 +12,10 @@
 
 <div class="container">
     <h3>Admin users!</h3>
-    <div th:if="${editUser.getEmail()!=null}" class="col-3">
+    <div th:if="${editUser.getUsername()!=null}" class="col-3">
         <h5 class="text-primary">Edit User</h5>
-        <form class="form-inline" th:action="${'/admin/user/save/'}+${editUser.getEmail()}" th:modelAttribute="editUser" method="post">
-            <input type="hidden" th:value="${editUser.getEmail()}" name="id">
+        <form class="form-inline" th:action="${'/admin/user/save/'}+${editUser.getUsername()}" th:modelAttribute="editUser" method="post">
+            <input type="hidden" th:value="${editUser.getUsername()}" name="id">
             <div class="form-group">
                 <input type="text" th:value="${editUser.getFirstName()}" name="firstName" class="form-control" placeholder="First Name">
                 <input type="text" th:value="${editUser.getLastName()}" name="lastName" class="form-control" placeholder="Last Name">
@@ -31,11 +31,12 @@
         </form>
     </div>
     <div class="row">
-        <div class="col-9">
+        <div class="col-md">
             <h5 class="text-primary">All registered Users</h5>
             <table class="table table-bordered table-hover">
                 <thead class="thead-dark">
                 <tr>
+                    <th>Username</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Roles</th>
@@ -45,14 +46,15 @@
                 </thead>
                 <tbody>
                 <tr th:each="user : ${allUsers}">
+                    <td th:text="${user.getUsername()}"></td>
                     <td th:text="${user.getLastName()}+${', '}+${user.getFirstName()}"></td>
                     <td th:text="${user.getEmail()}"></td>
                     <td><span th:each="role, itr : ${user.getRoles()}" th:text="!${itr.last} ? ${role.toString()} + ', ': ${role.toString()}"></span></td>
                     <td>
-                        <a class="btn btn-warning" th:href="${'/admin/user/edit/'}+${user.getEmail()}">Edit</a>
+                        <a class="btn btn-warning" th:href="${'/admin/user/edit/'}+${user.getUsername()}">Edit</a>
                     </td>
                     <td>
-                        <a class="btn btn-danger" th:href="${'/admin/user/delete/'}+${user.getEmail()}">Delete</a>
+                        <a class="btn btn-danger" th:href="${'/admin/user/delete/'}+${user.getUsername()}">Delete</a>
                     </td>
                 </tr>
                 <tr th:if="${allUsers.isEmpty()}">
