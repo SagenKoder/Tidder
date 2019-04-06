@@ -33,7 +33,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.ALWAYS);
         http.authorizeRequests()
-                .antMatchers("/", "/signup", "/h2-console/**", "/css/**", "/scss/**", "/js/**", "/img/**", "/vendor/**").permitAll()
+                .antMatchers("/", "/signup", "/h2-console/**", "/css/**", "/scss/**", "/js/**", "/img/**", "/vendor/**", "/t**").permitAll()
                 .antMatchers("/home/**").hasRole("USER")
                 .antMatchers("/admin/**").hasRole("ADMIN")
                 .anyRequest().authenticated()
