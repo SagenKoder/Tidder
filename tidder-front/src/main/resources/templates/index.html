@@ -26,9 +26,13 @@
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading text-uppercase">Start exploring</h2>
                 <h3 class="section-subheading text-muted">Select a tidder channel to continue</h3>
-                <form class="form-horizontal active-purple active-purple-2 mt-2" action="/t" method="POST">
-                    <i th:if="false" class="fas fa-search" aria-hidden="true"></i>
-                    <input name="topic" class="form-control form-control-sm ml-3" type="text" placeholder="Topic" aria-label="Topic">
+                <form class="form-inline active-purple active-purple-2 mt-2" action="/t" method="POST">
+                    <select name="topic" class="mdb-select" searchable="Search here..">
+                        <option value="" disabled selected>Select a topic</option>
+                        <option value="All" data-icon="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="rounded-circle">All</option>
+                        <option value="Technology" data-icon="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle">Technology</option>
+                        <option value="StupidPeopleFight" data-icon="https://mdbootstrap.com/img/Photos/Avatars/avatar-3.jpg" class="rounded-circle">StupidPeopleFight</option>
+                    </select>
                 </form>
             </div>
         </div>
