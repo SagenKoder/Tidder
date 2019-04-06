@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title th:include="::#pageTitle">Sagen.App</title>
+    <title th:include="::#pageTitle">Tidder</title>
 
     <link rel="shortcut icon" href="/img/favicon.png" />
 
@@ -31,7 +31,7 @@
 <!-- HEADER -->
 <nav th:fragment="sagenapp_header(currentUser, fixedNav)" th:id="${fixedNav} ? 'mainNav' : ''" th:class="${!fixedNav} ? 'navbar navbar-expand-lg navbar-dark navbar-shrink mainNavbar' : 'navbar navbar-expand-lg navbar-dark navbar-shrink mainNavbar fixed-top'">
     <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="/">Sagen.App</a>
+        <a class="navbar-brand js-scroll-trigger" href="/">Tidder - Explore the web</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i class="fas fa-bars"></i>
