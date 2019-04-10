@@ -23,13 +23,13 @@
 <section th:if="true" id="searchTopics">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center">
+            <div class="col-lg-12 text-center d-flex justify-content-center">
                 <h2 class="section-heading text-uppercase">Start exploring</h2>
                 <h3 class="section-subheading text-muted">Select a tidder channel to continue</h3>
-                <form class="form-inline active-purple active-purple-2 mt-2" action="/t" method="POST">
-
-
-
+                <!-- Search form -->
+                <form class="form-inline active-purple-3 active-purple-4 col-4">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
                 </form>
             </div>
         </div>
