@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0c11b0fa-9b05-4d38-8a87-03744b940b4a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tidder-front/src/main/resources/static/css/agency.css" beforeDir="false" afterPath="$PROJECT_DIR$/tidder-front/src/main/resources/static/css/agency.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tidder-front/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tidder-front/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -31,8 +30,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="38" column="38" lean-forward="true" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
+            <state relative-caret-position="323">
+              <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/FrontController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -53,20 +64,6 @@
               <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/service/UserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1430#1431#0" expanded="true" />
-                <element signature="e#1478#1479#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -220,8 +217,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="322" />
-    <option name="y" value="-13" />
+    <option name="x" value="74" />
+    <option name="y" value="-21" />
     <option name="width" value="974" />
     <option name="height" value="564" />
   </component>
@@ -258,6 +255,33 @@
               <item name="tidder-front" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tidder" type="462c0819:PsiDirectoryNode" />
+              <item name="tidder-front" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tidder" type="462c0819:PsiDirectoryNode" />
+              <item name="tidder-front" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tidderfront" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tidder" type="462c0819:PsiDirectoryNode" />
+              <item name="tidder-front" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tidderfront" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
@@ -429,21 +453,7 @@
       <workItem from="1554574727055" duration="1881000" />
       <workItem from="1554675203770" duration="29000" />
       <workItem from="1554675396084" duration="13000" />
-      <workItem from="1554898451604" duration="5906000" />
-    </task>
-    <task id="LOCAL-00011" summary="Typo in docker-composer">
-      <created>1554116269228</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1554116269228</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Mysql utf8">
-      <created>1554117123556</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1554117123556</updated>
+      <workItem from="1554898451604" duration="6754000" />
     </task>
     <task id="LOCAL-00013" summary="Added eureka to navbar">
       <created>1554143557470</created>
@@ -774,11 +784,25 @@
       <option name="project" value="LOCAL" />
       <updated>1554916972098</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Fix css 7.0">
+      <created>1554917439689</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1554917439689</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Fix css 8.0">
+      <created>1554918019132</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1554918019133</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76425000" />
+    <option name="totallyTimeSpent" value="77273000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -828,8 +852,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Renamed uername in sql" />
-    <MESSAGE value="Back to h2 mem db" />
     <MESSAGE value="Added debug" />
     <MESSAGE value="Defined username and password" />
     <MESSAGE value="Changed url for login" />
@@ -853,7 +875,9 @@
     <MESSAGE value="Fix css 4.0" />
     <MESSAGE value="Fix css 5.0" />
     <MESSAGE value="Fix css 6.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix css 6.0" />
+    <MESSAGE value="Fix css 7.0" />
+    <MESSAGE value="Fix css 8.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix css 8.0" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/tidder-oauth/src/main/resources/application.properties">
@@ -1269,16 +1293,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/FrontController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1356,10 +1370,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/FrontController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="38" column="38" lean-forward="true" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
+        <state relative-caret-position="323">
+          <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
         </state>
       </provider>
     </entry>
