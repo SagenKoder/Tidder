@@ -341,3 +341,20 @@ ul.social-buttons li a {
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
   background-color: #fed136;
 }
+
+/* TOPIC IN HEADER */
+.navbar-nav input {
+  background-color: transparent;
+  transition: all .5s;
+  color: white;
+}
+.navbar-nav input::placeholder {
+  color: white;
+}
+.navbar-shrink input {
+  color: black;
+  background-color: white !important;
+}
+.navbar-shrink input::placeholder {
+  color: #212529 !important;
+}
