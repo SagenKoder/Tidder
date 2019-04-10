@@ -27,13 +27,17 @@
                 <h2 class="section-heading text-uppercase">Start exploring</h2>
                 <h3 class="section-subheading text-muted">Select a tidder channel to continue</h3>
                 <!-- Search form -->
-                <form class="form-inline md-form mr-auto mb-4">
-                    <div class="wrap">
-                        <div class="search">
-                            <input type="text" class="searchTerm" placeholder="What are you looking for?">
-                            <button type="submit" class="searchButton">
-                                <i class="fa fa-search"></i>
-                            </button>
+                <form action="/f" method="POST">
+                    <div class="row">
+                        <div class="col-xs-6 col-md-4">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Tidder" id="tidder"/>
+                                <div class="input-group-btn">
+                                    <button class="btn btn-primary" type="submit">
+                                        <span class="glyphicon glyphicon-search"></span>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </form>
