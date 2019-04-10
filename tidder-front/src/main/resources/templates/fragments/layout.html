@@ -4,7 +4,7 @@
 <!-- HEAD -->
 <head th:fragment="head">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -38,7 +38,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ml-auto">
-                <form action="/t" method="POST" class="mr-3 my-auto">
+                <form action="/t" method="POST" class="mr-3 my-auto sr-only">
                     <input type="text" class="form-control" placeholder="Topic" id="topic" name="topic"/>
                 </form>
                 <li th:if="${currentUser==null}" class="nav-item">
