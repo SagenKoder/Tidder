@@ -15,12 +15,12 @@
     <div class="container">
         <div class="intro-text">
             <div class="intro-lead-in">Topic <span th:text="${topicName}"></span></div>
-            <div th:if="false" class="intro-heading">Exploring the internet together</div>
+            <div class="intro-heading"></div>
         </div>
     </div>
 </header>
 
-<section th:if="!topicExists" id="notclaimed">
+<section th:if="${!topicExists}" id="notclaimed">
     <div class="container">
         <div class="row">
             <div class="col-md-6 text-center">
