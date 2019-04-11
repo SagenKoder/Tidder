@@ -5,7 +5,7 @@
     <title id="pageTitle">Tidder</title>
 </head>
 
-<body id="page-top">
+<body id="page-top" class="darktheme">
 
 <!-- Navigation -->
 <div th:replace="fragments/layout::sagenapp_header(${currentUser}, true)"></div>
@@ -14,8 +14,8 @@
 <header class="masthead">
     <div class="container">
         <div class="intro-text">
-            <div class="intro-lead-in">/t/<span th:text="${topicName}"></span></div>
-            <div th:if="${topicName}==${'all'}" class="intro-heading">Collection of the best posts from all categories</div>
+            <div class="intro-heading">/t/<span th:text="${topicName}"></span></div>
+            <div th:if="${topicName}==${'all'}" class="intro-lead-in">Collection of the best posts from all categories</div>
         </div>
     </div>
 </header>
