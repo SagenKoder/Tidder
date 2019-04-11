@@ -266,6 +266,11 @@ section#form3plus1 .form-group input.form-control {
   height: auto;
 }
 
+section#form3plus1 .form-group label.form-control {
+  height: auto;
+  color: #fff;
+}
+
 section#form3plus1 .form-group textarea.form-control {
   height: 248px;
 }
