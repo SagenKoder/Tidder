@@ -363,3 +363,17 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 .navbar-shrink input::placeholder {
   color: #212529 !important;
 }
+
+.darktheme {
+  background-color: #000;
+  color: #ccc;
+}
+.post {
+  background-color: #111;
+  color: #ccc;
+  padding: 10px 40px;
+}
+.userColumnContainer {
+  background-color: #111;
+  color: #ccc;
+}
