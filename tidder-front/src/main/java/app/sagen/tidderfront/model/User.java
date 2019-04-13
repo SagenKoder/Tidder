@@ -5,9 +5,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.factory.PasswordEncoderFactories;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
+import java.security.SecureRandom;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.Random;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -32,6 +36,24 @@ public class User implements UserDetails {
         this.lastName = lastName;
         this.email = email;
         this.password = password;
+    }
+
+    public void setAndEncryptPassword(String password) {
+        PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
+        setPassword(encoder.encode(password));
+    }
+
+    public String setAndReturnRandomPassword() {
+        int passwordLength = 16;
+        Random random = new SecureRandom();
+        String alphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        StringBuilder pass = new StringBuilder(passwordLength);
+        for (int i = 0; i < passwordLength; i++) {
+            pass.append(alphabet.charAt(random.nextInt(alphabet.length())));
+        }
+        String password = pass.toString();
+        setAndEncryptPassword(password);
+        return password;
     }
 
     /* ROLE_USER-DETAILS IMPLEMENTATION */

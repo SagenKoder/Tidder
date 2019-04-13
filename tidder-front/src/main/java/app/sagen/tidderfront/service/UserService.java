@@ -1,6 +1,8 @@
 package app.sagen.tidderfront.service;
 
 import app.sagen.tidderfront.Role;
+import app.sagen.tidderfront.model.RequestEmail;
+import app.sagen.tidderfront.model.ResponseSendtEmail;
 import app.sagen.tidderfront.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
@@ -115,6 +117,16 @@ public class UserService implements UserDetailsService {
         Optional<User> user = findByUsername(username);
         if(!user.isPresent()) throw new UsernameNotFoundException("Not found user with email: " + username);
         return user.get();
+    }
+
+    public Optional<ResponseSendtEmail> sendEmail(User user, String header, String body) {
+        URI uri = getUserService().resolve("/u/" + user.getUsername());
+        try {
+            return Optional.ofNullable(restTemplate.postForObject(uri, new RequestEmail(header, body), ResponseSendtEmail.class));
+        } catch (Exception e) {
+            e.printStackTrace();
+            return Optional.empty();
+        }
     }
 
 }

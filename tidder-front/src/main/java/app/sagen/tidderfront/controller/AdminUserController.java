@@ -1,5 +1,6 @@
 package app.sagen.tidderfront.controller;
 
+import app.sagen.tidderfront.model.ResponseSendtEmail;
 import app.sagen.tidderfront.model.User;
 import app.sagen.tidderfront.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,6 +49,22 @@ public class AdminUserController {
         model.addAttribute("allUsers", userService.findAll());
         model.addAttribute("editUser", editUser.get());
         return "adminUser";
+    }
+
+    @GetMapping("resetPassword/{id}")
+    public String resetPassowrd(Model model, @PathVariable("id") String id) {
+        Optional<User> user = userService.getAuthenticatedUser();
+        if(!user.isPresent()) return "redirect:/login";
+        Optional<User> editUser = userService.findByUsername(id);
+        if(!editUser.isPresent()) return "redirect:/admin/user";
+
+        String password = editUser.get().setAndReturnRandomPassword();
+
+        Optional<ResponseSendtEmail> response = userService.sendEmail(user.get(), "Tidder.no - Your new password...", "Here is your new password: \"" + password + "\"");
+        if(response.isPresent() && response.get().getStatus().equalsIgnoreCase("ok")) {
+            userService.update(user.get(), user.get().getUsername());
+        }
+        return "redirect:/admin/user";
     }
 
 }

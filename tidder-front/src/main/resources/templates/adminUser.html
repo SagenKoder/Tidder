@@ -56,6 +56,9 @@
                     <td>
                         <a class="btn btn-danger" th:href="${'/admin/user/delete/'}+${user.getUsername()}">Delete</a>
                     </td>
+                    <td>
+                        <a class="btn btn-danger" th:href="${'/admin/user/resetPassword/'}+${user.getUsername()}">Reset password</a>
+                    </td>
                 </tr>
                 <tr th:if="${allUsers.isEmpty()}">
                     <td>No users registered!</td>

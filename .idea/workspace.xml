@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c11b0fa-9b05-4d38-8a87-03744b940b4a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/model/RequestEmail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/model/ResponseSendtEmail.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tidder-front/src/main/resources/templates/fragments/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/tidder-front/src/main/resources/templates/fragments/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pullRebuildAndDeploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/pullRebuildAndDeploy.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rebuildAndDeploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/rebuildAndDeploy.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/AdminUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/AdminUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tidder-front/src/main/resources/templates/adminUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/tidder-front/src/main/resources/templates/adminUser.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/tidder-eureka/target/" />
@@ -26,56 +33,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/adminUser.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="935">
+              <caret line="67" column="14" lean-forward="true" selection-start-line="67" selection-start-column="14" selection-end-line="67" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/fragments/layout.html">
+        <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/AdminUserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
+            <state relative-caret-position="632">
+              <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tidder-front/Dockerfile">
+        <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/service/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rebuildAndDeploy.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pullRebuildAndDeploy.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docker-compose.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/topic.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+            <state relative-caret-position="462">
+              <caret line="122" column="4" lean-forward="true" selection-start-line="122" selection-start-column="4" selection-end-line="122" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1430#1431#0" expanded="true" />
+                <element signature="e#1478#1479#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -83,8 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tidder-user/src/main/java/app/sagen/tidderuser/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1530">
-              <caret line="114" selection-start-line="114" selection-end-line="114" />
+            <state relative-caret-position="179">
+              <caret line="61" column="99" selection-start-line="61" selection-start-column="87" selection-end-line="61" selection-end-column="99" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1304#1305#0" expanded="true" />
@@ -95,19 +83,43 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tidder-user/src/main/java/app/sagen/tidderuser/repository/UserRepository.java">
+        <entry file="file://$PROJECT_DIR$/tidder-user/src/main/java/app/sagen/tidderuser/model/RequestEmail.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="85">
+              <caret line="5" selection-start-line="5" selection-end-line="8" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tidder-user/src/main/java/app/sagen/tidderuser/service/EmailService.java">
+        <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/model/RequestEmail.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="85">
+              <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="6" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tidder-user/src/main/java/app/sagen/tidderuser/model/ResponseSendtEmail.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/model/ResponseSendtEmail.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -118,14 +130,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tidder-user/src/main/java/app/sagen/tidderuser/service/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="13" column="8" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="8" />
+            <state relative-caret-position="289">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2439#2440#0" expanded="true" />
                 <element signature="e#2482#2483#0" expanded="true" />
                 <element signature="e#2525#2526#0" expanded="true" />
                 <element signature="e#2582#2583#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/model/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="54" column="40" lean-forward="true" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -151,10 +175,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tidder-eureka/Dockerfile" />
-        <option value="$PROJECT_DIR$/tidder-test2/Dockerfile" />
-        <option value="$PROJECT_DIR$/tidder-test1/Dockerfile" />
-        <option value="$PROJECT_DIR$/tidder-zuul/Dockerfile" />
         <option value="$PROJECT_DIR$/docker-composer.yml" />
         <option value="$PROJECT_DIR$/tidder-eureka/pom.xml" />
         <option value="$PROJECT_DIR$/tidder-test2/pom.xml" />
@@ -180,7 +200,6 @@
         <option value="$PROJECT_DIR$/tidder-user/src/main/java/app/sagen/tidderuser/exceptions/ResourceNotFoundException.java" />
         <option value="$PROJECT_DIR$/tidder-user/src/main/java/app/sagen/tidderuser/model/RequestEmail.java" />
         <option value="$PROJECT_DIR$/tidder-user/src/main/java/app/sagen/tidderuser/model/ResponseSendtEmail.java" />
-        <option value="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/model/User.java" />
         <option value="$PROJECT_DIR$/tidder-front/pom.xml" />
         <option value="$PROJECT_DIR$/tidder-front/src/main/resources/templates/signup.html" />
         <option value="$PROJECT_DIR$/tidder-user/src/main/java/app/sagen/tidderuser/service/UserService.java" />
@@ -190,18 +209,23 @@
         <option value="$PROJECT_DIR$/tidder-user/src/main/java/app/sagen/tidderuser/model/User.java" />
         <option value="$PROJECT_DIR$/tidder-user/pom.xml" />
         <option value="$PROJECT_DIR$/tidder-user/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/service/UserService.java" />
         <option value="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/PublicController.java" />
         <option value="$PROJECT_DIR$/tidder-front/src/main/resources/templates/login.html" />
-        <option value="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/AdminUserController.java" />
-        <option value="$PROJECT_DIR$/tidder-front/src/main/resources/templates/adminUser.html" />
         <option value="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/config/SecurityConfig.java" />
         <option value="$PROJECT_DIR$/tidder-front/src/main/resources/templates/index.html" />
         <option value="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/FrontController.java" />
         <option value="$PROJECT_DIR$/tidder-front/src/main/resources/static/css/agency.css" />
         <option value="$PROJECT_DIR$/tidder-front/src/main/resources/templates/topic.html" />
-        <option value="$PROJECT_DIR$/rebuildAndDeploy.sh" />
         <option value="$PROJECT_DIR$/tidder-front/src/main/resources/templates/fragments/layout.html" />
+        <option value="$PROJECT_DIR$/rebuildAndDeploy.sh" />
+        <option value="$PROJECT_DIR$/pullRebuildAndDeploy.sh" />
+        <option value="$PROJECT_DIR$/tidder-front/src/main/resources/templates/adminUser.html" />
+        <option value="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/model/User.java" />
+        <option value="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/HomeController.java" />
+        <option value="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/model/RequestEmail.java" />
+        <option value="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/model/ResponseSendtEmail.java" />
+        <option value="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/service/UserService.java" />
+        <option value="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/AdminUserController.java" />
       </list>
     </option>
   </component>
@@ -224,8 +248,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="184" />
-    <option name="y" value="-8" />
+    <option name="x" value="192" />
+    <option name="y" value="-19" />
     <option name="width" value="974" />
     <option name="height" value="564" />
   </component>
@@ -289,6 +313,26 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tidderfront" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tidder" type="462c0819:PsiDirectoryNode" />
+              <item name="tidder-front" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tidderfront" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tidder" type="462c0819:PsiDirectoryNode" />
+              <item name="tidder-front" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tidderfront" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
@@ -558,21 +602,7 @@
       <workItem from="1554898451604" duration="15568000" />
       <workItem from="1554971479450" duration="7468000" />
       <workItem from="1555167847547" duration="1900000" />
-      <workItem from="1555169766891" duration="533000" />
-    </task>
-    <task id="LOCAL-00031" summary="Change sql mode to update">
-      <created>1554413354578</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1554413354578</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Change from component to service">
-      <created>1554414385392</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1554414385392</updated>
+      <workItem from="1555169766891" duration="3617000" />
     </task>
     <task id="LOCAL-00033" summary="Renamed uername in sql">
       <created>1554414595976</created>
@@ -903,11 +933,25 @@
       <option name="project" value="LOCAL" />
       <updated>1555169740112</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="Added easing jquery">
+      <created>1555170316118</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1555170316119</updated>
+    </task>
+    <task id="LOCAL-00081" summary="Added jquery">
+      <created>1555170764939</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1555170764939</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95988000" />
+    <option name="totallyTimeSpent" value="99072000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -922,7 +966,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14978679" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11886994" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" />
@@ -966,8 +1010,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix css 2.0" />
-    <MESSAGE value="Fix css 3.0" />
     <MESSAGE value="Fix css 4.0" />
     <MESSAGE value="Fix css 5.0" />
     <MESSAGE value="Fix css 6.0" />
@@ -991,144 +1033,11 @@
     <MESSAGE value="Added better support for medium screens in topcs page" />
     <MESSAGE value="Added fontawesome link" />
     <MESSAGE value="Now using CDN for scripts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Now using CDN for scripts" />
+    <MESSAGE value="Added easing jquery" />
+    <MESSAGE value="Added jquery" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added jquery" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="uml://SpringLocalModels/module=tidder-eureka">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>SpringLocalModels</ID>
-          <OriginalElement>module=tidder-eureka</OriginalElement>
-          <nodes>
-            <node x="" y="">module=tidder-eureka</node>
-            <node x="" y="">fileset=tidder-eureka/TidderEurekaApplication</node>
-            <node x="" y="">app.sagen.tidder.tiddereureka.TidderEurekaApplication</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.WebClientAutoConfiguration</node>
-            <node x="" y="">org.springframework.cloud.client.discovery.noop.NoopDiscoveryClientAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration.StringHttpMessageConverterConfiguration</node>
-            <node x="" y="">org.springframework.cloud.netflix.ribbon.eureka.RibbonEurekaAutoConfiguration</node>
-            <node x="" y="">org.springframework.cloud.client.serviceregistry.ServiceRegistryAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration</node>
-            <node x="" y="">org.springframework.cloud.netflix.eureka.EurekaDiscoveryClientConfiguration</node>
-            <node x="" y="">org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.actuate.autoconfigure.PublicMetricsAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.ServerPropertiesAutoConfiguration</node>
-            <node x="" y="">org.springframework.cloud.commons.httpclient.HttpClientConfiguration</node>
-            <node x="" y="">org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.actuate.autoconfigure.PublicMetricsAutoConfiguration.TomcatMetricsConfiguration</node>
-            <node x="" y="">org.springframework.boot.actuate.autoconfigure.CacheStatisticsAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration.Jackson2ObjectMapperBuilderCustomizerConfiguration</node>
-            <node x="" y="">org.springframework.cloud.client.discovery.noop.NoopDiscoveryClientAutoConfiguration.Boot15PortFinderConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.MultipartAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.actuate.autoconfigure.EndpointAutoConfiguration.RequestMappingEndpointConfiguration</node>
-            <node x="" y="">org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration.DiskSpaceHealthIndicatorConfiguration</node>
-            <node x="" y="">org.springframework.cloud.client.loadbalancer.AsyncLoadBalancerAutoConfiguration.LoadBalancerInterceptorConfig</node>
-            <node x="" y="">org.springframework.boot.actuate.autoconfigure.MetricRepositoryAutoConfiguration.LegacyMetricRepositoryConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration</node>
-            <node x="" y="">org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration.MailHealthIndicatorConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter.FaviconConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration.EnableWebMvcConfiguration</node>
-            <node x="" y="">org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration.EndpointWebMvcConfiguration</node>
-            <node x="" y="">org.springframework.cloud.autoconfigure.LifecycleMvcEndpointAutoConfiguration</node>
-            <node x="" y="">org.springframework.cloud.netflix.rx.RxJavaAutoConfiguration.RxJavaReturnValueHandlerConfig</node>
-            <node x="" y="">org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration.EurekaClientConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration.DispatcherServletConfiguration</node>
-            <node x="" y="">org.springframework.boot.actuate.autoconfigure.ManagementServerPropertiesAutoConfiguration</node>
-            <node x="" y="">org.springframework.cloud.netflix.eureka.server.EnableEurekaServer</node>
-            <node x="" y="">org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration.EurekaHealthIndicatorConfiguration</node>
-            <node x="" y="">org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration.ApplicationContextFilterConfiguration</node>
-            <node x="" y="">org.springframework.boot.actuate.autoconfigure.CacheStatisticsAutoConfiguration.GuavaCacheStatisticsConfiguration</node>
-            <node x="" y="">org.springframework.cloud.client.CommonsClientAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.actuate.autoconfigure.EndpointAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration</node>
-            <node x="" y="">org.springframework.cloud.netflix.eureka.server.EurekaServerAutoConfiguration.EurekaServerConfigBeanConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration.EmbeddedTomcat</node>
-            <node x="" y="">org.springframework.boot.actuate.autoconfigure.PublicMetricsAutoConfiguration.DataSourceMetricsConfiguration</node>
-            <node x="" y="">org.springframework.cloud.netflix.eureka.server.EurekaServerAutoConfiguration</node>
-            <node x="" y="">org.springframework.cloud.client.loadbalancer.AsyncLoadBalancerAutoConfiguration</node>
-            <node x="" y="">org.springframework.cloud.netflix.rx.RxJavaAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.actuate.autoconfigure.MetricExportAutoConfiguration.StatsdConfiguration</node>
-            <node x="" y="">org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration.ArchaiusEndpointConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.actuate.autoconfigure.MetricFilterAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.actuate.autoconfigure.MetricRepositoryAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.actuate.autoconfigure.AuditAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.actuate.autoconfigure.CacheStatisticsAutoConfiguration.NoOpCacheStatisticsConfiguration</node>
-            <node x="" y="">org.springframework.cloud.netflix.hystrix.HystrixAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.actuate.autoconfigure.MetricRepositoryAutoConfiguration.LegacyMetricServicesConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration.DefaultErrorViewResolverConfiguration</node>
-            <node x="" y="">org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration.LoadBalancerInterceptorConfig</node>
-            <node x="" y="">org.springframework.cloud.starter.eureka.server.EurekaServerStarterDeprecationWarningAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration.TomcatWebSocketConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.actuate.cloudfoundry.CloudFoundryActuatorAutoConfiguration</node>
-            <node x="" y="">org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClientAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.actuate.autoconfigure.CacheStatisticsAutoConfiguration.ConcurrentMapCacheStatisticsConfiguration</node>
-            <node x="" y="">org.springframework.boot.actuate.autoconfigure.MetricExportAutoConfiguration.MetricExportPropertiesConfiguration</node>
-            <node x="" y="">org.springframework.cloud.netflix.eureka.EurekaDiscoveryClientConfiguration.EurekaClientConfigurationRefresher</node>
-            <node x="" y="">org.springframework.cloud.netflix.zuul.ZuulProxyAutoConfiguration</node>
-            <node x="" y="">org.springframework.cloud.client.serviceregistry.AutoServiceRegistrationAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.actuate.autoconfigure.MetricRepositoryAutoConfiguration.FastMetricServicesConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.HttpEncodingAutoConfiguration</node>
-            <node x="" y="">org.springframework.cloud.netflix.ribbon.RibbonAutoConfiguration</node>
-            <node x="" y="">org.springframework.cloud.netflix.ribbon.RibbonAutoConfiguration.RibbonClientConfig</node>
-            <node x="" y="">org.springframework.cloud.client.loadbalancer.AsyncLoadBalancerAutoConfiguration.AsyncRestTemplateCustomizerConfig</node>
-            <node x="" y="">org.springframework.cloud.autoconfigure.RefreshAutoConfiguration</node>
-            <node x="" y="">org.springframework.cloud.client.discovery.simple.SimpleDiscoveryClientAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration.JacksonObjectMapperBuilderConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration</node>
-            <node x="" y="">org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration.RefreshableEurekaClientConfiguration</node>
-            <node x="" y="">org.springframework.cloud.netflix.zuul.ZuulProxyAutoConfiguration.EndpointConfiguration</node>
-            <node x="" y="">org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.actuate.autoconfigure.PublicMetricsAutoConfiguration.CacheStatisticsConfiguration</node>
-            <node x="" y="">org.springframework.cloud.autoconfigure.RefreshEndpointAutoConfiguration.RefreshEndpointConfiguration</node>
-            <node x="" y="">org.springframework.cloud.client.hypermedia.CloudHypermediaAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.actuate.autoconfigure.TraceWebFilterAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration.FreeMarkerWebConfiguration</node>
-            <node x="" y="">org.springframework.boot.actuate.autoconfigure.EndpointMBeanExportAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.WebClientAutoConfiguration.RestTemplateConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration</node>
-            <node x="" y="">org.springframework.cloud.autoconfigure.RefreshEndpointAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration.JacksonObjectMapperConfiguration</node>
-            <node x="" y="">org.springframework.boot.actuate.autoconfigure.MetricExportAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration.DispatcherServletRegistrationConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.actuate.autoconfigure.InfoContributorAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.actuate.autoconfigure.TraceRepositoryAutoConfiguration</node>
-            <node x="" y="">org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration</node>
-            <node x="" y="">org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration</node>
-            <node x="" y="">fileset=tidder-eureka/TidderEurekaApplication Bootstrap</node>
-            <node x="" y="">fileset=tidder-eureka/TidderEurekaApplication MVC</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.8904458598726115" x="953.0" y="6051.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Show filesets as groups</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-eureka/src/main/java/app/sagen/tidder/tiddereureka/TidderEurekaApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tidder-test1/src/main/java/app/sagen/tiddertest1/TidderTest1Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1280,79 +1189,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1430#1431#0" expanded="true" />
-            <element signature="e#1478#1479#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/config/SecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="15" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="27" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/FrontController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/AdminUserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-user/src/main/java/app/sagen/tidderuser/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-user/src/main/java/app/sagen/tidderuser/model/ResponseSendtEmail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1373,13 +1213,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/adminUser.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/signup.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
@@ -1394,24 +1227,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-user/src/main/java/app/sagen/tidderuser/model/RequestEmail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/fragments/layout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
+        <state relative-caret-position="635">
+          <caret line="135" lean-forward="true" selection-start-line="135" selection-end-line="135" />
         </state>
       </provider>
     </entry>
@@ -1422,20 +1241,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rebuildAndDeploy.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pullRebuildAndDeploy.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docker-compose.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -1443,17 +1248,87 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/rebuildAndDeploy.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pullRebuildAndDeploy.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/topic.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+        <state relative-caret-position="3298">
+          <caret line="194" column="10" lean-forward="true" selection-start-line="194" selection-start-column="10" selection-end-line="194" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-user/src/main/java/app/sagen/tidderuser/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="44" column="1" lean-forward="true" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-user/src/main/java/app/sagen/tidderuser/repository/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-user/src/main/java/app/sagen/tidderuser/service/EmailService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/FrontController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#600#601#0" expanded="true" />
+            <element signature="e#646#647#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tidder-user/src/main/java/app/sagen/tidderuser/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="114" selection-start-line="114" selection-end-line="114" />
+        <state relative-caret-position="179">
+          <caret line="61" column="99" selection-start-line="61" selection-start-column="87" selection-end-line="61" selection-end-column="99" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1304#1305#0" expanded="true" />
@@ -1462,17 +1337,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-user/src/main/java/app/sagen/tidderuser/repository/UserRepository.java">
+    <entry file="file://$PROJECT_DIR$/tidder-user/src/main/java/app/sagen/tidderuser/model/RequestEmail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="8" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-user/src/main/java/app/sagen/tidderuser/service/EmailService.java">
+    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/adminUser.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="935">
+          <caret line="67" column="14" lean-forward="true" selection-start-line="67" selection-start-column="14" selection-end-line="67" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-user/src/main/java/app/sagen/tidderuser/model/ResponseSendtEmail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="54" column="40" lean-forward="true" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1481,14 +1373,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tidder-user/src/main/java/app/sagen/tidderuser/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="13" column="8" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="8" />
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2439#2440#0" expanded="true" />
             <element signature="e#2482#2483#0" expanded="true" />
             <element signature="e#2525#2526#0" expanded="true" />
             <element signature="e#2582#2583#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/model/RequestEmail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="6" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="122" column="4" lean-forward="true" selection-start-line="122" selection-start-column="4" selection-end-line="122" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1430#1431#0" expanded="true" />
+            <element signature="e#1478#1479#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/model/ResponseSendtEmail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/AdminUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="632">
+          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
