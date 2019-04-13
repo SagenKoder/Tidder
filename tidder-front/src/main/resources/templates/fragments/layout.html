@@ -49,7 +49,7 @@
                 </li>
                 <li th:if="${currentUser!=null && currentUser.getRoles().contains(T(app.sagen.tidderfront.Role).ROLE_ADMIN)}" class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-admin" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fa fa-user"></i><span th:text="${' Admin'}"></span>
+                        <span th:text="${' Admin'}"></span>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown-admin">
                         <a class="dropdown-item" href="#">Admin Frontpage</a>
@@ -61,7 +61,7 @@
                 </li>
                 <li th:if="${currentUser!=null}" class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-user" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fa fa-user"></i><span th:text="' '+${currentUser.getFirstName()}"></span>
+                        </i><span th:text="' '+${currentUser.getFirstName()}"></span>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown-user">
                         <a class="dropdown-item" href="/home">Your profile</a>
