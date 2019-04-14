@@ -15,12 +15,25 @@ import java.util.stream.Stream;
 public class UserService {
 
     private UserRepository userRepository;
+    private EmailService emailService;
 
     @Autowired
-    private UserService(UserRepository userRepository) {
+    private UserService(UserRepository userRepository, EmailService emailService) {
         this.userRepository = userRepository;
+        this.emailService = emailService;
         if(count() == 0) {
-            User user = new User("sagen", "Alexander Meisdalen", "Sagen", "alexmsagen@gmail.com", "{noop}alex123");
+            User user = new User(
+                    "sagen",
+                    "Alexander Meisdalen",
+                    "Sagen",
+                    "alexmsagen@gmail.com",
+                    "");
+            user.setPasswordSetBy("System");
+            String password = user.setAndReturnRandomPassword();
+            emailService.sendSimpleEmail(user.getEmail(),
+                    "Tidder.no - Your new account...",
+                    "Username: \"" + user.getUsername() + "\"\nPassword: \"" + password + "\"");
+
             user.setRoles(Stream.of(Role.ROLE_USER, Role.ROLE_ADMIN).collect(Collectors.toSet()));
             userRepository.save(user);
         }

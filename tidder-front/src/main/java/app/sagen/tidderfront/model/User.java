@@ -9,10 +9,7 @@ import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.security.SecureRandom;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Random;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Data
@@ -25,6 +22,9 @@ public class User implements UserDetails {
     private String email;
     private String password;
     private Set<Role> roles = new HashSet<>();
+    private Date passwordSetDate;
+    private Date passwordExpires;
+    private String passwordSetBy;
 
     public User(String username) {
         this.username = username;
@@ -36,6 +36,9 @@ public class User implements UserDetails {
         this.lastName = lastName;
         this.email = email;
         this.password = password;
+        this.passwordSetDate = new Date();
+        this.passwordExpires = new Date(System.currentTimeMillis() + 30*6*(long)(8.64e+7));
+        this.passwordSetBy = "System";
     }
 
     public void setAndEncryptPassword(String password) {
