@@ -120,7 +120,7 @@ public class UserService implements UserDetailsService {
     }
 
     public Optional<ResponseSendtEmail> sendEmail(User user, String header, String body) {
-        URI uri = getUserService().resolve("/u/" + user.getUsername());
+        URI uri = getUserService().resolve("/u/" + user.getUsername() + "/sendEmail");
         try {
             return Optional.ofNullable(restTemplate.postForObject(uri, new RequestEmail(header, body), ResponseSendtEmail.class));
         } catch (Exception e) {
