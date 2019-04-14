@@ -53,8 +53,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/topic.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="683">
-              <caret line="261" column="14" lean-forward="true" selection-start-line="261" selection-start-column="14" selection-end-line="261" selection-end-column="14" />
+            <state relative-caret-position="374">
+              <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -645,14 +645,7 @@
       <workItem from="1554898451604" duration="15568000" />
       <workItem from="1554971479450" duration="7468000" />
       <workItem from="1555167847547" duration="1900000" />
-      <workItem from="1555169766891" duration="12419000" />
-    </task>
-    <task id="LOCAL-00041" summary="Changed to absolute paths">
-      <created>1554478896860</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1554478896861</updated>
+      <workItem from="1555169766891" duration="12447000" />
     </task>
     <task id="LOCAL-00042" summary="Updated html to use username and not email">
       <created>1554479504710</created>
@@ -990,11 +983,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555256379248</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="More html to topics 4.0">
+      <created>1555256714366</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1555256714366</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107874000" />
+    <option name="totallyTimeSpent" value="107902000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1053,7 +1053,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed redirect" />
     <MESSAGE value="Added topic html" />
     <MESSAGE value="Fixing if check" />
     <MESSAGE value="Fixing topic form" />
@@ -1078,7 +1077,8 @@
     <MESSAGE value="More html to topics" />
     <MESSAGE value="More html to topics 2.0" />
     <MESSAGE value="More html to topics 3.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="More html to topics 3.0" />
+    <MESSAGE value="More html to topics 4.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="More html to topics 4.0" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/tidder-user/src/main/java/app/sagen/tidderuser/Role.java">
@@ -1474,8 +1474,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/topic.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="683">
-          <caret line="261" column="14" lean-forward="true" selection-start-line="261" selection-start-column="14" selection-end-line="261" selection-end-column="14" />
+        <state relative-caret-position="374">
+          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
