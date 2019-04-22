@@ -22,7 +22,7 @@ import java.util.Set;
 @Entity
 @Data
 @NoArgsConstructor
-public class User{
+public class User {
 
     @Id
     private String username;

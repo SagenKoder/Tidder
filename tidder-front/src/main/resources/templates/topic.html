@@ -14,8 +14,9 @@
 <header class="masthead">
     <div class="container">
         <div class="intro-text py-5">
-            <div class="intro-heading pt-5">/t/<span th:text="${topicName}"></span></div>
-            <div th:if="${topicName}==${'all'}" class="intro-lead-in">Collection of the best posts from all categories</div>
+            <div class="intro-heading pt-5">/t/<span th:text="${topic.getName()}"></span></div>
+            <div th:if="${topic.getName()}==${'all'}" class="intro-lead-in">Collection of the best posts from all categories</div>
+            <div th:if="${topic.getTitle()}!=${'all'}" class="intro-lead-in"></div>
         </div>
     </div>
 </header>
@@ -25,6 +26,7 @@
     <div class="row">
         <div id="postContainer" class="col-lg-9 col-md-8">
 
+            <th:block th:each="post : ${posts}">
             <div class="row my-1 px-0 post d-flex flex-nowrap">
                 <div class="mx-0 pl-1 px-0 text-center" style="width: 40px;">
                     <span class="font-weight-bold" style="color: green;">198</span>
@@ -32,180 +34,12 @@
                     <span class="font-weight-bold" style="color: red;">12</span>
                 </div>
                 <div class="flex-grow-1 mx-0 px-2">
-                    <span class="font-weight-light text-truncate">2 hours ago | by <a href="/u/sagen">sagen</a> | <a href="/t/idiotsfightstuff">/t/idiotsfightstuff</a></span>
+                    <span class="font-weight-light text-truncate">2 hours ago | by <a th:text="${post.getOwner().getUsername()}" th:href="'/u/'+${post.getOwner().getUsername()}"></a> | <a th:href="'/t/'+${post.getTopic().getName()}" th:text="'/t/'+${post.getTopic().getName()}"></a></span>
                     <hr class="my-1" style="border-color: #666;">
-                    <span class="font-weight-bold text-truncate">Stupid people fight trashcan</span>
+                    <span class="font-weight-bold text-truncate" th:text="${post.getTitle()}"></span>
                 </div>
             </div>
-
-            <div class="row my-1 px-0 post d-flex flex-nowrap">
-                <div class="mx-0 pl-1 px-0 text-center" style="width: 40px;">
-                    <span class="font-weight-bold" style="color: green;">234</span>
-                    <hr class="my-1" style="border-color: #666;">
-                    <span class="font-weight-bold" style="color: red;">96</span>
-                </div>
-                <div class="flex-grow-1 mx-0 px-2">
-                    <span class="font-weight-light text-truncate">2 hours ago | by <a href="/u/fighter0987">fighter0987</a> | <a href="/t/technology">/t/technology</a></span>
-                    <hr class="my-1" style="border-color: #666;">
-                    <span class="font-weight-bold text-truncate">Robots can now outrun even the fastest athletes</span>
-                </div>
-            </div>
-
-            <div class="row my-1 px-0 post d-flex flex-nowrap">
-                <div class="mx-0 pl-1 px-0 text-center" style="width: 40px;">
-                    <span class="font-weight-bold" style="color: green;">198</span>
-                    <hr class="my-1" style="border-color: #666;">
-                    <span class="font-weight-bold" style="color: red;">12</span>
-                </div>
-                <div class="flex-grow-1 mx-0 px-2">
-                    <span class="font-weight-light text-truncate">2 hours ago | by <a href="/u/sagen">sagen</a> | <a href="/t/idiotsfightstuff">/t/idiotsfightstuff</a></span>
-                    <hr class="my-1" style="border-color: #666;">
-                    <span class="font-weight-bold text-truncate">Stupid people fight trashcan</span>
-                </div>
-            </div>
-
-            <div class="row my-1 px-0 post d-flex flex-nowrap">
-                <div class="mx-0 pl-1 px-0 text-center" style="width: 40px;">
-                    <span class="font-weight-bold" style="color: green;">234</span>
-                    <hr class="my-1" style="border-color: #666;">
-                    <span class="font-weight-bold" style="color: red;">96</span>
-                </div>
-                <div class="flex-grow-1 mx-0 px-2">
-                    <span class="font-weight-light text-truncate">2 hours ago | by <a href="/u/fighter0987">fighter0987</a> | <a href="/t/technology">/t/technology</a></span>
-                    <hr class="my-1" style="border-color: #666;">
-                    <span class="font-weight-bold text-truncate">Robots can now outrun even the fastest athletes</span>
-                </div>
-            </div>
-
-            <div class="row my-1 px-0 post d-flex flex-nowrap">
-                <div class="mx-0 pl-1 px-0 text-center" style="width: 40px;">
-                    <span class="font-weight-bold" style="color: green;">198</span>
-                    <hr class="my-1" style="border-color: #666;">
-                    <span class="font-weight-bold" style="color: red;">12</span>
-                </div>
-                <div class="flex-grow-1 mx-0 px-2">
-                    <span class="font-weight-light text-truncate">2 hours ago | by <a href="/u/sagen">sagen</a> | <a href="/t/idiotsfightstuff">/t/idiotsfightstuff</a></span>
-                    <hr class="my-1" style="border-color: #666;">
-                    <span class="font-weight-bold text-truncate">Stupid people fight trashcan</span>
-                </div>
-            </div>
-
-            <div class="row my-1 px-0 post d-flex flex-nowrap">
-                <div class="mx-0 pl-1 px-0 text-center" style="width: 40px;">
-                    <span class="font-weight-bold" style="color: green;">234</span>
-                    <hr class="my-1" style="border-color: #666;">
-                    <span class="font-weight-bold" style="color: red;">96</span>
-                </div>
-                <div class="flex-grow-1 mx-0 px-2">
-                    <span class="font-weight-light text-truncate">2 hours ago | by <a href="/u/fighter0987">fighter0987</a> | <a href="/t/technology">/t/technology</a></span>
-                    <hr class="my-1" style="border-color: #666;">
-                    <span class="font-weight-bold text-truncate">Robots can now outrun even the fastest athletes</span>
-                </div>
-            </div>
-
-            <div class="row my-1 px-0 post d-flex flex-nowrap">
-                <div class="mx-0 pl-1 px-0 text-center" style="width: 40px;">
-                    <span class="font-weight-bold" style="color: green;">198</span>
-                    <hr class="my-1" style="border-color: #666;">
-                    <span class="font-weight-bold" style="color: red;">12</span>
-                </div>
-                <div class="flex-grow-1 mx-0 px-2">
-                    <span class="font-weight-light text-truncate">2 hours ago | by <a href="/u/sagen">sagen</a> | <a href="/t/idiotsfightstuff">/t/idiotsfightstuff</a></span>
-                    <hr class="my-1" style="border-color: #666;">
-                    <span class="font-weight-bold text-truncate">Stupid people fight trashcan</span>
-                </div>
-            </div>
-
-            <div class="row my-1 px-0 post d-flex flex-nowrap">
-                <div class="mx-0 pl-1 px-0 text-center" style="width: 40px;">
-                    <span class="font-weight-bold" style="color: green;">234</span>
-                    <hr class="my-1" style="border-color: #666;">
-                    <span class="font-weight-bold" style="color: red;">96</span>
-                </div>
-                <div class="flex-grow-1 mx-0 px-2">
-                    <span class="font-weight-light text-truncate">2 hours ago | by <a href="/u/fighter0987">fighter0987</a> | <a href="/t/technology">/t/technology</a></span>
-                    <hr class="my-1" style="border-color: #666;">
-                    <span class="font-weight-bold text-truncate">Robots can now outrun even the fastest athletes</span>
-                </div>
-            </div>
-
-            <div class="row my-1 px-0 post d-flex flex-nowrap">
-                <div class="mx-0 pl-1 px-0 text-center" style="width: 40px;">
-                    <span class="font-weight-bold" style="color: green;">198</span>
-                    <hr class="my-1" style="border-color: #666;">
-                    <span class="font-weight-bold" style="color: red;">12</span>
-                </div>
-                <div class="flex-grow-1 mx-0 px-2">
-                    <span class="font-weight-light text-truncate">2 hours ago | by <a href="/u/sagen">sagen</a> | <a href="/t/idiotsfightstuff">/t/idiotsfightstuff</a></span>
-                    <hr class="my-1" style="border-color: #666;">
-                    <span class="font-weight-bold text-truncate">Stupid people fight trashcan</span>
-                </div>
-            </div>
-
-            <div class="row my-1 px-0 post d-flex flex-nowrap">
-                <div class="mx-0 pl-1 px-0 text-center" style="width: 40px;">
-                    <span class="font-weight-bold" style="color: green;">234</span>
-                    <hr class="my-1" style="border-color: #666;">
-                    <span class="font-weight-bold" style="color: red;">96</span>
-                </div>
-                <div class="flex-grow-1 mx-0 px-2">
-                    <span class="font-weight-light text-truncate">2 hours ago | by <a href="/u/fighter0987">fighter0987</a> | <a href="/t/technology">/t/technology</a></span>
-                    <hr class="my-1" style="border-color: #666;">
-                    <span class="font-weight-bold text-truncate">Robots can now outrun even the fastest athletes</span>
-                </div>
-            </div>
-
-            <div class="row my-1 px-0 post d-flex flex-nowrap">
-                <div class="mx-0 pl-1 px-0 text-center" style="width: 40px;">
-                    <span class="font-weight-bold" style="color: green;">198</span>
-                    <hr class="my-1" style="border-color: #666;">
-                    <span class="font-weight-bold" style="color: red;">12</span>
-                </div>
-                <div class="flex-grow-1 mx-0 px-2">
-                    <span class="font-weight-light text-truncate">2 hours ago | by <a href="/u/sagen">sagen</a> | <a href="/t/idiotsfightstuff">/t/idiotsfightstuff</a></span>
-                    <hr class="my-1" style="border-color: #666;">
-                    <span class="font-weight-bold text-truncate">Stupid people fight trashcan</span>
-                </div>
-            </div>
-
-            <div class="row my-1 px-0 post d-flex flex-nowrap">
-                <div class="mx-0 pl-1 px-0 text-center" style="width: 40px;">
-                    <span class="font-weight-bold" style="color: green;">234</span>
-                    <hr class="my-1" style="border-color: #666;">
-                    <span class="font-weight-bold" style="color: red;">96</span>
-                </div>
-                <div class="flex-grow-1 mx-0 px-2">
-                    <span class="font-weight-light text-truncate">2 hours ago | by <a href="/u/fighter0987">fighter0987</a> | <a href="/t/technology">/t/technology</a></span>
-                    <hr class="my-1" style="border-color: #666;">
-                    <span class="font-weight-bold text-truncate">Robots can now outrun even the fastest athletes</span>
-                </div>
-            </div>
-
-            <div class="row my-1 px-0 post d-flex flex-nowrap">
-                <div class="mx-0 pl-1 px-0 text-center" style="width: 40px;">
-                    <span class="font-weight-bold" style="color: green;">198</span>
-                    <hr class="my-1" style="border-color: #666;">
-                    <span class="font-weight-bold" style="color: red;">12</span>
-                </div>
-                <div class="flex-grow-1 mx-0 px-2">
-                    <span class="font-weight-light text-truncate">2 hours ago | by <a href="/u/sagen">sagen</a> | <a href="/t/idiotsfightstuff">/t/idiotsfightstuff</a></span>
-                    <hr class="my-1" style="border-color: #666;">
-                    <span class="font-weight-bold text-truncate">Stupid people fight trashcan</span>
-                </div>
-            </div>
-
-            <div class="row my-1 px-0 post d-flex flex-nowrap">
-                <div class="mx-0 pl-1 px-0 text-center" style="width: 40px;">
-                    <span class="font-weight-bold" style="color: green;">234</span>
-                    <hr class="my-1" style="border-color: #666;">
-                    <span class="font-weight-bold" style="color: red;">96</span>
-                </div>
-                <div class="flex-grow-1 mx-0 px-2">
-                    <span class="font-weight-light text-truncate">2 hours ago | by <a href="/u/fighter0987">fighter0987</a> | <a href="/t/technology">/t/technology</a></span>
-                    <hr class="my-1" style="border-color: #666;">
-                    <span class="font-weight-bold text-truncate">Robots can now outrun even the fastest athletes</span>
-                </div>
-            </div>
+            </th:block>
 
         </div>
 

@@ -1,6 +1,8 @@
 package app.sagen.tidderfront.controller;
 
+import app.sagen.tidderfront.model.Topic;
 import app.sagen.tidderfront.model.User;
+import app.sagen.tidderfront.service.PostService;
 import app.sagen.tidderfront.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,10 +17,12 @@ import java.util.Optional;
 public class FrontController {
 
     private UserService userService;
+    private PostService postService;
 
     @Autowired
-    FrontController(UserService userService) {
+    FrontController(UserService userService, PostService postService) {
         this.userService = userService;
+        this.postService = postService;
     }
 
     @GetMapping()
@@ -33,17 +37,25 @@ public class FrontController {
         return "redirect:/t/" + topic;
     }
 
-    @GetMapping("{topic}")
-    public String topic(HttpServletResponse response, Model model, @PathVariable("topic") String topic) {
-        String filteredTopic = topic.toLowerCase();
+    @GetMapping("{topicName}")
+    public String topic(HttpServletResponse response, Model model, @PathVariable("topicName") String topicName) {
+        String filteredTopic = topicName.toLowerCase();
         filteredTopic = filteredTopic.replaceAll("[^a-z0-9]", "");
-        if(!filteredTopic.equals(topic)) return "redirect:/t/" + filteredTopic;
+        if(!filteredTopic.equals(topicName)) return "redirect:/t/" + filteredTopic;
         Optional<User> optuser = userService.getAuthenticatedUser();
         User user = null;
         if(optuser.isPresent()) user = optuser.get();
+
+        Topic topic = new Topic(
+                optuser.isPresent() ? user : new User("Sagen97"),
+                topicName,
+                "Insert Fitting Title Here <3"
+        );
+
+        model.addAttribute(topic);
+        model.addAttribute("posts", postService.fetchAll(topic));
+
         model.addAttribute("currentUser", user);
-        model.addAttribute("topicExists", false);
-        model.addAttribute("topicName", topic);
         return "topic";
     }
 
