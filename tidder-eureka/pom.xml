@@ -6,7 +6,7 @@
     <groupId>app.sagen.tidder</groupId>
     <artifactId>tidder-eureka</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
     <name>tidder-eureka</name>
     <description>Demo project for Spring Boot</description>
 
@@ -26,6 +26,11 @@
     </parent>
 
     <dependencies>
+        <dependency>
+            <groupId>app.sagen.tidder</groupId>
+            <artifactId>tidder-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka-server</artifactId>

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Tidder.iml" filepath="$PROJECT_DIR$/Tidder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tidder-common/tidder-common.iml" filepath="$PROJECT_DIR$/tidder-common/tidder-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/tidder-eureka/tidder-eureka.iml" filepath="$PROJECT_DIR$/tidder-eureka/tidder-eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/tidder-front/tidder-front.iml" filepath="$PROJECT_DIR$/tidder-front/tidder-front.iml" />
       <module fileurl="file://$PROJECT_DIR$/tidder-likes/tidder-likes.iml" filepath="$PROJECT_DIR$/tidder-likes/tidder-likes.iml" />

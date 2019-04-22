@@ -6,23 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="tidder-post" />
         <module name="tidder-user" />
-        <module name="tidder-eureka" />
         <module name="tidder-likes" />
         <module name="tidder-zuul" />
         <module name="tidder-oauth" />
+        <module name="tidder-common" />
         <module name="tidder-topic" />
         <module name="tidder-front" />
-      </profile>
-      <profile name="Annotation profile for TidderParent" enabled="true">
-        <sourceOutputDir name="../tidder-topic/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../tidder-topic/target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="tidder-post" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Tidder" target="1.5" />
+      <module name="tidder-common" target="1.5" />
       <module name="tidder-eureka" target="1.8" />
       <module name="tidder-front" target="1.8" />
       <module name="tidder-likes" target="1.8" />
