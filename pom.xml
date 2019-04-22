@@ -12,7 +12,6 @@
     <modules>
         <module>tidder-eureka</module>
         <module>tidder-front</module>
-        <module>tidder-oauth</module>
         <module>tidder-zuul</module>
         <module>tidder-user</module>
         <module>tidder-topic</module>

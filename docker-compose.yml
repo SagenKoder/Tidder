@@ -38,37 +38,6 @@ services:
     deploy:
       mode: replicated
       replicas: 1
-  tidder-oauth:
-    build: ./tidder-oauth/
-    restart: always
-    depends_on:
-    - tidder-eureka
-    - db
-    ports:
-    - "9099"
-    deploy:
-      mode: replicated
-      replicas: 1
-  tidder-test1:
-    build: ./tidder-test1/
-    restart: always
-    depends_on:
-    - tidder-eureka
-    ports:
-    - "9092"
-    deploy:
-      mode: replicated 
-      replicas: 1
-  tidder-test2:
-    build: ./tidder-test2/
-    restart: always
-    depends_on:
-    - tidder-eureka
-    ports:
-    - "9091"
-    deploy:
-      mode: replicated
-      replicas: 1
   tidder-user:
     build: ./tidder-user/
     restart: always

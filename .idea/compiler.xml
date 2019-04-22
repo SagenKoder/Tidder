@@ -8,9 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="tidder-post" />
         <module name="tidder-user" />
+        <module name="tidder-eureka" />
         <module name="tidder-likes" />
         <module name="tidder-zuul" />
-        <module name="tidder-oauth" />
         <module name="tidder-common" />
         <module name="tidder-topic" />
         <module name="tidder-front" />
