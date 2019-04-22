@@ -6,22 +6,33 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="tidder-eureka" />
-        <module name="tidder-front" />
-        <module name="tidder-oauth" />
-        <module name="tidder-test1" />
-        <module name="tidder-test2" />
         <module name="tidder-user" />
+        <module name="tidder-eureka" />
+        <module name="tidder-likes" />
+        <module name="tidder-test2" />
+        <module name="tidder-test1" />
         <module name="tidder-zuul" />
+        <module name="tidder-oauth" />
+        <module name="tidder-topic" />
+        <module name="tidder-front" />
+      </profile>
+      <profile name="Annotation profile for TidderParent" enabled="true">
+        <sourceOutputDir name="../tidder-topic/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../tidder-topic/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="tidder-post" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Tidder" target="1.5" />
       <module name="tidder-eureka" target="1.8" />
       <module name="tidder-front" target="1.8" />
+      <module name="tidder-likes" target="1.8" />
       <module name="tidder-oauth" target="1.8" />
+      <module name="tidder-post" target="1.8" />
       <module name="tidder-test1" target="1.8" />
       <module name="tidder-test2" target="1.8" />
+      <module name="tidder-topic" target="1.8" />
       <module name="tidder-user" target="1.8" />
       <module name="tidder-zuul" target="1.8" />
     </bytecodeTargetLevel>
@@ -30,9 +41,12 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="tidder-eureka" options="" />
       <module name="tidder-front" options="-parameters" />
+      <module name="tidder-likes" options="-parameters" />
       <module name="tidder-oauth" options="-parameters" />
+      <module name="tidder-post" options="-parameters" />
       <module name="tidder-test1" options="-parameters" />
       <module name="tidder-test2" options="-parameters" />
+      <module name="tidder-topic" options="-parameters" />
       <module name="tidder-user" options="-parameters" />
       <module name="tidder-zuul" options="-parameters" />
     </option>

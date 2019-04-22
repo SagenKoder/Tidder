@@ -17,6 +17,9 @@
         <module>tidder-test2</module>
         <module>tidder-zuul</module>
         <module>tidder-user</module>
+        <module>tidder-topic</module>
+        <module>tidder-post</module>
+        <module>tidder-likes</module>
     </modules>
-    
+
 </project>
