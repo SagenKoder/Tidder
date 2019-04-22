@@ -10,7 +10,9 @@ public class Topic {
     private String title;
 
     public Topic(User owner, String name, String title) {
-
+        this.owner = owner;
+        this.name = name;
+        this.title = title;
     }
 
 }
