@@ -20,7 +20,7 @@ zuul:
       path: /eureka*
       serviceId: eureka-server
       stripPrefix: true
-    eureka-feont-slash:
+    eureka-front-slash:
       path: /eureka/*
       serviceId: eureka-server
       stripPrefix: true
@@ -28,9 +28,6 @@ zuul:
       path: /eureka/**
       serviceId: eureka-server
       stripPrefix: false
-    test:
-      path: /test/**
-      serviceId: test
     oauth:
       path: /oauth/**
       serviceId: oauth

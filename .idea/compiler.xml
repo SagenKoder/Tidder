@@ -9,8 +9,6 @@
         <module name="tidder-user" />
         <module name="tidder-eureka" />
         <module name="tidder-likes" />
-        <module name="tidder-test2" />
-        <module name="tidder-test1" />
         <module name="tidder-zuul" />
         <module name="tidder-oauth" />
         <module name="tidder-topic" />
