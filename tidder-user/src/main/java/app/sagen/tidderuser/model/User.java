@@ -24,8 +24,11 @@ public class User {
     private String lastName;
     private String email;
     private String password;
+    @Column(name = "pwd_set")
     private Date passwordSetDate;
+    @Column(name = "pwd_expires")
     private Date passwordExpires;
+    @Column(name = "pwd_by")
     private String passwordSetBy;
 
     @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
