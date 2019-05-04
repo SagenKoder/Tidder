@@ -32,12 +32,8 @@ services:
     restart: always
     depends_on:
     - tidder-eureka
-    - db
     ports:
-    - "9090"
-    deploy:
-      mode: replicated
-      replicas: 1
+    - "9090:9090"
   tidder-user:
     build: ./tidder-user/
     restart: always
