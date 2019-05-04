@@ -11,12 +11,12 @@
 <div th:replace="fragments/layout::sagenapp_header(${currentUser}, true)"></div>
 
 <!-- Header -->
-<header class="masthead">
+<header  class="masthead">
     <div class="container">
         <div class="intro-text py-5">
             <div class="intro-heading pt-5">/t/<span th:text="${topic.getName()}"></span></div>
-            <div th:if="${topic.getName()}==${'all'}" class="intro-lead-in">Collection of the best posts from all categories</div>
-            <div th:if="${topic.getTitle()}!=${'all'}" class="intro-lead-in"></div>
+            <div th:if="${topicName}==${'all'}" class="intro-lead-in">Collection of the best posts from all categories</div>
+            <div th:if="${topic!=null && topic.getName()!='all'}" th:text="${topic.getTitle()}" class="intro-lead-in"></div>
         </div>
     </div>
 </header>
@@ -101,7 +101,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Topic Name</label>
-                                <input class="form-control" id="topic" type="text" th:value="${topicName}" disabled="disabled" required="required">
+                                <input class="form-control" id="topic" type="text" th:value="${topic.getName()}" disabled="disabled" required="required">
                             </div>
                             <div class="form-group">
                                 <label>Topic Title</label>

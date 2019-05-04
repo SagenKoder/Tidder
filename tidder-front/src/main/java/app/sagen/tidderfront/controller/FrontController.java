@@ -52,6 +52,7 @@ public class FrontController {
 
         Optional<Topic> topicOptional = topicService.fetchTopic(topicName);
 
+        model.addAttribute("topicName", topicName);
         model.addAttribute("topic", topicOptional.orElse(null));
         if(topicOptional.isPresent()) model.addAttribute("posts", postService.fetchAll(topicName));
 
