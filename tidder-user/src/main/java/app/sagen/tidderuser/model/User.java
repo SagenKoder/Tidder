@@ -6,13 +6,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import javax.persistence.Column;
-import javax.persistence.ElementCollection;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.FetchType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.security.SecureRandom;
 import java.util.Date;
 import java.util.HashSet;
@@ -35,8 +29,9 @@ public class User {
     private String passwordSetBy;
 
     @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
-    @Column(nullable = false)
     @Enumerated(EnumType.STRING)
+    @Column(nullable = false, name = "role_id")
+    @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"))
     private Set<Role> roles = new HashSet<>();
 
     public User(String username) {
