@@ -12,6 +12,7 @@ import org.springframework.web.client.RestTemplate;
 import java.net.URI;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -32,27 +33,8 @@ public class PostService {
         return URI.create(String.format("http://%s:%s", instance.getHost(), instance.getPort()));
     }
 
-    public List<Post> fetchAll(Topic topic) {
-        List<Post> posts = new ArrayList<>();
-        posts.add(new Post(
-                new User("gaute94"),
-                topic,
-                LocalDateTime.now().minusHours(2),
-                "Stupid people fight trashcan",
-                "Stupid people fight trashcan"));
-        posts.add(new Post(
-                new User("sagen"),
-                topic,
-                LocalDateTime.now().minusHours(3),
-                "Robots can now outrun even the fastest athletes",
-                "Robots can now outrun even the fastest athletes"));
-        posts.add(new Post(
-                new User("RostadConsulting"),
-                topic,
-                LocalDateTime.now().minusHours(4),
-                "Idiot fights a tree",
-                "Idiot fights a tree"));
-        return posts;
+    public List<Post> fetchAll(String topic) {
+        return Collections.emptyList();
     }
 
 }

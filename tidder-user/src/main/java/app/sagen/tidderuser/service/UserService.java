@@ -15,12 +15,10 @@ import java.util.stream.Stream;
 public class UserService {
 
     private UserRepository userRepository;
-    private EmailService emailService;
 
     @Autowired
     private UserService(UserRepository userRepository, EmailService emailService) {
         this.userRepository = userRepository;
-        this.emailService = emailService;
         if(count() == 0) {
             User user = new User(
                     "sagen",

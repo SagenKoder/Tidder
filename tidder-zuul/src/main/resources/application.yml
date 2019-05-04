@@ -28,10 +28,6 @@ zuul:
       path: /eureka/**
       serviceId: eureka-server
       stripPrefix: false
-    oauth:
-      path: /oauth/**
-      serviceId: oauth
-      stripPrefix: false
     home:
       path: /**
       serviceId: front

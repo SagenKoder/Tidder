@@ -3,6 +3,7 @@ package app.sagen.tidderfront.controller;
 import app.sagen.tidderfront.model.Topic;
 import app.sagen.tidderfront.model.User;
 import app.sagen.tidderfront.service.PostService;
+import app.sagen.tidderfront.service.TopicService;
 import app.sagen.tidderfront.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,11 +19,13 @@ public class FrontController {
 
     private UserService userService;
     private PostService postService;
+    private TopicService topicService;
 
     @Autowired
-    FrontController(UserService userService, PostService postService) {
+    FrontController(UserService userService, PostService postService, TopicService topicService) {
         this.userService = userService;
         this.postService = postService;
+        this.topicService = topicService;
     }
 
     @GetMapping()
@@ -42,18 +45,15 @@ public class FrontController {
         String filteredTopic = topicName.toLowerCase();
         filteredTopic = filteredTopic.replaceAll("[^a-z0-9]", "");
         if(!filteredTopic.equals(topicName)) return "redirect:/t/" + filteredTopic;
+        topicName = filteredTopic;
         Optional<User> optuser = userService.getAuthenticatedUser();
         User user = null;
         if(optuser.isPresent()) user = optuser.get();
 
-        Topic topic = new Topic(
-                optuser.isPresent() ? user : new User("Sagen97"),
-                topicName,
-                "Insert Fitting Title Here <3"
-        );
+        Optional<Topic> topicOptional = topicService.fetchTopic(topicName);
 
-        model.addAttribute(topic);
-        model.addAttribute("posts", postService.fetchAll(topic));
+        model.addAttribute("topic", topicOptional.orElse(null));
+        if(topicOptional.isPresent()) model.addAttribute("posts", postService.fetchAll(topicName));
 
         model.addAttribute("currentUser", user);
         return "topic";
