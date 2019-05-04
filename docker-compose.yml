@@ -48,9 +48,13 @@ services:
     deploy:
       mode: replicated
       replicas: 1
-networks:
-  tidder_default:
-    ipam:
-      driver: default
-      config:
-      - subnet: 46.4.245.160/28
+  tidder-topic:
+    build: ./tidder-topic/
+    restart: always
+    depends_on:
+      - tidder-eureka
+    ports:
+      - "9090"
+    deploy:
+      mode: replicated
+      replicas: 1
