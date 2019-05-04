@@ -58,3 +58,23 @@ services:
     deploy:
       mode: replicated
       replicas: 1
+  tidder-post:
+    build: ./tidder-post/
+    restart: always
+    depends_on:
+      - tidder-eureka
+    ports:
+      - "9090"
+    deploy:
+      mode: replicated
+      replicas: 1
+  tidder-likes:
+    build: ./tidder-likes/
+    restart: always
+    depends_on:
+      - tidder-eureka
+    ports:
+      - "9090"
+    deploy:
+      mode: replicated
+      replicas: 1
