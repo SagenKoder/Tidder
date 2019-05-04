@@ -11,12 +11,11 @@
 <div th:replace="fragments/layout::sagenapp_header(${currentUser}, true)"></div>
 
 <!-- Header -->
-<header  class="masthead">
+<header class="masthead">
     <div class="container">
         <div class="intro-text py-5">
-            <div class="intro-heading pt-5">/t/<span th:text="${topic.getName()}"></span></div>
-            <div th:if="${topicName}==${'all'}" class="intro-lead-in">Collection of the best posts from all categories</div>
-            <div th:if="${topic!=null && topic.getName()!='all'}" th:text="${topic.getTitle()}" class="intro-lead-in"></div>
+            <div class="intro-heading pt-5">/t/<span th:text="${topicName}"></span></div>
+            <div th:if="${topic!=null}" th:text="${topic.getTitle()}" class="intro-lead-in"></div>
         </div>
     </div>
 </header>
