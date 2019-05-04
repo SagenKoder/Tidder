@@ -31,7 +31,7 @@ public class User {
     @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, name = "role_id")
-    @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"))
+    @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"), foreignKey = @ForeignKey(name="FK_USER_ROLE"))
     private Set<Role> roles = new HashSet<>();
 
     public User(String username) {
