@@ -4,12 +4,14 @@ import app.sagen.tidderfront.model.Topic;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.net.URI;
 import java.util.*;
 import java.util.stream.Collectors;
 
+@Service
 public class TopicService {
 
     private RestTemplate restTemplate = new RestTemplate();
