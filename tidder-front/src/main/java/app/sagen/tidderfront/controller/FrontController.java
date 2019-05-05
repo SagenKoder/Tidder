@@ -124,7 +124,11 @@ public class FrontController {
             topic.setOwner("server");
             model.addAttribute("topic", topic);
         } else if(topicOptional.isPresent()) {
-            model.addAttribute("posts", postService.fetchPostsByTopic(topicName));
+            List<Post> postsByTopic = postService.fetchPostsByTopic(topicName);
+            System.out.println("*****************************************");
+            System.out.println(postsByTopic);
+            System.out.println("*****************************************");
+            model.addAttribute("posts", postsByTopic);
             model.addAttribute("topic", topicOptional.orElse(null));
         }
 
