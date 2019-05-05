@@ -2,6 +2,7 @@ package app.sagen.tidderfront.controller;
 
 import app.sagen.tidderfront.model.Topic;
 import app.sagen.tidderfront.model.User;
+import app.sagen.tidderfront.service.TopicService;
 import app.sagen.tidderfront.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,10 +18,12 @@ import java.util.Optional;
 @RequestMapping("/home")
 public class HomeController {
 
+    private TopicService topicService;
     private UserService userService;
 
     @Autowired
-    HomeController(UserService userService) {
+    HomeController(UserService userService, TopicService topicService) {
+        this.topicService = topicService;
         this.userService = userService;
     }
 
@@ -29,6 +32,7 @@ public class HomeController {
         System.out.println("FRONT :::::: HomeController :::::: GET homepage");
         Optional<User> user = userService.getAuthenticatedUser();
         model.addAttribute("currentUser", user.orElseGet(null));
+        model.addAttribute("allTopics", topicService.fetchAllTopics());
         return "home";
     }
 
