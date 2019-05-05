@@ -28,11 +28,11 @@ public class PostService {
     }
 
     public List<Post> fetchPostsByUser(String user) {
-        return postRepository.findAllByOwnerOrderByDate(user);
+        return postRepository.findAllByOwnerOrderByDateDesc(user);
     }
 
     public List<Post> fetchPostsByTopic(String topic) {
-        List<Post> allByTopicOrderByDate = postRepository.findAllByTopicOrderByDate(topic);
+        List<Post> allByTopicOrderByDate = postRepository.findAllByTopicOrderByDateDesc(topic);
 
         System.out.println("********************************");
         System.out.println("RETUGNING POSTS FROM DATABASE -> " + allByTopicOrderByDate);
@@ -41,7 +41,7 @@ public class PostService {
     }
 
     public List<Post> fetchPostsByUsersOrTopics(List<String> users, List<String> topics) {
-        return postRepository.findAllByTopicInOrOwnerInOrderByDate(users, topics);
+        return postRepository.findAllByTopicInOrOwnerInOrderByDateDesc(users, topics);
     }
 
     public void deleteByUser(String user) {

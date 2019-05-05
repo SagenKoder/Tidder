@@ -89,6 +89,7 @@ public class FrontController {
         topic.setTitle(topicTitle);
 
         if(topic.getName().equalsIgnoreCase("all")) return "redirect:/all/"; // never claim "all"
+        if(topic.getName().equalsIgnoreCase("feed")) return "redirect:/feed/"; // never claim "feed"
 
         Optional<User> user = userService.getAuthenticatedUser(); // require login
         if(!user.isPresent()) return "redirect:/login";
@@ -120,6 +121,9 @@ public class FrontController {
             topic.setOwner("server");
             model.addAttribute("topic", topic);
         } else if(topicName.equalsIgnoreCase("feed")) {
+            if(!optuser.isPresent()) {
+                return "redirect:/login";
+            }
             model.addAttribute("posts", postService.fetchPostsByUsersOrTopics(user.getUsers(), user.getTopics()));
             Topic topic = new Topic();
             topic.setTitle("A collection of posts from poeple and topics you follow");
