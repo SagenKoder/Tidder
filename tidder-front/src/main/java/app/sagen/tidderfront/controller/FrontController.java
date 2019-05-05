@@ -90,6 +90,7 @@ public class FrontController {
             model.addAttribute("topic", topicOptional.orElse(null));
         }
 
+        model.addAttribute("allTopics", topicService.fetchAllTopics());
         model.addAttribute("currentUser", user);
         return "topic";
     }

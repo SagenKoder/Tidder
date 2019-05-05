@@ -53,30 +53,10 @@
             </div>
             <div class="row">
                 <div class="my-1 mx-md-3 px-4 py-3 col-12 userColumnContainer">
-                    <h4 class="text-align-center">Top 10 topics</h4>
-                    <h6 class="ml-0">/t/thingsfightidiots</h6>
-                    <h6 class="ml-0">/t/thingsfightidiots</h6>
-                    <h6 class="ml-0">/t/thingsfightidiots</h6>
-                    <h6 class="ml-0">/t/thingsfightidiots</h6>
-                    <h6 class="ml-0">/t/thingsfightidiots</h6>
-                    <h6 class="ml-0">/t/thingsfightidiots</h6>
-                    <h6 class="ml-0">/t/thingsfightidiots</h6>
-                    <h6 class="ml-0">/t/thingsfightidiots</h6>
-                    <h6 class="ml-0">/t/thingsfightidiots</h6>
-                </div>
-            </div>
-            <div class="row">
-                <div class="my-1 mx-md-3 px-4 py-3 col-12 userColumnContainer">
-                    <h4 class="text-align-center">Discover</h4>
-                    <h6 class="ml-0">/t/thingsfightidiots</h6>
-                    <h6 class="ml-0">/t/thingsfightidiots</h6>
-                    <h6 class="ml-0">/t/thingsfightidiots</h6>
-                    <h6 class="ml-0">/t/thingsfightidiots</h6>
-                    <h6 class="ml-0">/t/thingsfightidiots</h6>
-                    <h6 class="ml-0">/t/thingsfightidiots</h6>
-                    <h6 class="ml-0">/t/thingsfightidiots</h6>
-                    <h6 class="ml-0">/t/thingsfightidiots</h6>
-                    <h6 class="ml-0">/t/thingsfightidiots</h6>
+                    <h4 class="text-align-center">10 random topics</h4>
+                    <a th:each="topic, topicItr : ${allTopics}" th:if="${topicItr.index <= 10}" th:href="'/t/'+${topic.getName()}">
+                        <h6 class="ml-0" th:text="'/t/'+${topic.getName()}"></h6>
+                    </a>
                 </div>
             </div>
         </div>

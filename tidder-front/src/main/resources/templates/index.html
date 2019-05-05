@@ -49,7 +49,7 @@
             </div>
 
             <div th:each="topic, topicItr : ${allTopics}" th:if="${topicItr.index <= 10}" class="text-center col-md-6 offset-md-3 my-1 py-2 rounded" style="background-color: #333">
-                <a class="text-center" href="/t/random">/t/random</a>
+                <a class="text-center" th:href="'/t/'+${topic.getName()}" th:text="'/t/'+${topic.getName()}"></a>
             </div>
 
         </div>
