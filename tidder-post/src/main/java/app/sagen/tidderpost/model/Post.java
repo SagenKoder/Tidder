@@ -3,8 +3,10 @@ package app.sagen.tidderpost.model;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import java.time.LocalDateTime;
 
 @Data
@@ -19,6 +21,9 @@ public class Post {
     private LocalDateTime date;
     private String title;
     private String body;
+
+    @Lob()
+    @Column(length = 52428800)
     private String image;
 
     public Post(String owner, String topic, LocalDateTime date, String title, String body, String image) {
