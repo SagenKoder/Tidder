@@ -6,9 +6,7 @@ import app.sagen.tidderfront.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
@@ -64,6 +62,12 @@ public class AdminUserController {
         if(response.isPresent() && response.get().getStatus().equalsIgnoreCase("ok")) {
             userService.update(user.get(), user.get().getUsername());
         }
+        return "redirect:/admin/user";
+    }
+
+    @PostMapping("save/{username}")
+    public String updateUser(@PathVariable String username, @RequestParam User user) {
+        userService.update(user, username);
         return "redirect:/admin/user";
     }
 

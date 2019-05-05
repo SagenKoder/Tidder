@@ -1,6 +1,5 @@
 package app.sagen.tidderfront.controller;
 
-import app.sagen.tidderfront.model.Post;
 import app.sagen.tidderfront.model.Topic;
 import app.sagen.tidderfront.model.User;
 import app.sagen.tidderfront.service.PostService;
@@ -71,14 +70,24 @@ public class FrontController {
         Optional<Topic> topicOptional = topicService.fetchTopic(topicName);
 
         model.addAttribute("topicName", topicName);
-        model.addAttribute("topic", topicOptional.orElse(null));
 
         if(topicName.equalsIgnoreCase("all")) {
             model.addAttribute("posts", postService.fetchAll());
+            Topic topic = new Topic();
+            topic.setTitle("A collection of every post on tidder");
+            topic.setName("all");
+            topic.setOwner("server");
+            model.addAttribute("topic", topic);
         } else if(topicName.equalsIgnoreCase("feed")) {
             model.addAttribute("posts", postService.fetchPostsByUsersOrTopics(user.getUsers(), user.getTopics()));
+            Topic topic = new Topic();
+            topic.setTitle("A collection of posts from poeple and topics you follow");
+            topic.setName("feed");
+            topic.setOwner("server");
+            model.addAttribute("topic", topic);
         } else if(topicOptional.isPresent()) {
             model.addAttribute("posts", postService.fetchPostsByTopic(topicName));
+            model.addAttribute("topic", topicOptional.orElse(null));
         }
 
         model.addAttribute("currentUser", user);
