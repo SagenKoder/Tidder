@@ -30,6 +30,10 @@ public class Post {
         this.body = body;
     }
 
+    public void setImage(String image) {
+        this.image = image;
+    }
+
     public void setImage(MultipartFile file) {
         if(file == null) return;
         try {
