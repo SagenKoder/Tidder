@@ -7,11 +7,11 @@ import java.util.List;
 
 public interface PostRepository extends JpaRepository<Post, Long> {
 
-    List<Post> findAllByOwnerOrderByDate(String owner);
+    List<Post> findAllByOwnerOrderByDateDesc(String owner);
 
-    List<Post> findAllByTopicOrderByDate(String topic);
+    List<Post> findAllByTopicOrderByDateDesc(String topic);
 
-    List<Post> findAllByTopicInOrOwnerInOrderByDate(List<String> topics, List<String> owners);
+    List<Post> findAllByTopicInOrOwnerInOrderByDateDesc(List<String> topics, List<String> owners);
 
     void deleteAllByOwner(String owner);
 
