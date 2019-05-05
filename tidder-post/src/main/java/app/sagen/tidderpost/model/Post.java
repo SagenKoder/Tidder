@@ -3,10 +3,7 @@ package app.sagen.tidderpost.model;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Lob;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Data
@@ -15,6 +12,7 @@ import java.time.LocalDateTime;
 public class Post {
 
     @Id
+    @GeneratedValue
     private long id;
     private String owner;
     private String topic;
