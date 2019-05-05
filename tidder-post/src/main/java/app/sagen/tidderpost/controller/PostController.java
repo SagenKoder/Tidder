@@ -28,7 +28,11 @@ public class PostController {
 
     @GetMapping("/t/{topic}")
     public List<Post> allPostsByTopic(@PathVariable String topic) {
-        return postService.fetchPostsByTopic(topic);
+        List<Post> posts = postService.fetchPostsByTopic(topic);
+        System.out.println("********************************");
+        System.out.println("RETUGNING POSTS FROM SERVICE -> " + posts);
+        System.out.println("********************************");
+        return posts;
     }
 
     @PostMapping("/feed")
@@ -38,6 +42,9 @@ public class PostController {
 
     @PostMapping("/")
     public Post createPost(@RequestBody Post post) {
+        System.out.println("********************************");
+        System.out.println("SENDING POST TO SERVICE FOR SAVING -> " + post);
+        System.out.println("********************************");
         return postService.createPost(post);
     }
 

@@ -123,7 +123,10 @@ public class PostService {
 
     // POST / -> Post
     public Optional<Post> createPost(Post post) {
-        URI uri = getPostService().resolve("/");
+        URI uri = getPostService();
+        System.out.println("********************************");
+        System.out.println("SENDING POST TO POST SERVER -> " + post);
+        System.out.println("********************************");
         try {
             return Optional.ofNullable(restTemplate.postForObject(uri, post, Post.class));
         } catch (Exception e){

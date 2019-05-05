@@ -32,7 +32,12 @@ public class PostService {
     }
 
     public List<Post> fetchPostsByTopic(String topic) {
-        return postRepository.findAllByTopicOrderByDate(topic);
+        List<Post> allByTopicOrderByDate = postRepository.findAllByTopicOrderByDate(topic);
+
+        System.out.println("********************************");
+        System.out.println("RETUGNING POSTS FROM DATABASE -> " + allByTopicOrderByDate);
+        System.out.println("********************************");
+        return allByTopicOrderByDate;
     }
 
     public List<Post> fetchPostsByUsersOrTopics(List<String> users, List<String> topics) {
@@ -52,7 +57,13 @@ public class PostService {
     }
 
     public Post createPost(Post post) {
+
+        System.out.println("********************************");
+        System.out.println("CREATING POST -> " + post);
+
         Optional<Post> oldPost = postRepository.findById(post.getId());
+        System.out.println("OLD POST -> " + oldPost);
+        System.out.println("********************************");
         // disallow accidental overwrite
         return oldPost.orElseGet(() -> postRepository.save(post));
     }
