@@ -1,5 +1,6 @@
 package app.sagen.tidderfront.controller;
 
+import app.sagen.tidderfront.model.Post;
 import app.sagen.tidderfront.model.Topic;
 import app.sagen.tidderfront.model.User;
 import app.sagen.tidderfront.service.PostService;
@@ -54,6 +55,21 @@ public class FrontController {
         model.addAttribute("allTopics", topicService.fetchAllTopics());
         model.addAttribute("topicName", topic);
         return "newPost";
+    }
+
+    @PostMapping("/{topic}/newPost")
+    public String createPost(Model model, @RequestParam Post post, @PathVariable String topic) {
+        if(!topicService.fetchTopic(topic.toLowerCase().trim()).isPresent()) {
+            return "redirect:/t/" + topic;
+        }
+        Optional<User> user = userService.getAuthenticatedUser();
+        if(!user.isPresent()) {
+            return "redirect:/login";
+        }
+
+        postService.createPost(post);
+
+        return "redirect:/t/" + topic;
     }
 
     @PostMapping("/createTopic/{topicName}")
