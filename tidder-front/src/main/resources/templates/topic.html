@@ -46,7 +46,7 @@
         <div class="col-lg-3 col-md-4">
 
             <div th:if="currentUser != null">
-                <a th:href="${'/t/'+${topicName}+'/newPost'}" class="btn btn-primary btn-lg">New Post</a>
+                <a th:href="'/t/'+${topicName}+'/newPost'" class="btn btn-primary btn-lg">New Post</a>
             </div>
 
             <div th:if="currentUser!=null" class="row">
