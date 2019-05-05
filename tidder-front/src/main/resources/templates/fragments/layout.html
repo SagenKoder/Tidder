@@ -55,11 +55,9 @@
                         <span th:text="${' Admin'}"></span>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown-admin">
-                        <a class="dropdown-item" href="#">Admin Frontpage</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="/admin/user">Admin - Users</a>
-                        <a class="dropdown-item" href="#">Admin - Nodes</a>
-                        <a class="dropdown-item" href="#">Admin - Servers</a>
+                        <!--<a class="dropdown-item" href="#">Admin Frontpage</a>
+                        <div class="dropdown-divider"></div>-->
+                        <a class="dropdown-item" href="/admin/user">Users</a>
                     </div>
                 </li>
                 <li th:if="${currentUser!=null}" class="nav-item dropdown">
@@ -68,7 +66,6 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown-user">
                         <a class="dropdown-item" href="/home">Your profile</a>
-                        <a class="dropdown-item" href="/t/newPost">New post</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="/logout">Log out</a>
                     </div>

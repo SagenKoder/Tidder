@@ -37,6 +37,10 @@
                     <hr class="my-1" style="border-color: #666;">
                     <span class="font-weight-bold text-truncate" th:text="${post.getTitle()}"></span>
                     <span class="font-weight-light" style="display:block;" th:text="${post.getBody()}"></span>
+                    <th:block th:if="${post.getImage() != null}">
+                        <hr class="my-1" style="border-color: #666;">
+                        <img th:if="${post.image != null}" th:src="@{'data:image/png;base64,'+${post.image}}"/>
+                    </th:block>
                 </div>
             </div>
             </th:block>

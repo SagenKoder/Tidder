@@ -19,13 +19,15 @@ public class Post {
     private LocalDateTime date;
     private String title;
     private String body;
+    private String image;
 
-    public Post(String owner, String topic, LocalDateTime date, String title, String body) {
+    public Post(String owner, String topic, LocalDateTime date, String title, String body, String image) {
         this.id = 0;
         this.owner = owner;
         this.topic = topic;
         this.date = date;
         this.title = title;
         this.body = body;
+        this.image = image;
     }
 }

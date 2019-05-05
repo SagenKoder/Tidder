@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
 import java.time.LocalDateTime;
@@ -59,7 +60,7 @@ public class FrontController {
     }
 
     @PostMapping("/{topic}/newPost")
-    public String createPost(Model model, @RequestParam String title, @RequestParam String body, @PathVariable String topic) {
+    public String createPost(Model model, @RequestParam String title, @RequestParam String body, @RequestParam(required = false) MultipartFile image, @PathVariable String topic) {
         if(!topicService.fetchTopic(topic.toLowerCase().trim()).isPresent()) {
             return "redirect:/t/" + topic;
         }
@@ -74,6 +75,7 @@ public class FrontController {
         post.setDate(LocalDateTime.now());
         post.setOwner(user.get().getUsername());
         post.setTopic(topic);
+        post.setImage(image);
 
         postService.createPost(post);
 
