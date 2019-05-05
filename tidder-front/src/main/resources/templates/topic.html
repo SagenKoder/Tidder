@@ -36,6 +36,7 @@
                     <span class="font-weight-light text-truncate">2 hours ago | by <a th:text="${post.getOwner()}" th:href="'/u/'+${post.getOwner()}"></a> | <a th:href="'/t/'+${post.getTopic()}" th:text="'/t/'+${post.getTopic()}"></a></span>
                     <hr class="my-1" style="border-color: #666;">
                     <span class="font-weight-bold text-truncate" th:text="${post.getTitle()}"></span>
+                    <span class="font-weight-light" style="display:block;" th:text="${post.getBody()}"></span>
                 </div>
             </div>
             </th:block>
@@ -43,6 +44,11 @@
         </div>
 
         <div class="col-lg-3 col-md-4">
+
+            <div th:if="currentUser != null">
+                <a th:href="${'/t/'+${topicName}+'/newPost'}" class="btn btn-primary btn-lg">New Post</a>
+            </div>
+
             <div th:if="currentUser!=null" class="row">
                 <div class="my-1 mx-md-3 px-4 py-3 col-12 userColumnContainer">
                     <h4 class="text-align-center">Your profile</h4>
