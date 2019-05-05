@@ -40,6 +40,20 @@ public class FrontController {
         return "redirect:/t/" + topic;
     }
 
+    @PostMapping("/createTopic")
+    public String createTopic(@RequestParam Topic topic) {
+        topic.setName(topic.getName().toLowerCase()); // always lowercase
+
+        if(topic.getName().equalsIgnoreCase("all")) return "redirect:/all/"; // never claim "all"
+
+        Optional<User> user = userService.getAuthenticatedUser(); // require login
+        if(!user.isPresent()) return "redirect:/login";
+
+        topic.setOwner(user.get().getUsername()); // set owner
+        topicService.createTopic(topic); // save if not exists
+        return "redirect:/t/" + topic.getName();
+    }
+
     @GetMapping("{topicName}")
     public String topic(HttpServletResponse response, Model model, @PathVariable("topicName") String topicName) {
         String filteredTopic = topicName.toLowerCase();
