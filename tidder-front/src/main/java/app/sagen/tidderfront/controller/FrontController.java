@@ -40,8 +40,8 @@ public class FrontController {
         return "redirect:/t/" + topic;
     }
 
-    @PostMapping("/createTopic")
-    public String createTopic(@RequestParam String topicName, String topicTitle) {
+    @PostMapping("/createTopic/{topicName}")
+    public String createTopic(@PathVariable String topicName, @RequestParam String topicTitle) {
         Topic topic = new Topic();
         topic.setName(topicName.toLowerCase().trim());
         topic.setTitle(topicTitle);
