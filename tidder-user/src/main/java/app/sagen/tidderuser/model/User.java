@@ -8,10 +8,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.persistence.*;
 import java.security.SecureRandom;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Random;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 @Data
@@ -36,6 +33,11 @@ public class User {
     @Column(nullable = false, name = "role_id")
     @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"), foreignKey = @ForeignKey(name="FK_USER_ROLE"))
     private Set<Role> roles = new HashSet<>();
+
+    @ElementCollection
+    private List<String> topics = new ArrayList<>();
+    @ElementCollection
+    private List<String> users = new ArrayList<>();
 
     public User(String username) {
         this.username = username;

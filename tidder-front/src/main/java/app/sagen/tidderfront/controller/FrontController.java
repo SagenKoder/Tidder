@@ -1,5 +1,6 @@
 package app.sagen.tidderfront.controller;
 
+import app.sagen.tidderfront.model.Post;
 import app.sagen.tidderfront.model.Topic;
 import app.sagen.tidderfront.model.User;
 import app.sagen.tidderfront.service.PostService;
@@ -11,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -70,7 +72,14 @@ public class FrontController {
 
         model.addAttribute("topicName", topicName);
         model.addAttribute("topic", topicOptional.orElse(null));
-        if(topicOptional.isPresent()) model.addAttribute("posts", postService.fetchAll(topicName));
+
+        if(topicName.equalsIgnoreCase("all")) {
+            model.addAttribute("posts", postService.fetchAll());
+        } else if(topicName.equalsIgnoreCase("feed")) {
+            model.addAttribute("posts", postService.fetchPostsByUsersOrTopics(user.getUsers(), user.getTopics()));
+        } else if(topicOptional.isPresent()) {
+            model.addAttribute("posts", postService.fetchPostsByTopic(topicName));
+        }
 
         model.addAttribute("currentUser", user);
         return "topic";

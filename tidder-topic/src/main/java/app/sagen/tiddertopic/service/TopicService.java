@@ -15,19 +15,11 @@ import java.util.Optional;
 @Service
 public class TopicService {
 
-    private RestTemplate restTemplate = new RestTemplate();
-    private LoadBalancerClient loadBalancer;
     private TopicRepository topicRepository;
 
     @Autowired
     public TopicService(LoadBalancerClient loadBalancer, TopicRepository topicRepository) {
         this.topicRepository = topicRepository;
-        this.loadBalancer = loadBalancer;
-    }
-
-    private URI getUserService() {
-        ServiceInstance instance = loadBalancer.choose("user");
-        return URI.create(String.format("http://%s:%s", instance.getHost(), instance.getPort()));
     }
 
     public Optional<Topic> fetchTopic(String name) {

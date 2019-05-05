@@ -25,6 +25,8 @@ public class User implements UserDetails {
     private Date passwordSetDate;
     private Date passwordExpires;
     private String passwordSetBy;
+    private List<String> topics;
+    private List<String> users;
 
     public User(String username) {
         this.username = username;

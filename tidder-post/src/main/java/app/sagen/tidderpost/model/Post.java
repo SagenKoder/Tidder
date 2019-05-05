@@ -1,4 +1,4 @@
-package app.sagen.tidderfront.model;
+package app.sagen.tidderpost.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

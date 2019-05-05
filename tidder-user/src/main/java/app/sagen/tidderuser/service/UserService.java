@@ -72,6 +72,10 @@ public class UserService {
                 oldUser.setPassword(user.getPassword());
             if(user.getRoles() != null && !user.getRoles().isEmpty())
                 oldUser.setRoles(user.getRoles());
+            if(user.getTopics() != null)
+                oldUser.setTopics(user.getTopics());
+            if(user.getUsers() != null)
+                oldUser.setUsers(user.getUsers());
             save(oldUser);
             return Optional.of(oldUser);
         }
