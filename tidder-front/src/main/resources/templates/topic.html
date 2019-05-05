@@ -95,22 +95,18 @@
         </div>
         <div class="row">
             <div class="col-md-8 offset-md-2">
-                <form id="claimtopicform" name="/t/claimtopic" th:action="@{/createTopic}" method="post">
+                <form id="claimtopicform" name="topic" th:action="@{/t/createTopic}" method="post">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Topic Name</label>
-                                <input class="form-control" name="name" type="text" th:value="${topicName}" disabled="disabled" required="required">
+                                <input class="form-control" name="topicName" type="text" th:value="${topicName}" disabled="disabled" required="required">
                             </div>
-                            <!--<div class="form-group">
-                                <label>Topic Title</label>
-                                <input class="form-control" id="topicTitle" type="text" placeholder="Topic Title" required="required">
-                            </div>-->
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Topic title and description</label>
-                                <textarea class="form-control" name="title"  placeholder="Describe your topic and the rules..." required="required" maxlength="255"></textarea>
+                                <textarea class="form-control" name="topicTitle"  placeholder="Describe your topic and the rules..." required="required" maxlength="255"></textarea>
                             </div>
                         </div>
                         <div class="clearfix"></div>

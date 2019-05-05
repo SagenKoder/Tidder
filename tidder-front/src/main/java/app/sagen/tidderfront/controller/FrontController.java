@@ -41,8 +41,10 @@ public class FrontController {
     }
 
     @PostMapping("/createTopic")
-    public String createTopic(@RequestParam Topic topic) {
-        topic.setName(topic.getName().toLowerCase()); // always lowercase
+    public String createTopic(@RequestParam String topicName, String topicTitle) {
+        Topic topic = new Topic();
+        topic.setName(topicName.toLowerCase().trim());
+        topic.setTitle(topicTitle);
 
         if(topic.getName().equalsIgnoreCase("all")) return "redirect:/all/"; // never claim "all"
 
