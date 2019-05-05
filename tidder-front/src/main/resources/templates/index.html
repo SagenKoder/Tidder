@@ -42,14 +42,18 @@
                 </div>
             </div>
         </form>
-        <div class="row">
-            <div class="text-primary text-center">
-                <h4>Or select a topic the list</h4>
+
+        <div class="row text-center">
+            <div class="text-center col-md-8 offset-md-2 my-1 py-4" style="">
+                <h3 class="section-subheading my-0">Or select a topic from the list</h3>
             </div>
-            <div th:each="topic, itrStat : ${allTopics}" th:if="${itrStat.index} <= 10" class="text-center col-md-8 offset-md-2 my-1 py-4" style="background-color: #333">
-                <a class="text-center" th:href="'/t/'+${topic.name}" th:text="'/t/'+${topic.name}"></a>
+
+            <div th:each="topic, topicItr : ${allTopics}" th:if="${topicItr.index <= 10}" class="text-center col-md-6 offset-md-3 my-1 py-2 rounded" style="background-color: #333">
+                <a class="text-center" href="/t/random">/t/random</a>
             </div>
+
         </div>
+
     </div>
 </section>
 

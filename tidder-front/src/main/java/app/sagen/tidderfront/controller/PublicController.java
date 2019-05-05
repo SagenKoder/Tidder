@@ -1,6 +1,7 @@
 package app.sagen.tidderfront.controller;
 
 import app.sagen.tidderfront.model.User;
+import app.sagen.tidderfront.service.TopicService;
 import app.sagen.tidderfront.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,9 +17,11 @@ import java.util.Optional;
 public class PublicController {
 
     private UserService userService;
+    private TopicService topicService;
 
     @Autowired
-    PublicController(UserService userService) {
+    PublicController(UserService userService, TopicService topicService) {
+        this.topicService = topicService;
         this.userService = userService;
     }
 
@@ -52,6 +55,7 @@ public class PublicController {
         System.out.println("FRONT :::::: PublicController :::::: GET homepage");
         Optional<User> user = userService.getAuthenticatedUser();
         user.ifPresent(user1 -> model.addAttribute("currentUser", user1));
+        model.addAttribute("allTopics", topicService.fetchAllTopics());
         return "index";
     }
 
