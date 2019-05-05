@@ -73,6 +73,7 @@ public class FrontController {
         post.setTitle(title);
         post.setDate(LocalDateTime.now());
         post.setOwner(user.get().getUsername());
+        post.setTopic(topic);
 
         postService.createPost(post);
 
