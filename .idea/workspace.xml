@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c11b0fa-9b05-4d38-8a87-03744b940b4a" name="Default Changelist" comment="Added list of topics to top 10topics">
+    <list default="true" id="0c11b0fa-9b05-4d38-8a87-03744b940b4a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tidder-front/src/main/resources/templates/newPost.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/FrontController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/FrontController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tidder-front/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tidder-front/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tidder-front/src/main/resources/templates/fragments/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/tidder-front/src/main/resources/templates/fragments/layout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tidder-front/src/main/resources/templates/topic.html" beforeDir="false" afterPath="$PROJECT_DIR$/tidder-front/src/main/resources/templates/topic.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -37,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="526">
-              <caret line="31" column="64" selection-start-line="31" selection-start-column="64" selection-end-line="31" selection-end-column="64" />
+              <caret line="31" column="64" lean-forward="true" selection-start-line="30" selection-start-column="8" selection-end-line="31" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -58,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="305">
-              <caret line="47" column="63" selection-start-line="47" selection-start-column="62" selection-end-line="47" selection-end-column="63" />
+              <caret line="47" column="61" selection-start-line="47" selection-start-column="55" selection-end-line="47" selection-end-column="61" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -67,39 +68,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/AdminUserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/topic.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="60" column="18" lean-forward="true" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
+            <state relative-caret-position="240">
+              <caret line="88" column="41" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="41" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#th:block#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#th:block#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#hr#0;n#div#0;n#div#0;n#th:block#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#th:block#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-              <folding>
-                <element signature="n#style#0;n#i#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -118,16 +95,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tidder-user/src/main/java/app/sagen/tidderuser/service/UserService.java">
+        <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/fragments/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="30" column="41" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="41" />
-              <folding>
-                <element signature="e#3060#3061#0" expanded="true" />
-                <element signature="e#3103#3104#0" expanded="true" />
-                <element signature="e#3146#3147#0" expanded="true" />
-                <element signature="e#3203#3204#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="527">
+              <caret line="73" column="26" lean-forward="true" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -135,8 +106,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/FrontController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="92" column="71" selection-start-line="92" selection-start-column="71" selection-end-line="92" selection-end-column="71" />
+            <state relative-caret-position="118">
+              <caret line="43" column="4" lean-forward="true" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/newPost.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="611">
+              <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/model/Topic.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="11" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -145,14 +137,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tidder-post/src/main/java/app/sagen/tidderpost/controller/PostController.java">
+        <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/model/Post.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="56" column="64" selection-start-line="56" selection-start-column="52" selection-end-line="56" selection-end-column="64" />
+            <state relative-caret-position="272">
+              <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#603#604#0" expanded="true" />
-                <element signature="e#649#650#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -178,12 +168,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tidder-oauth/pom.xml" />
         <option value="$PROJECT_DIR$/tidder-zuul/pom.xml" />
         <option value="$PROJECT_DIR$/tidder-common/pom.xml" />
         <option value="$PROJECT_DIR$/tidder-eureka/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/tidder-front/src/main/resources/templates/fragments/layout.html" />
         <option value="$PROJECT_DIR$/tidder-topic/src/main/java/app/sagen/tiddertopic/TidderTopicApplication.java" />
         <option value="$PROJECT_DIR$/tidder-topic/Dockerfile" />
         <option value="$PROJECT_DIR$/pullRebuildAndDeploy.sh" />
@@ -227,8 +215,10 @@
         <option value="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/HomeController.java" />
         <option value="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/PublicController.java" />
         <option value="$PROJECT_DIR$/tidder-front/src/main/resources/templates/index.html" />
-        <option value="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/FrontController.java" />
         <option value="$PROJECT_DIR$/tidder-front/src/main/resources/templates/topic.html" />
+        <option value="$PROJECT_DIR$/tidder-front/src/main/resources/templates/fragments/layout.html" />
+        <option value="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/FrontController.java" />
+        <option value="$PROJECT_DIR$/tidder-front/src/main/resources/templates/newPost.html" />
       </list>
     </option>
   </component>
@@ -256,8 +246,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="96" />
-    <option name="y" value="-16" />
+    <option name="x" value="289" />
+    <option name="y" value="-15" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -373,6 +363,16 @@
             <path>
               <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
               <item name="Tidder" type="462c0819:PsiDirectoryNode" />
+              <item name="tidder-front" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="fragments" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tidder" type="462c0819:PsiDirectoryNode" />
               <item name="tidder-post" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -593,6 +593,14 @@
               <item name="tidderuser" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tidder" type="462c0819:PsiDirectoryNode" />
+              <item name="tidder-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -610,7 +618,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554567661490" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tidder-likes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tidder-front/src/main/resources/templates" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -621,10 +629,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Alexander Sagen\IntelliJ Projects\Tidder\tidder-front\src\main\resources\templates" />
       <recent name="C:\Users\Alexander Sagen\IntelliJ Projects\Tidder\tidder-likes" />
       <recent name="C:\Users\Alexander Sagen\IntelliJ Projects\Tidder\tidder-post" />
       <recent name="C:\Users\Alexander Sagen\IntelliJ Projects\Tidder\tidder-topic" />
-      <recent name="C:\Users\Alexander Sagen\IntelliJ Projects\Tidder\tidder-front\src\main\resources\templates" />
       <recent name="C:\Users\Alexander Sagen\IntelliJ Projects\Tidder\tidder-user" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -766,14 +774,7 @@
       <workItem from="1555939429877" duration="13248000" />
       <workItem from="1556192311961" duration="8043000" />
       <workItem from="1556635772083" duration="4976000" />
-      <workItem from="1556972338160" duration="39490000" />
-    </task>
-    <task id="LOCAL-00076" summary="Fix css 112123234.0">
-      <created>1555015086131</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1555015086131</updated>
+      <workItem from="1556972338160" duration="42600000" />
     </task>
     <task id="LOCAL-00077" summary="Added better support for medium screens in topcs page">
       <created>1555168507772</created>
@@ -1111,11 +1112,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557086582745</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="Added list of topics to random 10 topics">
+      <created>1557087040791</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1557087040791</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181796000" />
+    <option name="totallyTimeSpent" value="184906000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1130,7 +1138,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13752665" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24840085" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" />
@@ -1141,7 +1149,7 @@
       <window_info id="Image Layers" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946696" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.17226435" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.17226435" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1149,7 +1157,7 @@
       <window_info anchor="bottom" id="IntelliGuard" order="7" />
       <window_info anchor="bottom" id="Spring" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.4312026" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.5417118" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010661" side_tool="true" visible="true" weight="0.17226435" />
       <window_info anchor="bottom" id="Statistic" order="11" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
@@ -1174,7 +1182,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Manually set FK name" />
     <MESSAGE value="Renamed all long fields in user" />
     <MESSAGE value="Removed detached from scripts temporarily" />
     <MESSAGE value="Going back to sqlite" />
@@ -1199,23 +1206,10 @@
     <MESSAGE value="UserService now generates a default first-time password" />
     <MESSAGE value="Added list of topics to frontpage" />
     <MESSAGE value="Fixed list of topics on homepage. Max 10 items" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed list of topics on homepage. Max 10 items" />
+    <MESSAGE value="Added list of topics to random 10 topics" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added list of topics to random 10 topics" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pullRebuildAndDeploy.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rebuildAndDeploy.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tidder-user/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -1376,16 +1370,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/model/Topic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tidder-topic/src/main/java/app/sagen/tiddertopic/repository/TopicRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1433,16 +1417,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/model/Post.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1589,12 +1563,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/HomeController.java">
+    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="31" column="64" selection-start-line="31" selection-start-column="64" selection-end-line="31" selection-end-column="64" />
+        <state relative-caret-position="305">
+          <caret line="47" column="61" selection-start-line="47" selection-start-column="55" selection-end-line="47" selection-end-column="61" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1606,36 +1580,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/FrontController.java">
+    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/fragments/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="73" column="26" lean-forward="true" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="526">
-          <caret line="92" column="71" selection-start-line="92" selection-start-column="71" selection-end-line="92" selection-end-column="71" />
+          <caret line="31" column="64" lean-forward="true" selection-start-line="30" selection-start-column="8" selection-end-line="31" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/FrontController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="47" column="63" selection-start-line="47" selection-start-column="62" selection-end-line="47" selection-end-column="63" />
+        <state relative-caret-position="118">
+          <caret line="43" column="4" lean-forward="true" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
           <folding>
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/model/Topic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="11" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/topic.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="60" column="18" lean-forward="true" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
+        <state relative-caret-position="240">
+          <caret line="88" column="41" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="41" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#th:block#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#th:block#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#hr#0;n#div#0;n#div#0;n#th:block#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#th:block#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/model/Post.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/newPost.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="611">
+          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
         </state>
       </provider>
     </entry>

@@ -41,6 +41,21 @@ public class FrontController {
         return "redirect:/t/" + topic;
     }
 
+    @GetMapping("/{topic}/newPost")
+    public String createPost(Model model, @PathVariable String topic) {
+        if(!topicService.fetchTopic(topic.toLowerCase().trim()).isPresent()) {
+            return "redirect:/t/" + topic;
+        }
+        Optional<User> user = userService.getAuthenticatedUser();
+        if(!user.isPresent()) {
+            return "redirect:/login";
+        }
+        model.addAttribute("currentUser", user.orElseGet(null));
+        model.addAttribute("allTopics", topicService.fetchAllTopics());
+        model.addAttribute("topicName", topic);
+        return "newPost";
+    }
+
     @PostMapping("/createTopic/{topicName}")
     public String createTopic(@PathVariable String topicName, @RequestParam String topicTitle) {
         Topic topic = new Topic();
