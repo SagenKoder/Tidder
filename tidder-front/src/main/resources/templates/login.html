@@ -13,6 +13,8 @@
 <div class="container">
     <div class="col-sm-6 my-3 ">
         <h4 class="text-primary">Log in</h4>
+        <b>Default username: <i>administrator</i></b><br>
+        <b>Default password: <i>Passord123</i></b><br>
         <i style="color:red" th:if="${error}">Wrong username or password!</i>
         <form th:action="@{/processLogin}"  method="POST">
 

@@ -21,13 +21,15 @@ public class UserService {
         this.userRepository = userRepository;
         if(count() == 0) {
             User user = new User(
-                    "sagen",
+                    "administrator",
                     "Alexander Meisdalen",
                     "Sagen",
                     "alexmsagen@gmail.com",
                     "");
             user.setPasswordSetBy("System");
-            String password = user.setAndReturnRandomPassword();
+            //String password = user.setAndReturnRandomPassword();
+            String password = "Passord123";
+            user.setAndEncryptPassword(password);
             emailService.sendSimpleEmail(user.getEmail(),
                     "Tidder.no - Your new account...",
                     "Username: \"" + user.getUsername() + "\"\nPassword: \"" + password + "\"");
