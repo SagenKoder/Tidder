@@ -40,7 +40,7 @@ public class FrontController {
         return "redirect:/t/" + topic;
     }
 
-    @PostMapping("/createTopic")
+    @PostMapping("/t/createTopic")
     public String createTopic(@RequestParam Topic topic) {
         topic.setName(topic.getName().toLowerCase()); // always lowercase
 
