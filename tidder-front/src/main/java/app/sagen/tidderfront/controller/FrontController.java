@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -58,7 +59,7 @@ public class FrontController {
     }
 
     @PostMapping("/{topic}/newPost")
-    public String createPost(Model model, @RequestParam Post post, @PathVariable String topic) {
+    public String createPost(Model model, @RequestParam String title, @RequestParam String body, @PathVariable String topic) {
         if(!topicService.fetchTopic(topic.toLowerCase().trim()).isPresent()) {
             return "redirect:/t/" + topic;
         }
@@ -66,6 +67,12 @@ public class FrontController {
         if(!user.isPresent()) {
             return "redirect:/login";
         }
+
+        Post post = new Post();
+        post.setBody(body);
+        post.setTitle(title);
+        post.setDate(LocalDateTime.now());
+        post.setOwner(user.get().getUsername());
 
         postService.createPost(post);
 
