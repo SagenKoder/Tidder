@@ -56,7 +56,7 @@
                 <a th:href="'/u/'+${user.getUsername()}+'/unfollow'" class="btn btn-primary btn-lg">Unfollow <span th:text="${user.getUsername()}"></span></a>
             </div>
 
-            <div th:if="currentUser!=null" class="row">
+            <div th:if="${currentUser!=null}" class="row">
                 <div class="my-1 mx-md-3 px-4 py-3 col-12 userColumnContainer">
                     <h4 class="text-align-center">Your profile</h4>
                     <h6 class="ml-0" th:text="'Username: '+${currentUser.getUsername()}"></h6>
