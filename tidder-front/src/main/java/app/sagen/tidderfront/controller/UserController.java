@@ -29,7 +29,7 @@ public class UserController {
         this.topicService = topicService;
     }
 
-    @GetMapping("{user}")
+    @GetMapping("{username}")
     public String userSite(Model model, @PathVariable String username) {
         Optional<User> userOptional = userService.getAuthenticatedUser();
         model.addAttribute("currentUser", userOptional.orElseGet(null));
