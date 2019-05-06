@@ -34,7 +34,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionCreationPolicy(SessionCreationPolicy.ALWAYS);
         http.authorizeRequests()
                 .antMatchers("/", "/signup", "/h2-console/**", "/css/**", "/scss/**", "/js/**", "/img/**", "/vendor/**", "/t/**", "/u/**").permitAll()
-                .antMatchers("/home/**").hasRole("USER")
+                .antMatchers("/home/**", "/deleteMe").hasRole("USER")
                 .antMatchers("/admin/**").hasRole("ADMIN")
                 .anyRequest().authenticated()
                 .and()

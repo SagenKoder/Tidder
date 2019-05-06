@@ -60,4 +60,11 @@ public class PublicController {
         return "index";
     }
 
+    @GetMapping("/deleteMe")
+    public String deleteMe() {
+        Optional<User> user = userService.getAuthenticatedUser();
+        user.ifPresent(value -> userService.delete(value));
+        return "redirect:/logout";
+    }
+
 }
