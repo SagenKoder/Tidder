@@ -73,6 +73,9 @@ public class UserService implements UserDetailsService {
     }
 
     public Optional<User> update(User user, String username) {
+        System.out.println("**************************");
+        System.out.println("public Optional<User> update(User user, String username) {");
+        System.out.println("**************************");
         try {
             return Optional.ofNullable(restTemplate.postForObject(getUserService().resolve("/u/" + username), user, User.class));
         } catch (Exception e) {

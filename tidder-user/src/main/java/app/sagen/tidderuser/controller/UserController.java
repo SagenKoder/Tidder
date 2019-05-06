@@ -51,6 +51,9 @@ public class UserController {
 
     @PostMapping("/u/{username}")
     public User updateUser(@PathVariable String username, @RequestBody User user) {
+        System.out.println("**************************");
+        System.out.println("public User updateUser(@PathVariable String username, @RequestBody User user) {");
+        System.out.println("**************************");
         Optional<User> optUser = userService.update(user, username);
         if(!optUser.isPresent()) {
             throw new ResourceNotFoundException("Could not find a user with the username: " + username);
