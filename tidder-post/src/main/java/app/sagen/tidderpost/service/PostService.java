@@ -37,7 +37,7 @@ public class PostService {
     }
 
     public List<Post> fetchPostsByUsersOrTopics(List<String> users, List<String> topics) {
-        List<Post> allByTopicInOrOwnerInOrderByDateDesc = postRepository.findAllByTopicInOrOwnerInOrderByDateDesc(users, topics);
+        List<Post> allByTopicInOrOwnerInOrderByDateDesc = postRepository.findAllByTopicInOrOwnerInOrderByDateDesc(topics, users);
 
         System.out.println("********************************");
         System.out.println("FETCH POSTS BY USER OR TOPIC INPUT -> \n\t" + users + "\n\t" + topics);
