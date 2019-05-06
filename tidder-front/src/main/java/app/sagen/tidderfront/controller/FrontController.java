@@ -149,7 +149,7 @@ public class FrontController {
         Optional<User> userOptional = userService.getAuthenticatedUser();
         if(!userOptional.isPresent()) return "redirect:/login";
         Optional<Topic> optionalTopic = topicService.fetchTopic(topicName.toLowerCase().trim());
-        if(optionalTopic.isPresent()) return "redirect:/t/" + topicName;
+        if(!optionalTopic.isPresent()) return "redirect:/t/all";
 
         userOptional.get().getTopics().add(optionalTopic.get().getName());
         userService.update(userOptional.get(), userOptional.get().getUsername());
