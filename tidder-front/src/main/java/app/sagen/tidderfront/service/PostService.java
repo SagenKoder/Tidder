@@ -34,8 +34,9 @@ public class PostService {
         if(searchterm.isPresent()) search = searchterm.get();
         URI uri = getPostService().resolve("/");
         try {
-            return Arrays.stream(Objects.requireNonNull(restTemplate.postForObject(uri, search, Post[].class)))
-                    .collect(Collectors.toList());
+            return searchterm.map(s -> Arrays.stream(Objects.requireNonNull(restTemplate.postForObject(uri, s, Post[].class)))
+                    .collect(Collectors.toList())).orElseGet(() -> Arrays.stream(Objects.requireNonNull(restTemplate.getForObject(uri, Post[].class)))
+                    .collect(Collectors.toList()));
         } catch (Exception e) {
             e.printStackTrace();
             return Collections.emptyList();
