@@ -49,7 +49,7 @@
 
         <div class="col-lg-3 col-md-4">
             <div th:if="${topic != null && !topic.getName().equalsIgnoreCase('all') && !topic.getName().equalsIgnoreCase('feed')}" class="row">
-                <form class="form-inline d-flex d-block flex-column" style="width:100%;" method="post" th:action="${'/t/'+topic.getName()}">
+                <form class="form-inline d-flex d-block flex-column flex-nowrap" style="width:100%;" method="post" th:action="${'/t/'+topic.getName()}">
                     <input type="text" name="search" id="search" class="form-control flex-grow-1" placeholder="Search in this topic">
                     <button stype="submit" class="btn btn-primary">Search</button>
                 </form>

@@ -30,7 +30,8 @@ public class PostService {
 
     // GET /
     public List<Post> fetchAll(Optional<String> searchterm) {
-        String search = searchterm.orElse("");
+        String search = "";
+        if(searchterm.isPresent()) search = searchterm.get();
         URI uri = getPostService().resolve("/");
         try {
             return Arrays.stream(Objects.requireNonNull(restTemplate.postForObject(uri, search, Post[].class)))
