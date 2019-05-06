@@ -14,7 +14,7 @@
 <header class="masthead">
     <div class="container">
         <div class="intro-text py-5">
-            <div class="intro-heading pt-5">/u/<span th:text="${user.getUsername()}"></span><br><span class="section-subheading" th:text="${user.getFirstName()+' '+user.getLastName()}"></span></div>
+            <div class="intro-lead-in pt-5">/u/<span th:text="${user.getUsername()}"></span><br><span class="intro-lead-in" th:text="${user.getFirstName()+' '+user.getLastName()}"></span></div>
             <div th:text="'View all posts from '+${user.getUsername()}" class="intro-lead-in"></div>
         </div>
     </div>
@@ -50,19 +50,19 @@
         <div class="col-lg-3 col-md-4" th:if="${currentUser != null}">
 
             <div th:if="${!currentUser.getUsername().equalsIgnoreCase(user.getUsername()) && !currentUser.getUsers().contains(user.getUsername())}" class="mx-auto">
-                <a th:href="'/u/'+${user.getUsername()}+'/follow'" class="btn btn-primary btn-lg">Follow <span th:text="${user.getUsername()}"></span></a>
+                <a style="width:100%;" th:href="'/u/'+${user.getUsername()}+'/follow'" class="btn btn-primary btn-lg">Follow <span th:text="${user.getUsername()}"></span></a>
             </div>
             <div th:if="${!currentUser.getUsername().equalsIgnoreCase(user.getUsername()) && currentUser.getUsers().contains(user.getUsername())}" class="mx-auto">
-                <a th:href="'/u/'+${user.getUsername()}+'/unfollow'" class="btn btn-primary btn-lg">Unfollow <span th:text="${user.getUsername()}"></span></a>
+                <a style="width:100%;" th:href="'/u/'+${user.getUsername()}+'/unfollow'" class="btn btn-primary btn-lg">Unfollow <span th:text="${user.getUsername()}"></span></a>
             </div>
 
             <div class="row">
                 <div class="my-1 mx-md-3 px-4 py-3 col-12 userColumnContainer">
-                    <h4 class="text-align-center">Your profile</h4>
+                    <h5 class="text-align-center">Your profile</h5>
                     <a th:href="'/u/'+${currentUser.getUsername()}"><h6 class="ml-0" th:text="'Username: '+${currentUser.getUsername()}"></h6></a>
-                    <h4 class="ml-0">People you follow</h4>
+                    <h5 class="ml-0">People you follow</h5>
                     <a th:each="u : ${currentUser.getUsers()}" th:text="${'/u/'+u}"><h6 th:text="${'/u/'+u}"></h6><br></a>
-                    <h4>Topics you follow</h4>
+                    <h5>Topics you follow</h5>
                     <a th:each="t : ${currentUser.getTopics()}" th:text="${'/t/'+t}"><h6 th:text="${'/t/'+t}"></h6><br></a>
                 </div>
             </div>
