@@ -37,7 +37,7 @@
                     <hr class="my-1" style="border-color: #666;">
                     <span class="font-weight-bold text-truncate" th:text="${post.getTitle()}"></span>
                     <span class="font-weight-light" style="display:block;" th:text="${post.getBody()}"></span>
-                    <th:block th:if="${post.getImage() != null}">
+                    <th:block th:if="${post.getImage()!=null && !post.getImage().trim().isEmpty()}">
                         <hr class="my-1" style="border-color: #666;">
                         <img style="display:block; max-width: 100%;" class="m-1" th:if="${post.image != null}" th:src="@{'data:image/png;base64,'+${post.image}}"/>
                     </th:block>
@@ -49,7 +49,7 @@
 
         <div class="col-lg-3 col-md-4">
 
-            <div th:if="currentUser != null">
+            <div th:if="currentUser != null" class="mx-auto">
                 <a th:href="'/t/'+${topicName}+'/newPost'" class="btn btn-primary btn-lg">New Post</a>
             </div>
 
