@@ -45,6 +45,7 @@ public class PublicController {
 
     @PostMapping("/signup")
     public String register(@ModelAttribute("user") User user){
+        if(user.getUsername().equalsIgnoreCase("anonymoususer")) return "redirect:/signup";
         System.out.println("FRONT :::::: PublicController :::::: POST signup");
         userService.registerNewUser(user);
         return "redirect:/login";
