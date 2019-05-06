@@ -14,7 +14,7 @@
 <header class="masthead">
     <div class="container">
         <div class="intro-text py-5">
-            <div class="intro-heading pt-5">/u/<span th:text="${user.getUsername()}"></span> <span class="text-muted" th:text="${user.getFirstName()+' '+user.getLastName()}"></span></div>
+            <div class="intro-heading pt-5">/u/<span th:text="${user.getUsername()}"></span><br><span class="section-subheading" th:text="${user.getFirstName()+' '+user.getLastName()}"></span></div>
             <div th:text="'View all posts from '+${user.getUsername()}" class="intro-lead-in"></div>
         </div>
     </div>
@@ -59,7 +59,11 @@
             <div th:if="${currentUser!=null}" class="row">
                 <div class="my-1 mx-md-3 px-4 py-3 col-12 userColumnContainer">
                     <h4 class="text-align-center">Your profile</h4>
-                    <h6 class="ml-0" th:text="'Username: '+${currentUser.getUsername()}"></h6>
+                    <a th:href="${'/u/'+${currentUser.getUsername()}"><h6 class="ml-0" th:text="'Username: '+${currentUser.getUsername()}"></h6></a>
+                    <h4 class="ml-0">People you follow</h4>
+                    <a th:each="u : ${currentUser.getUsers()}" th:text="${'/u/'+u}"><h6 th:text="${'/u/'+u}"></h6></a>
+                    <h4>Topics you follow</h4>
+                    <a th:each="t : ${currentUser.getTopics()}" th:text="${'/t/'+t}"><h6 th:text="${'/t/'+t}"></h6></a>
                 </div>
             </div>
         </div>

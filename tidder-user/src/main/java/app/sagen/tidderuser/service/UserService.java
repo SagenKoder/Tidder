@@ -61,6 +61,11 @@ public class UserService {
     }
 
     public Optional<User> update(User user, String username) {
+
+        System.out.println("********************************");
+        System.out.println("90 UPDATE USER INPUT -> \n\t" + user + "\n\t" + username);
+        System.out.println("********************************");
+
         Optional<User> oldUserOpt = userRepository.findUserByUsername(username);
         if(oldUserOpt.isPresent()) {
             User oldUser = oldUserOpt.get();
