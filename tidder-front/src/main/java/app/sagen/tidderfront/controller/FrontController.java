@@ -144,4 +144,28 @@ public class FrontController {
         return "topic";
     }
 
+    @GetMapping("{topicName}/follow")
+    public String followUser(@PathVariable String topicName) {
+        Optional<User> userOptional = userService.getAuthenticatedUser();
+        if(!userOptional.isPresent()) return "redirect:/login";
+        Optional<Topic> optionalTopic = topicService.fetchTopic(topicName);
+        if(optionalTopic.isPresent()) return "redirect:/t/all";
+
+        userOptional.get().getTopics().add(optionalTopic.get().getName());
+        userService.update(userOptional.get(), userOptional.get().getUsername());
+
+        return "redirect:/t/" + topicName;
+    }
+
+    @GetMapping("{topicName}/unfollow")
+    public String unfollowUser(@PathVariable String topicName) {
+        Optional<User> userOptional = userService.getAuthenticatedUser();
+        if(!userOptional.isPresent()) return "redirect:/login";
+
+        userOptional.get().getTopics().remove(topicName);
+        userService.update(userOptional.get(), userOptional.get().getUsername());
+
+        return "redirect:/t/" + topicName;
+    }
+
 }

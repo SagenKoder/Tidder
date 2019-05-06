@@ -40,4 +40,28 @@ public class UserController {
         return "user";
     }
 
+    @GetMapping("{username}/follow")
+    public String followUser(@PathVariable String username) {
+        Optional<User> userOptional = userService.getAuthenticatedUser();
+        if(!userOptional.isPresent()) return "redirect:/login";
+        Optional<User> selectedUserOpt = userService.findByUsername(username);
+        if(!selectedUserOpt.isPresent()) return "redirect:/t/all";
+
+        userOptional.get().getUsers().add(selectedUserOpt.get().getUsername());
+        userService.update(userOptional.get(), userOptional.get().getUsername());
+
+        return "redirect:/u/" + username;
+    }
+
+    @GetMapping("{username}/unfollow")
+    public String unfollowUser(@PathVariable String username) {
+        Optional<User> userOptional = userService.getAuthenticatedUser();
+        if(!userOptional.isPresent()) return "redirect:/login";
+
+        userOptional.get().getUsers().remove(username);
+        userService.update(userOptional.get(), userOptional.get().getUsername());
+
+        return "redirect:/u/" + username;
+    }
+
 }
