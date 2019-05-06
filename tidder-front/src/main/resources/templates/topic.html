@@ -52,6 +52,13 @@
             <div th:if="currentUser != null" class="mx-auto">
                 <a th:href="'/t/'+${topicName}+'/newPost'" class="btn btn-primary btn-lg">New Post</a>
             </div>
+            <div th:if="currentUser != null && !${currentUser.getTopics().contains(topicName)}" class="mx-auto">
+                <a th:href="'/t/'+${topicName}+'/follow'" class="btn btn-primary btn-lg">Follow <span th:text="${topicName}"></span></a>
+            </div>
+            <div th:if="currentUser != null && ${currentUser.getTopics().contains(topicName)}" class="mx-auto">
+                <a th:href="'/t/'+${topicName}+'/unfollow'" class="btn btn-primary btn-lg">Unfollow <span th:text="${topicName}"></span></a>
+            </div>
+
 
             <div th:if="currentUser!=null" class="row">
                 <div class="my-1 mx-md-3 px-4 py-3 col-12 userColumnContainer">
