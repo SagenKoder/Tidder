@@ -11,7 +11,7 @@ public interface PostRepository extends JpaRepository<Post, Long> {
 
     List<Post> findAllByTopicOrderByDateDesc(String topic);
 
-    List<Post> findAllByTopicInOrOwnerInOrderByDateDesc(List<String> topics, List<String> owners);
+    List<Post> findAllByTopicInOrOwnerInOrderByDateDesc(List<String> topic, List<String> owner);
 
     void deleteAllByOwner(String owner);
 

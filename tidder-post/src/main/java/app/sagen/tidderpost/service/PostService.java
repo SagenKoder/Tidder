@@ -41,7 +41,8 @@ public class PostService {
 
         System.out.println("********************************");
         System.out.println("FETCH POSTS BY USER OR TOPIC INPUT -> \n\t" + users + "\n\t" + topics);
-        System.out.println("53 RETUGNING POSTS FROM DATABASE -> " + allByTopicInOrOwnerInOrderByDateDesc);
+        System.out.println("53 RETURNING POSTS FROM DATABASE -> " + allByTopicInOrOwnerInOrderByDateDesc);
+        System.out.println("54 EVERY POST IN DB -> " + postRepository.findAll());
         System.out.println("********************************");
 
         return allByTopicInOrOwnerInOrderByDateDesc;
