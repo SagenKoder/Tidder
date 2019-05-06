@@ -62,7 +62,7 @@
             <div th:if="${currentUser!=null}" class="row">
                 <div class="my-1 mx-md-3 px-4 py-3 col-12 userColumnContainer">
                     <h4 class="text-align-center">Your profile</h4>
-                    <a th:href="${'/u/'+${currentUser.getUsername()}"><h6 class="ml-0" th:text="'Username: '+${currentUser.getUsername()}"></h6></a>
+                    <a th:href="'/u/'+${currentUser.getUsername()}"><h6 class="ml-0" th:text="'Username: '+${currentUser.getUsername()}"></h6></a>
                     <h4 class="ml-0">People you follow</h4>
                     <a th:each="u : ${currentUser.getUsers()}" th:text="${'/u/'+u}"><h6 th:text="${'/u/'+u}"></h6></a>
                     <h4>Topics you follow</h4>
