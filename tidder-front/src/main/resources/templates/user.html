@@ -49,10 +49,10 @@
 
         <div class="col-lg-3 col-md-4">
 
-            <div th:if="${currentUser != null && !currentUser.getUsers().contains(user.getUsername())}" class="mx-auto">
+            <div th:if="${currentUser != null && !currentUser.getUsername().equalsIgnoreCase(user.getUsername()) && !currentUser.getUsers().contains(user.getUsername())}" class="mx-auto">
                 <a th:href="'/u/'+${user.getUsername()}+'/follow'" class="btn btn-primary btn-lg">Follow <span th:text="${user.getUsername()}"></span></a>
             </div>
-            <div th:if="${currentUser != null && currentUser.getUsers().contains(user.getUsername())}" class="mx-auto">
+            <div th:if="${currentUser != null && !currentUser.getUsername().equalsIgnoreCase(user.getUsername()) && currentUser.getUsers().contains(user.getUsername())}" class="mx-auto">
                 <a th:href="'/u/'+${user.getUsername()}+'/unfollow'" class="btn btn-primary btn-lg">Unfollow <span th:text="${user.getUsername()}"></span></a>
             </div>
 

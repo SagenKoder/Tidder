@@ -34,10 +34,10 @@ public class User {
     @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"), foreignKey = @ForeignKey(name="FK_USER_ROLE"))
     private Set<Role> roles = new HashSet<>();
 
-    @ElementCollection
-    private List<String> topics = new ArrayList<>();
-    @ElementCollection
-    private List<String> users = new ArrayList<>();
+    @ElementCollection(fetch = FetchType.EAGER)
+    private Set<String> topics = new HashSet<>();
+    @ElementCollection(fetch = FetchType.EAGER)
+    private Set<String> users = new HashSet<>();
 
     public User(String username) {
         this.username = username;
