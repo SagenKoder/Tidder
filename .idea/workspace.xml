@@ -56,8 +56,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/topic.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+            <state relative-caret-position="476">
+              <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#th:block#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#th:block#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -90,8 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/user.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="52" column="150" lean-forward="true" selection-start-line="52" selection-start-column="105" selection-end-line="52" selection-end-column="150" />
+            <state relative-caret-position="340">
+              <caret line="56" column="18" lean-forward="true" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -772,21 +772,7 @@
       <workItem from="1555939429877" duration="13248000" />
       <workItem from="1556192311961" duration="8043000" />
       <workItem from="1556635772083" duration="4976000" />
-      <workItem from="1556972338160" duration="55460000" />
-    </task>
-    <task id="LOCAL-00096" summary="Fixed pom">
-      <created>1555956604183</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1555956604183</updated>
-    </task>
-    <task id="LOCAL-00097" summary="Removed oauth">
-      <created>1555956785508</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1555956785509</updated>
+      <workItem from="1556972338160" duration="56046000" />
     </task>
     <task id="LOCAL-00098" summary="Fixed topic bug">
       <created>1555959340208</created>
@@ -1117,11 +1103,25 @@
       <option name="project" value="LOCAL" />
       <updated>1557103368674</updated>
     </task>
-    <option name="localTasksCounter" value="145" />
+    <task id="LOCAL-00145" summary="Moar html">
+      <created>1557103675506</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1557103675506</updated>
+    </task>
+    <task id="LOCAL-00146" summary="Fix thymeleaf syntax">
+      <created>1557103937119</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1557103937119</updated>
+    </task>
+    <option name="localTasksCounter" value="147" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197766000" />
+    <option name="totallyTimeSpent" value="198352000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1180,8 +1180,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added @Entity and @Id to Post entity" />
-    <MESSAGE value="Fixed user save" />
     <MESSAGE value="UserService now generates a default first-time password" />
     <MESSAGE value="Added list of topics to frontpage" />
     <MESSAGE value="Fixed list of topics on homepage. Max 10 items" />
@@ -1205,7 +1203,9 @@
     <MESSAGE value="Added /u/ to security" />
     <MESSAGE value="Fixed requestmapping for usercontroller" />
     <MESSAGE value="Fixed requestmapping for usercontroller 2.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed requestmapping for usercontroller 2.0" />
+    <MESSAGE value="Moar html" />
+    <MESSAGE value="Fix thymeleaf syntax" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix thymeleaf syntax" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/tidder-post/pom.xml">
@@ -1626,15 +1626,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/user.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="52" column="150" lean-forward="true" selection-start-line="52" selection-start-column="105" selection-end-line="52" selection-end-column="150" />
+        <state relative-caret-position="340">
+          <caret line="56" column="18" lean-forward="true" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/topic.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+        <state relative-caret-position="476">
+          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#th:block#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#th:block#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
