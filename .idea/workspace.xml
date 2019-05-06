@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c11b0fa-9b05-4d38-8a87-03744b940b4a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/FrontController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/FrontController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tidder-front/src/main/resources/templates/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/tidder-front/src/main/resources/templates/user.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/tidder-eureka/target/" />
@@ -103,19 +101,19 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/user.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+            <state relative-caret-position="475">
+              <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/FrontController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="628">
+            <state relative-caret-position="611">
               <caret line="171" lean-forward="true" selection-start-line="171" selection-end-line="171" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -231,9 +229,9 @@
         <option value="$PROJECT_DIR$/tidder-post/src/main/java/app/sagen/tidderpost/service/PostService.java" />
         <option value="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/model/Post.java" />
         <option value="$PROJECT_DIR$/tidder-front/src/main/resources/templates/topic.html" />
-        <option value="$PROJECT_DIR$/tidder-front/src/main/resources/templates/user.html" />
         <option value="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/UserController.java" />
         <option value="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/FrontController.java" />
+        <option value="$PROJECT_DIR$/tidder-front/src/main/resources/templates/user.html" />
       </list>
     </option>
   </component>
@@ -790,14 +788,7 @@
       <workItem from="1556192311961" duration="8043000" />
       <workItem from="1556635772083" duration="4976000" />
       <workItem from="1556972338160" duration="57005000" />
-      <workItem from="1557142682632" duration="1855000" />
-    </task>
-    <task id="LOCAL-00100" summary="Trying to shorten the name of FK of roles">
-      <created>1556979574762</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1556979574762</updated>
+      <workItem from="1557142682632" duration="2104000" />
     </task>
     <task id="LOCAL-00101" summary="Manually set FK name">
       <created>1556979779428</created>
@@ -1135,11 +1126,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557144118527</updated>
     </task>
-    <option name="localTasksCounter" value="149" />
+    <task id="LOCAL-00149" summary="implemented follow and unfollow user and post">
+      <created>1557144555729</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1557144555729</updated>
+    </task>
+    <option name="localTasksCounter" value="150" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="201166000" />
+    <option name="totallyTimeSpent" value="201415000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1198,7 +1196,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed list of topics on homepage. Max 10 items" />
     <MESSAGE value="Added list of topics to random 10 topics" />
     <MESSAGE value="Added newPost form" />
     <MESSAGE value="Added newPost mapping" />
@@ -1223,7 +1220,8 @@
     <MESSAGE value="Fix thymeleaf syntax" />
     <MESSAGE value="Fix thymeleaf syntax 2.0" />
     <MESSAGE value="Added time and fixed optional npe" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added time and fixed optional npe" />
+    <MESSAGE value="implemented follow and unfollow user and post" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented follow and unfollow user and post" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/tidder-post/src/main/resources/application.properties">
@@ -1628,13 +1626,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -1657,11 +1648,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/FrontController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
+        <state relative-caret-position="611">
           <caret line="171" lean-forward="true" selection-start-line="171" selection-end-line="171" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
         </state>
       </provider>
     </entry>
