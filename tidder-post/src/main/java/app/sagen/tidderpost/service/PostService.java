@@ -20,7 +20,7 @@ public class PostService {
     }
 
     public List<Post> fetchAll() {
-        return postRepository.findAll();
+        return postRepository.findAllByOrderByDateDesc();
     }
 
     public Optional<Post> fetchPostById(long id) {

@@ -7,10 +7,7 @@ import app.sagen.tidderfront.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
@@ -61,6 +58,16 @@ public class UserController {
         userOptional.get().getUsers().remove(username);
         userService.update(userOptional.get(), userOptional.get().getUsername());
 
+        return "redirect:/u/" + username;
+    }
+
+    @PostMapping("{username}/changePassword")
+    public String changePassword(@PathVariable String username, @RequestParam String password) {
+        Optional<User> authenticatedUser = userService.getAuthenticatedUser();
+        if(!authenticatedUser.isPresent()) return "redirect:/u/" + username;
+
+        authenticatedUser.get().setAndEncryptPassword(password);
+        userService.update(authenticatedUser.get(), authenticatedUser.get().getUsername());
         return "redirect:/u/" + username;
     }
 

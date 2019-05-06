@@ -47,16 +47,16 @@
 
         </div>
 
-        <div class="col-lg-3 col-md-4">
+        <div class="col-lg-3 col-md-4" th:if="${currentUser != null}">
 
-            <div th:if="${currentUser != null && !currentUser.getUsername().equalsIgnoreCase(user.getUsername()) && !currentUser.getUsers().contains(user.getUsername())}" class="mx-auto">
+            <div th:if="${!currentUser.getUsername().equalsIgnoreCase(user.getUsername()) && !currentUser.getUsers().contains(user.getUsername())}" class="mx-auto">
                 <a th:href="'/u/'+${user.getUsername()}+'/follow'" class="btn btn-primary btn-lg">Follow <span th:text="${user.getUsername()}"></span></a>
             </div>
-            <div th:if="${currentUser != null && !currentUser.getUsername().equalsIgnoreCase(user.getUsername()) && currentUser.getUsers().contains(user.getUsername())}" class="mx-auto">
+            <div th:if="${!currentUser.getUsername().equalsIgnoreCase(user.getUsername()) && currentUser.getUsers().contains(user.getUsername())}" class="mx-auto">
                 <a th:href="'/u/'+${user.getUsername()}+'/unfollow'" class="btn btn-primary btn-lg">Unfollow <span th:text="${user.getUsername()}"></span></a>
             </div>
 
-            <div th:if="${currentUser!=null}" class="row">
+            <div class="row">
                 <div class="my-1 mx-md-3 px-4 py-3 col-12 userColumnContainer">
                     <h4 class="text-align-center">Your profile</h4>
                     <a th:href="'/u/'+${currentUser.getUsername()}"><h6 class="ml-0" th:text="'Username: '+${currentUser.getUsername()}"></h6></a>
@@ -65,6 +65,15 @@
                     <h4>Topics you follow</h4>
                     <a th:each="t : ${currentUser.getTopics()}" th:text="${'/t/'+t}"><h6 th:text="${'/t/'+t}"></h6><br></a>
                 </div>
+            </div>
+            <div th:if="${currentUser.getUsername().equalsIgnoreCase(user.getUsername())}" class="row">
+                <form th:method="post" th:action="${'/u/'+currentUser.getUsername()+'/changePassword'}">
+                    <div class="form-group">
+                        <label for="password">Change passord</label>
+                        <input type="password" class="form-control" id="password" placeholder="Choose a new password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
             </div>
         </div>
 

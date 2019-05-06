@@ -7,6 +7,8 @@ import java.util.List;
 
 public interface PostRepository extends JpaRepository<Post, Long> {
 
+    List<Post> findAllByOrderByDateDesc();
+
     List<Post> findAllByOwnerOrderByDateDesc(String owner);
 
     List<Post> findAllByTopicOrderByDateDesc(String topic);
