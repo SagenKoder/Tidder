@@ -17,6 +17,12 @@
             <div class="intro-heading pt-5">/t/<span th:text="${topicName}"></span></div>
             <div th:if="${topic!=null}" th:text="${topic.getTitle()}" class="intro-lead-in"></div>
         </div>
+        <div th:if="t${topic != null && topic != null && !topic.getName().equalsIgnoreCase('all') && !topic.getName().equalsIgnoreCase('feed')}" class="row">
+            <form class="form-inline" method="post" th:action="${'/t/'+topic.getName()}">
+                <input type="text" name="search" id="search" placeholder="Search in this topic">
+                <button stype="submit" class="btn btn-outline-light">Search</button>
+            </form>
+        </div>
     </div>
 </header>
 
