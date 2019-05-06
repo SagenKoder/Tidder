@@ -170,7 +170,7 @@ public class FrontController {
         return "redirect:/t/" + topicName;
     }
 
-    @GetMapping("/t/{topicName}/{postid}/upvote")
+    @GetMapping("{topicName}/{postid}/upvote")
     public String upvoteFromTopic(@PathVariable String topicName, @PathVariable long postid) {
         Optional<User> userOptional = userService.getAuthenticatedUser();
         if(!userOptional.isPresent()) return "redirect:/login";
@@ -191,7 +191,7 @@ public class FrontController {
     }
 
     @SuppressWarnings("Duplicates")
-    @GetMapping("/t/{topicName}/{postid}/downvote")
+    @GetMapping("{topicName}/{postid}/downvote")
     public String downvoteFromTopic(@PathVariable String topicName, @PathVariable long postid) {
         Optional<User> userOptional = userService.getAuthenticatedUser();
         if(!userOptional.isPresent()) return "redirect:/login";

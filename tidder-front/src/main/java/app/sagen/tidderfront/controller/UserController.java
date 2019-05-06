@@ -73,7 +73,7 @@ public class UserController {
         return "redirect:/u/" + username;
     }
 
-    @GetMapping("/t/{username}/{postid}/upvote")
+    @GetMapping("{username}/{postid}/upvote")
     public String upvoteFromTopic(@PathVariable String username, @PathVariable long postid) {
         Optional<User> userOptional = userService.getAuthenticatedUser();
         if(!userOptional.isPresent()) return "redirect:/login";
@@ -94,7 +94,7 @@ public class UserController {
     }
 
     @SuppressWarnings("Duplicates")
-    @GetMapping("/t/{username}/{postid}/downvote")
+    @GetMapping("{username}/{postid}/downvote")
     public String downvoteFromTopic(@PathVariable String username, @PathVariable long postid) {
         Optional<User> userOptional = userService.getAuthenticatedUser();
         if(!userOptional.isPresent()) return "redirect:/login";

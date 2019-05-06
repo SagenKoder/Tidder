@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c11b0fa-9b05-4d38-8a87-03744b940b4a" name="Default Changelist" comment="Added deleteMe button for users">
+    <list default="true" id="0c11b0fa-9b05-4d38-8a87-03744b940b4a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/PublicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/PublicController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/service/PostService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tidder-front/src/main/resources/templates/fragments/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/tidder-front/src/main/resources/templates/fragments/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/FrontController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/FrontController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/UserController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/tidder-eureka/target/" />
@@ -47,28 +45,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/PublicController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/fragments/layout.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="78" column="15" lean-forward="true" selection-start-line="78" selection-start-column="15" selection-end-line="78" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/topic.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="47" column="14" lean-forward="true" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
+            <state relative-caret-position="357">
+              <caret line="36" column="24" lean-forward="true" selection-start-line="30" selection-start-column="20" selection-end-line="36" selection-end-column="24" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#th:block#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#th:block#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -86,11 +66,39 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tidder-post/src/main/java/app/sagen/tidderpost/model/Post.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="26" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1264">
+              <caret line="75" column="17" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4072#4103#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/user.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="703">
-              <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
+            <state relative-caret-position="604">
+              <caret line="51" column="14" lean-forward="true" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
               <folding>
+                <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#div#0;n#th:block#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#hr#0;n#div#0;n#div#0;n#th:block#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#a#1;n#div#0;n#div#0;n#th:block#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -99,10 +107,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/model/User.java">
+        <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/model/Post.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+            <state relative-caret-position="703">
+              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -111,22 +119,38 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/config/SecurityConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
-              <caret line="48" column="25" lean-forward="true" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/FrontController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-487">
-              <caret line="102" column="157" selection-start-line="102" selection-start-column="151" selection-end-line="102" selection-end-column="157" />
+            <state relative-caret-position="176">
+              <caret line="165" lean-forward="true" selection-start-line="165" selection-end-line="165" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#705#736#0" expanded="true" />
+                <element signature="e#7883#7914#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tidder-post/src/main/java/app/sagen/tidderpost/service/PostService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="737">
+              <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#519#520#0" expanded="true" />
+                <element signature="e#571#572#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tidder-post/src/main/java/app/sagen/tidderpost/repository/PostRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -135,22 +159,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tidder-user/src/main/java/app/sagen/tidderuser/model/User.java">
+        <entry file="file://$PROJECT_DIR$/tidder-post/src/main/java/app/sagen/tidderpost/model/TopicUserList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="28" column="33" lean-forward="true" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/service/PostService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-272">
-              <caret line="53" column="3" selection-start-line="53" selection-start-column="3" selection-end-line="53" selection-end-column="3" />
+            <state relative-caret-position="119">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -208,28 +220,28 @@
         <option value="$PROJECT_DIR$/tidder-front/src/main/resources/templates/login.html" />
         <option value="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/HomeController.java" />
         <option value="$PROJECT_DIR$/tidder-front/src/main/resources/templates/newPost.html" />
-        <option value="$PROJECT_DIR$/tidder-post/src/main/java/app/sagen/tidderpost/model/Post.java" />
         <option value="$PROJECT_DIR$/tidder-front/src/main/resources/templates/index.html" />
         <option value="$PROJECT_DIR$/tidder-front/pom.xml" />
         <option value="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/TidderFrontApplication.java" />
-        <option value="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/model/Post.java" />
         <option value="$PROJECT_DIR$/tidder-user/src/main/java/app/sagen/tidderuser/model/User.java" />
         <option value="$PROJECT_DIR$/tidder-user/src/main/java/app/sagen/tidderuser/controller/UserController.java" />
         <option value="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/service/UserService.java" />
         <option value="$PROJECT_DIR$/tidder-user/src/main/java/app/sagen/tidderuser/service/UserService.java" />
         <option value="$PROJECT_DIR$/tidder-front/src/main/resources/templates/adminUser.html" />
         <option value="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/AdminUserController.java" />
-        <option value="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/UserController.java" />
         <option value="$PROJECT_DIR$/tidder-post/src/main/java/app/sagen/tidderpost/repository/PostRepository.java" />
-        <option value="$PROJECT_DIR$/tidder-post/src/main/java/app/sagen/tidderpost/service/PostService.java" />
-        <option value="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/FrontController.java" />
         <option value="$PROJECT_DIR$/tidder-post/src/main/java/app/sagen/tidderpost/controller/PostController.java" />
-        <option value="$PROJECT_DIR$/tidder-front/src/main/resources/templates/user.html" />
-        <option value="$PROJECT_DIR$/tidder-front/src/main/resources/templates/topic.html" />
         <option value="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/service/PostService.java" />
         <option value="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/PublicController.java" />
         <option value="$PROJECT_DIR$/tidder-front/src/main/resources/templates/fragments/layout.html" />
         <option value="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/config/SecurityConfig.java" />
+        <option value="$PROJECT_DIR$/tidder-post/src/main/java/app/sagen/tidderpost/model/Post.java" />
+        <option value="$PROJECT_DIR$/tidder-post/src/main/java/app/sagen/tidderpost/service/PostService.java" />
+        <option value="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/model/Post.java" />
+        <option value="$PROJECT_DIR$/tidder-front/src/main/resources/templates/topic.html" />
+        <option value="$PROJECT_DIR$/tidder-front/src/main/resources/templates/user.html" />
+        <option value="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/FrontController.java" />
       </list>
     </option>
   </component>
@@ -257,8 +269,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="167" />
-    <option name="y" value="-11" />
+    <option name="x" value="275" />
+    <option name="y" value="-16" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -372,16 +384,6 @@
             <path>
               <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
               <item name="Tidder" type="462c0819:PsiDirectoryNode" />
-              <item name="tidder-front" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="fragments" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tidder" type="462c0819:PsiDirectoryNode" />
               <item name="tidder-post" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -413,16 +415,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tidderpost" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tidder" type="462c0819:PsiDirectoryNode" />
-              <item name="tidder-post" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tidderpost" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
@@ -453,162 +445,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tidderpost" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tidder" type="462c0819:PsiDirectoryNode" />
-              <item name="tidder-topic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tidder" type="462c0819:PsiDirectoryNode" />
-              <item name="tidder-topic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tidder" type="462c0819:PsiDirectoryNode" />
-              <item name="tidder-topic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tidder" type="462c0819:PsiDirectoryNode" />
-              <item name="tidder-topic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tidder" type="462c0819:PsiDirectoryNode" />
-              <item name="tidder-topic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tiddertopic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tidder" type="462c0819:PsiDirectoryNode" />
-              <item name="tidder-topic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tiddertopic" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tidder" type="462c0819:PsiDirectoryNode" />
-              <item name="tidder-topic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tiddertopic" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tidder" type="462c0819:PsiDirectoryNode" />
-              <item name="tidder-topic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tiddertopic" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tidder" type="462c0819:PsiDirectoryNode" />
-              <item name="tidder-topic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tidder" type="462c0819:PsiDirectoryNode" />
-              <item name="tidder-user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tidder" type="462c0819:PsiDirectoryNode" />
-              <item name="tidder-user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tidder" type="462c0819:PsiDirectoryNode" />
-              <item name="tidder-user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tidder" type="462c0819:PsiDirectoryNode" />
-              <item name="tidder-user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tidder" type="462c0819:PsiDirectoryNode" />
-              <item name="tidder-user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tidderuser" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tidder" type="462c0819:PsiDirectoryNode" />
-              <item name="tidder-user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tidderuser" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tidder" type="462c0819:PsiDirectoryNode" />
-              <item name="tidder-user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tidderuser" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tidder" type="462c0819:PsiDirectoryNode" />
-              <item name="tidder-user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tidderuser" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tidder" type="462c0819:PsiDirectoryNode" />
-              <item name="tidder-user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tidderuser" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tidder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tidder" type="462c0819:PsiDirectoryNode" />
-              <item name="tidder-user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -786,21 +622,7 @@
       <workItem from="1556192311961" duration="8043000" />
       <workItem from="1556635772083" duration="4976000" />
       <workItem from="1556972338160" duration="57005000" />
-      <workItem from="1557142682632" duration="17712000" />
-    </task>
-    <task id="LOCAL-00123" summary="Added list of topics to frontpage">
-      <created>1557085269262</created>
-      <option name="number" value="00123" />
-      <option name="presentableId" value="LOCAL-00123" />
-      <option name="project" value="LOCAL" />
-      <updated>1557085269262</updated>
-    </task>
-    <task id="LOCAL-00124" summary="Fixed list of topics on homepage. Max 10 items">
-      <created>1557086582745</created>
-      <option name="number" value="00124" />
-      <option name="presentableId" value="LOCAL-00124" />
-      <option name="project" value="LOCAL" />
-      <updated>1557086582745</updated>
+      <workItem from="1557142682632" duration="21400000" />
     </task>
     <task id="LOCAL-00125" summary="Added list of topics to random 10 topics">
       <created>1557087040791</created>
@@ -1131,11 +953,25 @@
       <option name="project" value="LOCAL" />
       <updated>1557157732304</updated>
     </task>
-    <option name="localTasksCounter" value="172" />
+    <task id="LOCAL-00172" summary="Added deleteMe button for users">
+      <created>1557161230205</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1557161230205</updated>
+    </task>
+    <task id="LOCAL-00173" summary="Added upvotes">
+      <created>1557164464130</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1557164464130</updated>
+    </task>
+    <option name="localTasksCounter" value="174" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="217023000" />
+    <option name="totallyTimeSpent" value="220711000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1194,8 +1030,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added /u/ to security" />
-    <MESSAGE value="Fixed requestmapping for usercontroller" />
     <MESSAGE value="Fixed requestmapping for usercontroller 2.0" />
     <MESSAGE value="Moar html" />
     <MESSAGE value="Fix thymeleaf syntax" />
@@ -1219,19 +1053,11 @@
     <MESSAGE value="Fixed password form" />
     <MESSAGE value="Fix more html/css" />
     <MESSAGE value="Fix search box" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix search box" />
+    <MESSAGE value="Added deleteMe button for users" />
+    <MESSAGE value="Added upvotes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added upvotes" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tidder-topic/src/main/java/app/sagen/tiddertopic/TidderTopicApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="9" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tidder-post/src/main/java/app/sagen/tidderpost/TidderPostApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1360,13 +1186,6 @@
     <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/signup.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-front/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="48" column="7" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/TidderFrontApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1426,16 +1245,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-post/src/main/java/app/sagen/tidderpost/model/Post.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tidder-user/src/main/java/app/sagen/tidderuser/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-555">
@@ -1460,82 +1269,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/model/Post.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-post/src/main/java/app/sagen/tidderpost/service/PostService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#519#520#0" expanded="true" />
-            <element signature="e#571#572#0" expanded="true" />
-            <element signature="e#706#707#0" expanded="true" />
-            <element signature="e#756#757#0" expanded="true" />
-            <element signature="e#811#812#0" expanded="true" />
-            <element signature="e#884#885#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-post/src/main/java/app/sagen/tidderpost/repository/PostRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/ServletInitializer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-post/src/main/java/app/sagen/tidderpost/model/TopicUserList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-post/src/main/java/app/sagen/tidderpost/controller/PostController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="47" column="5" lean-forward="true" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#603#604#0" expanded="true" />
-            <element signature="e#649#650#0" expanded="true" />
-            <element signature="e#1300#1301#0" expanded="true" />
-            <element signature="e#1351#1352#0" expanded="true" />
-            <element signature="e#1457#1458#0" expanded="true" />
-            <element signature="e#1508#1509#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1577,60 +1314,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/topic.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="47" column="14" lean-forward="true" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#th:block#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#th:block#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#hr#0;n#div#0;n#div#0;n#th:block#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#th:block#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#2;n#div#1;n#div#0;n#th:block#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#th:block#0;n#div#1;n#div#0;n#th:block#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#0;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#2;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#3;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tidder-user/src/main/java/app/sagen/tidderuser/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="28" column="33" lean-forward="true" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/FrontController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-487">
-          <caret line="102" column="157" selection-start-line="102" selection-start-column="151" selection-end-line="102" selection-end-column="157" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1661,12 +1348,160 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/config/SecurityConfig.java">
+    <entry file="file://$PROJECT_DIR$/tidder-front/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="48" column="25" lean-forward="true" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+        <state relative-caret-position="544">
+          <caret line="62" column="21" lean-forward="true" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-post/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-post/src/main/java/app/sagen/tidderpost/controller/PostController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#603#604#0" expanded="true" />
+            <element signature="e#649#650#0" expanded="true" />
+            <element signature="e#1300#1301#0" expanded="true" />
+            <element signature="e#1351#1352#0" expanded="true" />
+            <element signature="e#1457#1458#0" expanded="true" />
+            <element signature="e#1508#1509#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/config/SecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="689">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-post/src/main/java/app/sagen/tidderpost/model/Post.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="26" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-post/src/main/java/app/sagen/tidderpost/service/PostService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="737">
+          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#519#520#0" expanded="true" />
+            <element signature="e#571#572#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-post/src/main/java/app/sagen/tidderpost/repository/PostRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-post/src/main/java/app/sagen/tidderpost/model/TopicUserList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/model/Post.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/topic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="36" column="24" lean-forward="true" selection-start-line="30" selection-start-column="20" selection-end-line="36" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#th:block#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#th:block#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#hr#0;n#div#0;n#div#0;n#th:block#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#th:block#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#2;n#div#1;n#div#0;n#th:block#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#th:block#0;n#div#1;n#div#0;n#th:block#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#2;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#3;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/resources/templates/user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="604">
+          <caret line="51" column="14" lean-forward="true" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#div#0;n#th:block#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#hr#0;n#div#0;n#div#0;n#th:block#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#a#1;n#div#0;n#div#0;n#th:block#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1264">
+          <caret line="75" column="17" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4072#4103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidder-front/src/main/java/app/sagen/tidderfront/controller/FrontController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="165" lean-forward="true" selection-start-line="165" selection-end-line="165" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#705#736#0" expanded="true" />
+            <element signature="e#7883#7914#0" expanded="true" />
           </folding>
         </state>
       </provider>
