@@ -77,6 +77,9 @@ public class PostService {
         oldPost.get().setTitle(post.getTitle());
         oldPost.get().setTopic(post.getTopic());
         oldPost.get().setImage(post.getImage());
+        oldPost.get().setUpvotes(post.getUpvotes());
+        oldPost.get().setDownvotes(post.getDownvotes());
+        oldPost.get().setVotes(post.getVotes());
         return Optional.of(postRepository.save(oldPost.get()));
     }
 

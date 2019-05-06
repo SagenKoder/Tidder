@@ -1,5 +1,7 @@
 package app.sagen.tidderfront.controller;
 
+import app.sagen.tidderfront.model.Post;
+import app.sagen.tidderfront.model.Topic;
 import app.sagen.tidderfront.model.User;
 import app.sagen.tidderfront.service.PostService;
 import app.sagen.tidderfront.service.TopicService;
@@ -69,6 +71,47 @@ public class UserController {
         authenticatedUser.get().setAndEncryptPassword(password);
         userService.update(authenticatedUser.get(), authenticatedUser.get().getUsername());
         return "redirect:/u/" + username;
+    }
+
+    @GetMapping("/t/{username}/{postid}/upvote")
+    public String upvoteFromTopic(@PathVariable String username, @PathVariable long postid) {
+        Optional<User> userOptional = userService.getAuthenticatedUser();
+        if(!userOptional.isPresent()) return "redirect:/login";
+        Optional<User> optionalOwner = userService.findByUsername(username);
+        if(!optionalOwner.isPresent()) return "redirect:/t/all";
+        Optional<Post> optionalPost = postService.fetchPostById(postid);
+        if(!optionalPost.isPresent()) return "redirect:/u/" + optionalOwner;
+
+        if(optionalPost.get().getVotes().contains(userOptional.get().getUsername())) {
+            return "redirect:/u/" + optionalOwner;
+        }
+
+        optionalPost.get().getVotes().add(userOptional.get().getUsername());
+        optionalPost.get().setUpvotes(optionalPost.get().getUpvotes());
+        postService.updatePost(optionalPost.get(), optionalPost.get().getId());
+
+        return "redirect:/u/" + optionalOwner;
+    }
+
+    @SuppressWarnings("Duplicates")
+    @GetMapping("/t/{username}/{postid}/downvote")
+    public String downvoteFromTopic(@PathVariable String username, @PathVariable long postid) {
+        Optional<User> userOptional = userService.getAuthenticatedUser();
+        if(!userOptional.isPresent()) return "redirect:/login";
+        Optional<User> optionalOwner = userService.findByUsername(username);
+        if(!optionalOwner.isPresent()) return "redirect:/t/all";
+        Optional<Post> optionalPost = postService.fetchPostById(postid);
+        if(!optionalPost.isPresent()) return "redirect:/u/" + optionalOwner;
+
+        if(optionalPost.get().getVotes().contains(userOptional.get().getUsername())) {
+            return "redirect:/u/" + optionalOwner;
+        }
+
+        optionalPost.get().getVotes().add(userOptional.get().getUsername());
+        optionalPost.get().setDownvotes(optionalPost.get().getUpvotes());
+        postService.updatePost(optionalPost.get(), optionalPost.get().getId());
+
+        return "redirect:/u/" + optionalOwner;
     }
 
 }

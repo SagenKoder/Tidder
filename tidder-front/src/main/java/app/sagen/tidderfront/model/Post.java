@@ -9,6 +9,9 @@ import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.Base64;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -21,6 +24,9 @@ public class Post {
     private String title;
     private String body;
     private String image;
+    private Set<String> votes = new HashSet<>();
+    private int upvotes = 0;
+    private int downvotes = 0;
 
     public Post(String owner, String topic, LocalDateTime date, String title, String body) {
         this.id = 0;

@@ -17,6 +17,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
+@SuppressWarnings("Duplicates")
 @Controller
 @RequestMapping("/t")
 public class FrontController {
@@ -165,6 +166,47 @@ public class FrontController {
 
         userOptional.get().getTopics().remove(topicName);
         userService.update(userOptional.get(), userOptional.get().getUsername());
+
+        return "redirect:/t/" + topicName;
+    }
+
+    @GetMapping("/t/{topicName}/{postid}/upvote")
+    public String upvoteFromTopic(@PathVariable String topicName, @PathVariable long postid) {
+        Optional<User> userOptional = userService.getAuthenticatedUser();
+        if(!userOptional.isPresent()) return "redirect:/login";
+        Optional<Topic> optionalTopic = topicService.fetchTopic(topicName.toLowerCase().trim());
+        if(!optionalTopic.isPresent()) return "redirect:/t/all";
+        Optional<Post> optionalPost = postService.fetchPostById(postid);
+        if(!optionalPost.isPresent()) return "redirect:/t/" + topicName;
+
+        if(optionalPost.get().getVotes().contains(userOptional.get().getUsername())) {
+            return "redirect:/r/" + topicName;
+        }
+
+        optionalPost.get().getVotes().add(userOptional.get().getUsername());
+        optionalPost.get().setUpvotes(optionalPost.get().getUpvotes());
+        postService.updatePost(optionalPost.get(), optionalPost.get().getId());
+
+        return "redirect:/t/" + topicName;
+    }
+
+    @SuppressWarnings("Duplicates")
+    @GetMapping("/t/{topicName}/{postid}/downvote")
+    public String downvoteFromTopic(@PathVariable String topicName, @PathVariable long postid) {
+        Optional<User> userOptional = userService.getAuthenticatedUser();
+        if(!userOptional.isPresent()) return "redirect:/login";
+        Optional<Topic> optionalTopic = topicService.fetchTopic(topicName.toLowerCase().trim());
+        if(!optionalTopic.isPresent()) return "redirect:/t/all";
+        Optional<Post> optionalPost = postService.fetchPostById(postid);
+        if(!optionalPost.isPresent()) return "redirect:/t/" + topicName;
+
+        if(optionalPost.get().getVotes().contains(userOptional.get().getUsername())) {
+            return "redirect:/r/" + topicName;
+        }
+
+        optionalPost.get().getVotes().add(userOptional.get().getUsername());
+        optionalPost.get().setDownvotes(optionalPost.get().getUpvotes());
+        postService.updatePost(optionalPost.get(), optionalPost.get().getId());
 
         return "redirect:/t/" + topicName;
     }
