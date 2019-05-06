@@ -42,9 +42,9 @@ public class PostController {
         return postService.createPost(post);
     }
 
-    @GetMapping("/")
-    public List<Post> allPosts() {
-        return postService.fetchAll();
+    @RequestMapping("/")
+    public List<Post> allPosts(@RequestParam(required = false) String search) {
+        return postService.fetchAll(search);
     }
 
     @GetMapping("/p/{id}")

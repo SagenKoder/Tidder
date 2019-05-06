@@ -99,8 +99,8 @@ public class FrontController {
         return "redirect:/t/" + topic.getName();
     }
 
-    @GetMapping("{topicName}")
-    public String topic(HttpServletResponse response, Model model, @PathVariable("topicName") String topicName) {
+    @RequestMapping("{topicName}")
+    public String topic(HttpServletResponse response, Model model, @PathVariable("topicName") String topicName, @RequestParam(required = false) String search) {
         String filteredTopic = topicName.toLowerCase();
         filteredTopic = filteredTopic.replaceAll("[^a-z0-9]", "");
         if(!filteredTopic.equals(topicName)) return "redirect:/t/" + filteredTopic;
@@ -109,12 +109,10 @@ public class FrontController {
         User user = null;
         if(optuser.isPresent()) user = optuser.get();
 
-        Optional<Topic> topicOptional = topicService.fetchTopic(topicName);
-
         model.addAttribute("topicName", topicName);
 
         if(topicName.equalsIgnoreCase("all")) {
-            model.addAttribute("posts", postService.fetchAll());
+            model.addAttribute("posts", postService.fetchAll(Optional.empty()));
             Topic topic = new Topic();
             topic.setTitle("A collection of every post on tidder");
             topic.setName("all");
@@ -130,13 +128,16 @@ public class FrontController {
             topic.setName("feed");
             topic.setOwner("server");
             model.addAttribute("topic", topic);
-        } else if(topicOptional.isPresent()) {
-            List<Post> postsByTopic = postService.fetchPostsByTopic(topicName);
-            System.out.println("*****************************************");
-            System.out.println(postsByTopic);
-            System.out.println("*****************************************");
-            model.addAttribute("posts", postsByTopic);
-            model.addAttribute("topic", topicOptional.orElse(null));
+        } else {
+            Optional<Topic> topicOptional = topicService.fetchTopic(topicName);
+            if(topicOptional.isPresent()) {
+                List<Post> postsByTopic = postService.fetchPostsByTopic(topicName);
+                System.out.println("*****************************************");
+                System.out.println(postsByTopic);
+                System.out.println("*****************************************");
+                model.addAttribute("posts", postsByTopic);
+                model.addAttribute("topic", topicOptional.orElse(null));
+            }
         }
 
         model.addAttribute("allTopics", topicService.fetchAllTopics());

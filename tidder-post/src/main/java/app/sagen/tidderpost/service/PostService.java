@@ -19,7 +19,9 @@ public class PostService {
         this.postRepository = postRepository;
     }
 
-    public List<Post> fetchAll() {
+    public List<Post> fetchAll(String searchterm) {
+        if(searchterm != null && !searchterm.trim().isEmpty())
+            return postRepository.findAllByTopicContainsOrBodyContainsOrderByDate(searchterm, searchterm);
         return postRepository.findAllByOrderByDateDesc();
     }
 

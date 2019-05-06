@@ -29,10 +29,11 @@ public class PostService {
     }
 
     // GET /
-    public List<Post> fetchAll() {
+    public List<Post> fetchAll(Optional<String> searchterm) {
+        String search = searchterm.orElse("");
         URI uri = getPostService().resolve("/");
         try {
-            return Arrays.stream(Objects.requireNonNull(restTemplate.getForObject(uri, Post[].class)))
+            return Arrays.stream(Objects.requireNonNull(restTemplate.postForObject(uri, search, Post[].class)))
                     .collect(Collectors.toList());
         } catch (Exception e) {
             e.printStackTrace();
