@@ -67,12 +67,12 @@
                 </div>
             </div>
             <div th:if="${currentUser.getUsername().equalsIgnoreCase(user.getUsername())}" class="row">
-                <form th:method="post" th:action="${'/u/'+currentUser.getUsername()+'/changePassword'}">
+                <form method="post" th:action="${'/u/'+currentUser.getUsername()+'/changePassword'}">
                     <div class="form-group">
                         <label for="password">Change passord</label>
-                        <input type="password" class="form-control" id="password" placeholder="Choose a new password">
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Choose a new password">
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Change</button>
                 </form>
             </div>
         </div>

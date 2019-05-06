@@ -17,12 +17,6 @@
             <div class="intro-heading pt-5">/t/<span th:text="${topicName}"></span></div>
             <div th:if="${topic!=null}" th:text="${topic.getTitle()}" class="intro-lead-in"></div>
         </div>
-        <div th:if="${topic != null && !topic.getName().equalsIgnoreCase('all') && !topic.getName().equalsIgnoreCase('feed')}" class="row">
-            <form class="form-inline" method="post" th:action="${'/t/'+topic.getName()}">
-                <input type="text" name="search" id="search" placeholder="Search in this topic">
-                <button stype="submit" class="btn btn-outline-light">Search</button>
-            </form>
-        </div>
     </div>
 </header>
 
@@ -54,6 +48,12 @@
         </div>
 
         <div class="col-lg-3 col-md-4">
+            <div th:if="${topic != null && !topic.getName().equalsIgnoreCase('all') && !topic.getName().equalsIgnoreCase('feed')}" class="row">
+                <form class="form-inline" method="post" th:action="${'/t/'+topic.getName()}">
+                    <input type="text" name="search" id="search" class="form-control" placeholder="Search in this topic">
+                    <button stype="submit" class="btn btn-primary">Search</button>
+                </form>
+            </div>
 
             <div th:if="${currentUser != null && topic != null && !topic.getName().equalsIgnoreCase('all') && !topic.getName().equalsIgnoreCase('feed')}" class="mx-auto">
                 <a th:href="'/t/'+${topicName}+'/newPost'" class="btn btn-primary btn-lg">New Post</a>
