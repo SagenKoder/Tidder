@@ -15,7 +15,7 @@
     <div th:if="${editUser.getUsername()!=null}" class="col-3">
         <h5 class="text-primary">Edit User</h5>
         <form class="form-inline" th:action="${'/admin/user/save/'}+${editUser.getUsername()}" th:modelAttribute="editUser" method="post">
-            <input type="hidden" th:value="${editUser.getUsername()}" name="id">
+            <input type="hidden" th:value="${editUser.getUsername()}" name="username">
             <div class="form-group">
                 <input type="text" th:value="${editUser.getFirstName()}" name="firstName" class="form-control" placeholder="First Name">
                 <input type="text" th:value="${editUser.getLastName()}" name="lastName" class="form-control" placeholder="Last Name">

@@ -61,9 +61,9 @@
                     <h4 class="text-align-center">Your profile</h4>
                     <a th:href="'/u/'+${currentUser.getUsername()}"><h6 class="ml-0" th:text="'Username: '+${currentUser.getUsername()}"></h6></a>
                     <h4 class="ml-0">People you follow</h4>
-                    <a th:each="u : ${currentUser.getUsers()}" th:text="${'/u/'+u}"><h6 th:text="${'/u/'+u}"></h6></a>
+                    <a th:each="u : ${currentUser.getUsers()}" th:text="${'/u/'+u}"><h6 th:text="${'/u/'+u}"></h6><br></a>
                     <h4>Topics you follow</h4>
-                    <a th:each="t : ${currentUser.getTopics()}" th:text="${'/t/'+t}"><h6 th:text="${'/t/'+t}"></h6></a>
+                    <a th:each="t : ${currentUser.getTopics()}" th:text="${'/t/'+t}"><h6 th:text="${'/t/'+t}"></h6><br></a>
                 </div>
             </div>
         </div>
