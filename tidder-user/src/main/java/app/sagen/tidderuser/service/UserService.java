@@ -83,7 +83,7 @@ public class UserService {
                 oldUser.setTopics(user.getTopics());
             if(user.getUsers() != null)
                 oldUser.setUsers(user.getUsers());
-            save(oldUser);
+            userRepository.save(oldUser);
             return Optional.of(oldUser);
         }
         return Optional.empty();
