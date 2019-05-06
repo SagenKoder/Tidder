@@ -33,7 +33,7 @@
                     <span class="font-weight-bold" style="color: red;">12</span>
                 </div>
                 <div class="flex-grow-1 mx-0 px-2">
-                    <span class="font-weight-light text-truncate">2 hours ago | by <a th:text="${post.getOwner()}" th:href="'/u/'+${post.getOwner()}"></a> | <a th:href="'/t/'+${post.getTopic()}" th:text="'/t/'+${post.getTopic()}"></a></span>
+                    <span class="font-weight-light text-truncate"><span th:text="${post.humanTimeSince()}"></span> | by <a th:text="${post.getOwner()}" th:href="'/u/'+${post.getOwner()}"></a> | <a th:href="'/t/'+${post.getTopic()}" th:text="'/t/'+${post.getTopic()}"></a></span>
                     <hr class="my-1" style="border-color: #666;">
                     <span class="font-weight-bold text-truncate" th:text="${post.getTitle()}"></span>
                     <span class="font-weight-light" style="display:block;" th:text="${post.getBody()}"></span>

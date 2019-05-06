@@ -6,6 +6,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.Base64;
 
@@ -42,5 +43,16 @@ public class Post {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public Duration getTimeSince() {
+        return Duration.between(date, LocalDateTime.now());
+    }
+
+    public String humanTimeSince() {
+        return getTimeSince().toString()
+                .substring(2)
+                .replaceAll("(\\d[HMS])(?!$)", "$1 ")
+                .toLowerCase();
     }
 }

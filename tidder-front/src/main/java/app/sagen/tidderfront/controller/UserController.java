@@ -32,7 +32,7 @@ public class UserController {
     @GetMapping("{username}")
     public String userSite(Model model, @PathVariable String username) {
         Optional<User> userOptional = userService.getAuthenticatedUser();
-        model.addAttribute("currentUser", userOptional.orElseGet(null));
+        model.addAttribute("currentUser", userOptional.orElse(null));
         Optional<User> selectedUserOpt = userService.findByUsername(username);
         if(!selectedUserOpt.isPresent()) return "redirect:/t/all";
         model.addAttribute("user", selectedUserOpt.get());
