@@ -148,8 +148,8 @@ public class FrontController {
     public String followUser(@PathVariable String topicName) {
         Optional<User> userOptional = userService.getAuthenticatedUser();
         if(!userOptional.isPresent()) return "redirect:/login";
-        Optional<Topic> optionalTopic = topicService.fetchTopic(topicName);
-        if(optionalTopic.isPresent()) return "redirect:/t/all";
+        Optional<Topic> optionalTopic = topicService.fetchTopic(topicName.toLowerCase().trim());
+        if(optionalTopic.isPresent()) return "redirect:/t/" + topicName;
 
         userOptional.get().getTopics().add(optionalTopic.get().getName());
         userService.update(userOptional.get(), userOptional.get().getUsername());
