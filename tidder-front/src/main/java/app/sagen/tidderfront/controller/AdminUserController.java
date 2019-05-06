@@ -1,5 +1,6 @@
 package app.sagen.tidderfront.controller;
 
+import app.sagen.tidderfront.Role;
 import app.sagen.tidderfront.model.ResponseSendtEmail;
 import app.sagen.tidderfront.model.User;
 import app.sagen.tidderfront.service.UserService;
@@ -8,7 +9,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping("/admin/user")
@@ -65,9 +68,15 @@ public class AdminUserController {
         return "redirect:/admin/user";
     }
 
-    @PostMapping("save/{username}")
-    public String updateUser(@PathVariable String username, @RequestParam User user) {
-        userService.update(user, username);
+    @PostMapping("save/{user}")
+    public String updateUser(@PathVariable String user, @RequestParam String username, @RequestParam String firstName, @RequestParam String lastName, @RequestParam String email, @RequestParam List<String> roles) {
+        User u = new User();
+        u.setUsername(username);
+        u.setFirstName(firstName);
+        u.setLastName(lastName);
+        u.setEmail(email);
+        u.setRoles(roles.stream().map(Role::valueOf).collect(Collectors.toSet()));
+        userService.update(u, username);
         return "redirect:/admin/user";
     }
 
